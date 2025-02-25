@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AWS Machine Learning Engineering Course</title>
+    <link rel="stylesheet" href="ml.styles.css" />
+    <script src="scriptml.js" defer></script>
+  </head>
+  <body>
+    <h1>AWS Machine Learning Engineering Course</h1>
+
+    <div class="section">
+      <h2>Section 1: Introduction</h2>
+      <div class="lesson">
+        <h3>Lesson 1: How to Use This Course</h3>
+        <p>
+          Welcome to the AWS Machine Learning Engineering course! This
+          comprehensive program will guide you through building expertise in
+          machine learning on AWS.
+        </p>
+
+        <div class="explanation cs-student">
+          <h4>For CS Students:</h4>
+          <p>
+            This course is structured like a full-stack development journey, but
+            for machine learning. You'll learn about:
+          </p>
+          <ul>
+            <li>Core ML algorithms and their mathematical foundations</li>
+            <li>AWS's ML service architecture and implementation patterns</li>
+            <li>Hands-on experience with production-grade ML tools</li>
+            <li>Best practices for scalable ML systems design</li>
+          </ul>
+        </div>
+
+        <div class="explanation simple">
+          <h4>Simple Explanation:</h4>
+          <p>
+            Imagine you're building a robot that can learn! This course will
+            teach you:
+          </p>
+          <ul>
+            <li>
+              How to make computers learn from examples (just like how you learn
+              from practice!)
+            </li>
+            <li>Using Amazon's special tools to build smart programs</li>
+            <li>
+              Making your computer recognize pictures, understand words, and
+              make predictions
+            </li>
+            <li>How to make your robot helper work better and faster</li>
+          </ul>
+        </div>
+        <p>Key Resources:</p>
+        <ul>
+          <li>
+            <a
+              href="https://docs.aws.amazon.com/sagemaker/latest/dg/gs.html"
+              class="aws-link"
+              >Getting Started with Amazon SageMaker</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://aws.amazon.com/training/learn-about/machine-learning/"
+              class="aws-link"
+              >AWS Machine Learning Training and Certification</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://aws.amazon.com/whitepapers/?whitepapers-main.sort-by=item.additionalFields.sortDate&whitepapers-main.sort-order=desc&awsf.whitepapers-content-type=*all&awsf.whitepapers-tech-category=tech-category%23ai-ml"
+              class="aws-link"
+              >AWS ML Whitepapers</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="lesson">
+        <h3>Lesson 2: Domain 2 Introduction</h3>
+        <p>Master the core concepts of machine learning on AWS:</p>
+
+        <div class="explanation cs-student">
+          <h4>For CS Students:</h4>
+          <p>
+            Think of ML as a programming paradigm where instead of writing
+            explicit rules, you're designing systems that learn patterns from
+            data:
+          </p>
+          <ul>
+            <li>
+              Supervised Learning: Like function approximation where f(x) = y,
+              learning from labeled examples
+            </li>
+            <li>
+              Unsupervised Learning: Pattern discovery in unlabeled data using
+              clustering and dimensionality reduction
+            </li>
+            <li>
+              AWS ML Stack: A three-tier architecture with high-level AI
+              Services, managed ML with SageMaker, and low-level infrastructure
+            </li>
+            <li>
+              MLOps: Applying DevOps principles to ML system lifecycles,
+              including version control for data and models
+            </li>
+          </ul>
+        </div>
+
+        <div class="explanation simple">
+          <h4>Simple Explanation:</h4>
+          <p>Let's learn how to make computers smart!</p>
+          <ul>
+            <li>
+              Teaching computers by showing them examples (like teaching a dog
+              tricks)
+            </li>
+            <li>
+              Using Amazon's special tools that make it easier to build smart
+              programs
+            </li>
+            <li>
+              Learning how to prepare information so computers can understand it
+            </li>
+            <li>Making sure our smart programs keep working well over time</li>
+          </ul>
+        </div>
+        <p>Essential Reading:</p>
+        <ul>
+          <li>
+            <a
+              href="https://docs.aws.amazon.com/sagemaker/latest/dg/whatis.html"
+              class="aws-link"
+              >What is Amazon SageMaker?</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://aws.amazon.com/machine-learning/mlops/"
+              class="aws-link"
+              >AWS MLOps Framework</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="lesson">
+        <h3>Lesson 3: Course Overview</h3>
+        <p>The course is structured to provide:</p>
+
+        <div class="explanation cs-student">
+          <h4>For CS Students:</h4>
+          <p>This course follows a bottom-up approach to ML engineering:</p>
+          <ul>
+            <li>
+              Mathematical Foundations: Linear algebra, calculus, and
+              probability theory applied to ML
+            </li>
+            <li>
+              Algorithm Implementation: From scratch implementations to using
+              optimized libraries
+            </li>
+            <li>System Design: Architecting end-to-end ML pipelines on AWS</li>
+            <li>
+              Production Deployment: Load balancing, scaling, and monitoring ML
+              systems
+            </li>
+          </ul>
+        </div>
+
+        <div class="explanation simple">
+          <h4>Simple Explanation:</h4>
+          <p>We'll learn step by step, like building with LEGO blocks:</p>
+          <ul>
+            <li>
+              First, we'll learn the basic building blocks of making computers
+              smart
+            </li>
+            <li>Then, we'll play with Amazon's cool tools to build things</li>
+            <li>
+              We'll solve real problems, like teaching computers to recognize
+              cats and dogs
+            </li>
+            <li>
+              Finally, we'll learn the best ways to make our creations work
+              perfectly!
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lesson">
+        <h3>Lesson 4: Choosing a Modeling Approach</h3>
+        <p>
+          Learn to select the optimal modeling approach based on your use case:
+        </p>
+
+        <div class="explanation cs-student">
+          <h4>For CS Students:</h4>
+          <p>
+            Model selection is a critical engineering decision that involves
+            multiple trade-offs:
+          </p>
+          <ul>
+            <li>
+              Problem Types: Understanding the mathematical foundations of
+              classification (decision boundaries), regression (function
+              approximation), clustering (distance metrics), and time series
+              (sequence modeling)
+            </li>
+            <li>
+              Data Analysis: Evaluating data distribution, feature engineering
+              requirements, and statistical properties
+            </li>
+            <li>
+              Model Complexity: Balancing model capacity with computational
+              constraints and avoiding overfitting
+            </li>
+            <li>
+              Production Considerations: Analyzing inference latency, resource
+              utilization, and scaling requirements
+            </li>
+          </ul>
+        </div>
+
+        <div class="explanation simple">
+          <h4>Simple Explanation:</h4>
+          <p>Let's learn how to pick the right tool for each job!</p>
+          <ul>
+            <li>
+              Some problems are like sorting things into groups (like sorting
+              toys), while others are about guessing numbers (like guessing
+              someone's age)
+            </li>
+            <li>
+              We need to check if we have enough good information to teach our
+              computer
+            </li>
+            <li>
+              Sometimes simpler solutions work better than complicated ones
+            </li>
+            <li>
+              We need to make sure our computer can work fast enough to be
+              helpful
+            </li>
+          </ul>
+        </div>
+        <p>Reference Materials:</p>
+        <ul>
+          <li>
+            <a
+              href="https://docs.aws.amazon.com/sagemaker/latest/dg/algorithms-choose.html"
+              class="aws-link"
+              >Choosing an Algorithm</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://d1.awsstatic.com/whitepapers/machine-learning-foundations.pdf"
+              class="aws-link"
+              >Machine Learning Foundations Whitepaper</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Section 2: Training Model</h2>
+      <div class="lesson">
+        <h3>Lesson 3: Model Training Concepts</h3>
+        <p>Understanding fundamental model training concepts:</p>
+
+        <div class="explanation cs-student">
+          <h4>For CS Students:</h4>
+          <p>Core concepts in model training architecture:</p>
+          <ul>
+            <li>
+              Training Pipeline Design: Data preprocessing, feature engineering,
+              and model configuration
+            </li>
+            <li>
+              Optimization Algorithms: Gradient descent variants, learning rate
+              scheduling, and regularization
+            </li>
+            <li>
+              Distributed Training: Parameter servers, data parallelism, and
+              model parallelism
+            </li>
+            <li>
+              Model Evaluation: Cross-validation, metrics computation, and early
+              stopping
+            </li>
+          </ul>
+        </div>
+
+        <div class="explanation simple">
+          <h4>Simple Explanation:</h4>
+          <p>Let's learn how to teach our computer!</p>
+          <ul>
+            <li>Preparing information in a way computers can understand</li>
+            <li>Helping computers learn from their mistakes</li>
+            <li>Using multiple computers to learn faster</li>
+            <li>Checking how well our computer is learning</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lesson">
+        <h3>Lesson 4: Compute Environment Selection</h3>
+        <p>Choose the right compute environment for training:</p>
+
+        <div class="explanation cs-student">
+          <h4>For CS Students:</h4>
+          <p>Understanding compute infrastructure options:</p>
+          <ul>
+            <li>
+              Instance Types: CPU vs GPU optimization, memory-to-compute ratios
+            </li>
+            <li>
+              Distributed Computing: Multi-node training, network bandwidth
+              considerations
+            </li>
+            <li>
+              Cost Optimization: Spot instances, automatic scaling, resource
+              monitoring
+            </li>
+            <li>
+              Environment Management: Container orchestration, dependency
+              management
+            </li>
+          </ul>
+        </div>
+
+        <div class="explanation simple">
+          <h4>Simple Explanation:</h4>
+          <p>Picking the right computer to do the learning:</p>
+          <ul>
+            <li>Choosing between different types of computers</li>
+            <li>Using many computers together</li>
+            <li>Making sure we don't spend too much money</li>
+            <li>Setting up everything correctly</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lesson">
+        <h3>Lesson 5: AWS Container Services</h3>
+        <p>Learn about AWS container services for ML:</p>
+
+        <div class="explanation cs-student">
+          <h4>For CS Students:</h4>
+          <p>Container orchestration for ML workloads:</p>
+          <ul>
+            <li>
+              Docker Fundamentals: Image building, layer optimization, security
+              best practices
+            </li>
+            <li>
+              ECS Integration: Task definitions, service configuration, load
+              balancing
+            </li>
+            <li>
+              EKS Deployment: Kubernetes operators, autoscaling, resource
+              management
+            </li>
+            <li>
+              Monitoring: CloudWatch integration, metric collection, log
+              aggregation
+            </li>
+          </ul>
+        </div>
+
+        <div class="explanation simple">
+          <h4>Simple Explanation:</h4>
+          <p>Using special containers to organize our learning:</p>
+          <ul>
+            <li>Packaging our computer programs neatly</li>
+            <li>Making sure everything works together</li>
+            <li>Managing lots of containers at once</li>
+            <li>Watching how well everything is working</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lesson">
+        <h3>
+          Lesson 6: Create A Training Job Using the Amazon SageMaker Console
+        </h3>
+        <p>Hands-on training job creation:</p>
+
+        <div class="explanation cs-student">
+          <h4>For CS Students:</h4>
+          <p>SageMaker training job configuration:</p>
+          <ul>
+            <li>
+              Data Configuration: S3 integration, input channels, file formats
+            </li>
+            <li>
+              Resource Allocation: Instance selection, distributed training
+              setup
+            </li>
+            <li>
+              Hyperparameter Tuning: Search space definition, optimization
+              objectives
+            </li>
+            <li>
+              Monitoring Setup: Training metrics, instance utilization, logs
+            </li>
+          </ul>
+        </div>
+
+        <div class="explanation simple">
+          <h4>Simple Explanation:</h4>
+          <p>Starting our first training project:</p>
+          <ul>
+            <li>Getting our learning data ready</li>
+            <li>Setting up our learning computer</li>
+            <li>Making our program learn better</li>
+            <li>Watching how the learning goes</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lesson">
+        <h3>Lesson 7: Train a Model Using a SageMaker Built-in Algorithm</h3>
+        <p>Using SageMaker's pre-built algorithms:</p>
+
+        <div class="explanation cs-student">
+          <h4>For CS Students:</h4>
+          <p>Leveraging built-in algorithms:</p>
+          <ul>
+            <li>
+              Algorithm Selection: Use case matching, performance
+              characteristics
+            </li>
+            <li>Data Preparation: Format requirements, feature engineering</li>
+            <li>
+              Training Configuration: Algorithm-specific parameters, resource
+              allocation
+            </li>
+            <li>
+              Model Artifacts: Output handling, model registry integration
+            </li>
+          </ul>
+        </div>
+
+        <div class="explanation simple">
+          <h4>Simple Explanation:</h4>
+          <p>Using ready-made learning recipes:</p>
+          <ul>
+            <li>Picking the right learning recipe</li>
+            <li>Preparing our information correctly</li>
+            <li>Setting up the learning process</li>
+            <li>Saving what our computer learned</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lesson">
+        <h3>Lesson 8: Train a Model Using SageMaker Script Mode</h3>
+        <p>Custom training script development:</p>
+
+        <div class="explanation cs-student">
+          <h4>For CS Students:</h4>
+          <p>Script mode implementation details:</p>
+          <ul>
+            <li>
+              Environment Setup: Container configuration, dependency management
+            </li>
+            <li>
+              Script Structure: Entry points, training loop implementation
+            </li>
+            <li>
+              Framework Integration: TensorFlow, PyTorch, and custom framework
+              support
+            </li>
+            <li>Debugging Tools: Local testing, remote debugging setup</li>
+          </ul>
+        </div>
+
+        <div class="explanation simple">
+          <h4>Simple Explanation:</h4>
+          <p>Writing our own learning instructions:</p>
+          <ul>
+            <li>Setting up our workspace</li>
+            <li>Creating our learning program</li>
+            <li>Using different learning tools</li>
+            <li>Finding and fixing problems</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lesson">
+        <h3>Lesson 9: Methods to Reduce Training Time</h3>
+        <p>Optimize training efficiency:</p>
+
+        <div class="explanation cs-student">
+          <h4>For CS Students:</h4>
+          <p>Training optimization techniques:</p>
+          <ul>
+            <li>Data Pipeline: Efficient data loading, caching strategies</li>
+            <li>Distributed Training: Data parallelism, model parallelism</li>
+            <li>
+              Hardware Utilization: GPU optimization, mixed precision training
+            </li>
+            <li>
+              Algorithm Optimization: Gradient accumulation, learning rate
+              scheduling
+            </li>
+          </ul>
+        </div>
+
+        <div class="explanation simple">
+          <h4>Simple Explanation:</h4>
+          <p>Making our learning faster:</p>
+          <ul>
+            <li>Getting information quickly</li>
+            <li>Using many computers together</li>
+            <li>Using special computer chips</li>
+            <li>Making the learning smarter</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lesson">
+        <h3>Lesson 10: Integrating External Models into SageMaker</h3>
+        <p>Working with external models:</p>
+
+        <div class="explanation cs-student">
+          <h4>For CS Students:</h4>
+          <p>External model integration workflow:</p>
+          <ul>
+            <li>Model Conversion: Format compatibility, weight transfer</li>
+            <li>
+              Container Adaptation: Custom inference code, dependency management
+            </li>
+            <li>
+              Deployment Configuration: Resource allocation, scaling policies
+            </li>
+            <li>
+              Integration Testing: Endpoint validation, performance testing
+            </li>
+          </ul>
+        </div>
+
+        <div class="explanation simple">
+          <h4>Simple Explanation:</h4>
+          <p>Using smart programs from other places:</p>
+          <ul>
+            <li>Making different programs work together</li>
+            <li>Packaging programs correctly</li>
+            <li>Setting up the program to work well</li>
+            <li>Testing everything works properly</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Section 3: Modeling Approaches</h2>
+      <div class="lesson">
+        <h3>Lesson 5: AWS AI Services</h3>
+        <p>Explore AWS AI Services including:</p>
+
+        <div class="explanation cs-student">
+          <h4>For CS Students:</h4>
+          <p>
+            AWS AI Services provide high-level APIs built on pre-trained models:
+          </p>
+          <ul>
+            <li>
+              Rekognition: Implements deep CNN architectures for image/video
+              analysis, with built-in support for object detection, face
+              recognition, and scene understanding
+            </li>
+            <li>
+              Comprehend: Uses transformer-based NLP models for text analysis,
+              sentiment analysis, and entity recognition
+            </li>
+            <li>
+              Textract: Combines computer vision and NLP for intelligent OCR and
+              document parsing
+            </li>
+            <li>
+              Transcribe: Implements deep learning for automatic speech
+              recognition with custom vocabulary support
+            </li>
+          </ul>
+        </div>
+
+        <div class="explanation simple">
+          <h4>Simple Explanation:</h4>
+          <p>Let's see what special powers Amazon's tools have!</p>
+          <ul>
+            <li>
+              A tool that can look at pictures and tell you what it sees (like
+              playing I Spy)
+            </li>
+            <li>A tool that can read and understand words like a human</li>
+            <li>A tool that can read papers and documents automatically</li>
+            <li>
+              A tool that can listen to someone talking and write down what they
+              say
+            </li>
+          </ul>
+        </div>
+        <p>
+          Reference:
+          <a
+            href="https://aws.amazon.com/machine-learning/ai-services/"
+            class="aws-link"
+            >AWS AI Services Documentation</a
+          >
+        </p>
+      </div>
+
+      <div class="lesson">
+        <h3>Lesson 6: Amazon SageMaker Built-In Algorithms</h3>
+        <p>Deep dive into SageMaker's built-in algorithms:</p>
+
+        <div class="explanation cs-student">
+          <h4>For CS Students:</h4>
+          <p>
+            SageMaker provides optimized implementations of popular ML
+            algorithms:
+          </p>
+          <ul>
+            <li>
+              Linear Learner: Implements L1/L2 regularization, automatic model
+              tuning, and distributed training for linear models
+            </li>
+            <li>
+              XGBoost: Gradient boosting framework with tree pruning, parallel
+              training, and GPU acceleration
+            </li>
+            <li>
+              DeepAR: RNN-based forecasting using autoregressive models with
+              automatic feature engineering
+            </li>
+            <li>
+              BlazingText: Word2Vec and text classification with distributed
+              training and sub-word embeddings
+            </li>
+          </ul>
+        </div>
+
+        <div class="explanation simple">
+          <h4>Simple Explanation:</h4>
+          <p>Let's learn about different ways computers can learn!</p>
+          <ul>
+            <li>
+              A simple way to guess numbers or sort things (like drawing a line
+              between two groups)
+            </li>
+            <li>
+              A way to make better guesses by learning from mistakes (like
+              getting better at a game by practicing)
+            </li>
+            <li>
+              A special tool that can guess what will happen next (like
+              predicting tomorrow's weather)
+            </li>
+            <li>
+              A tool that can understand and sort different types of writing
+            </li>
+          </ul>
+        </div>
+        <p>
+          Reference:
+          <a
+            href="https://docs.aws.amazon.com/sagemaker/latest/dg/algos.html"
+            class="aws-link"
+            >SageMaker Built-in Algorithms</a
+          >
+        </p>
+      </div>
+
+      <div class="lesson">
+        <h3>Lesson 7: Amazon SageMaker JumpStart ML Solutions</h3>
+        <p>Learn about SageMaker JumpStart:</p>
+
+        <div class="explanation cs-student">
+          <h4>For CS Students:</h4>
+          <p>
+            SageMaker JumpStart is AWS's model hub and transfer learning
+            platform:
+          </p>
+          <ul>
+            <li>
+              Access to SOTA pre-trained models with PyTorch and TensorFlow
+              implementations
+            </li>
+            <li>
+              Automated deployment infrastructure with containerized inference
+              endpoints
+            </li>
+            <li>
+              Transfer learning workflows with custom fine-tuning scripts and
+              hyperparameter optimization
+            </li>
+            <li>
+              Production-ready solution templates with CI/CD pipelines and
+              monitoring
+            </li>
+          </ul>
+        </div>
+
+        <div class="explanation simple">
+          <h4>Simple Explanation:</h4>
+          <p>Imagine having a library of ready-to-use smart helpers!</p>
+          <ul>
+            <li>Use smart programs that other people have already taught</li>
+            <li>Start using these helpers with just one button click</li>
+            <li>Teach these programs new tricks for your specific needs</li>
+            <li>Follow simple recipes to build your own smart programs</li>
+          </ul>
+        </div>
+        <p>
+          Reference:
+          <a href="https://aws.amazon.com/sagemaker/jumpstart/" class="aws-link"
+            >SageMaker JumpStart</a
+          >
+        </p>
+      </div>
+
+      <div class="lesson">
+        <h3>Lesson 8: Amazon Bedrock ML Solutions</h3>
+        <p>Explore Amazon Bedrock capabilities:</p>
+
+        <div class="explanation cs-student">
+          <h4>For CS Students:</h4>
+          <p>Bedrock is AWS's foundation model service offering:</p>
+          <ul>
+            <li>
+              Access to large language models and multimodal foundation models
+              with different architectures and capabilities
+            </li>
+            <li>
+              Custom fine-tuning pipelines with efficient few-shot learning and
+              prompt engineering
+            </li>
+            <li>
+              RESTful APIs and SDK integration with managed scaling and security
+            </li>
+            <li>
+              Optimization techniques for latency, cost, and responsible AI
+              practices
+            </li>
+          </ul>
+        </div>
+
+        <div class="explanation simple">
+          <h4>Simple Explanation:</h4>
+          <p>Let's explore super-smart computer brains!</p>
+          <ul>
+            <li>
+              Use special computer brains that can understand words, pictures,
+              and more
+            </li>
+            <li>Teach these brains to help with your specific tasks</li>
+            <li>
+              Make it easy for your programs to talk to these smart brains
+            </li>
+            <li>
+              Learn the best ways to use these smart helpers safely and
+              efficiently
+            </li>
+          </ul>
+        </div>
+        <p>
+          Reference:
+          <a href="https://aws.amazon.com/bedrock/" class="aws-link"
+            >Amazon Bedrock</a
+          >
+        </p>
+      </div>
+
+      <div class="lesson">
+        <h3>Lesson 9: Model Selection Considerations</h3>
+        <p>Key factors in model selection:</p>
+
+        <div class="explanation cs-student">
+          <h4>For CS Students:</h4>
+          <p>Model selection involves analyzing multiple dimensions:</p>
+          <ul>
+            <li>
+              Performance Metrics: Precision, recall, F1-score, AUC-ROC, and
+              domain-specific metrics
+            </li>
+            <li>
+              Resource Analysis: CPU/GPU requirements, memory footprint,
+              inference latency, and operational costs
+            </li>
+            <li>
+              Interpretability: SHAP values, LIME explanations, feature
+              importance, and model-specific techniques
+            </li>
+            <li>
+              Production Readiness: Scalability, monitoring capabilities,
+              version control, and A/B testing support
+            </li>
+          </ul>
+        </div>
+
+        <div class="explanation simple">
+          <h4>Simple Explanation:</h4>
+          <p>How do we choose the best smart helper for our job?</p>
+          <ul>
+            <li>
+              Check how well it can do the task (like getting a score on a test)
+            </li>
+            <li>Make sure we can afford to use it and it works fast enough</li>
+            <li>See if it can explain why it makes certain choices</li>
+            <li>Check if it can handle lots of work without getting tired</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Section 3: Conclusion</h2>
+      <div class="lesson">
+        <h3>Lesson 10: Course Summary</h3>
+        <p>Review of key concepts and learning outcomes:</p>
+
+        <div class="explanation cs-student">
+          <h4>For CS Students:</h4>
+          <p>
+            This course has equipped you with comprehensive ML engineering
+            knowledge:
+          </p>
+          <ul>
+            <li>
+              Theoretical Foundations: Mathematical principles, algorithm
+              design, and model architecture fundamentals
+            </li>
+            <li>
+              AWS Ecosystem: Deep understanding of SageMaker, AI Services, and
+              Foundation Models integration
+            </li>
+            <li>
+              Engineering Best Practices: MLOps, monitoring, scaling, and
+              production deployment strategies
+            </li>
+            <li>
+              Advanced Topics: Model interpretation, optimization, and
+              responsible AI implementation
+            </li>
+          </ul>
+        </div>
+
+        <div class="explanation simple">
+          <h4>Simple Explanation:</h4>
+          <p>Let's remember all the amazing things we learned!</p>
+          <ul>
+            <li>How to make computers learn and become smarter</li>
+            <li>Using Amazon's special tools to build amazing things</li>
+            <li>
+              Making sure our computer programs work well and stay helpful
+            </li>
+            <li>
+              Learning what to do next to become even better at teaching
+              computers
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lesson">
+        <h3>Lesson 11: Assessment</h3>
+        <p>Prepare for certification through:</p>
+
+        <div class="explanation cs-student">
+          <h4>For CS Students:</h4>
+          <p>Systematic approach to AWS ML certification preparation:</p>
+          <ul>
+            <li>
+              Domain-specific practice questions focusing on architecture design
+              and implementation
+            </li>
+            <li>
+              Hands-on labs covering model deployment, optimization, and MLOps
+              workflows
+            </li>
+            <li>Exam-style scenarios testing end-to-end ML solution design</li>
+            <li>
+              Deep review of AWS ML best practices and service limitations
+            </li>
+          </ul>
+        </div>
+
+        <div class="explanation simple">
+          <h4>Simple Explanation:</h4>
+          <p>Let's practice what we learned and show how smart we've become!</p>
+          <ul>
+            <li>Answer fun questions about teaching computers</li>
+            <li>Try building your own smart programs step by step</li>
+            <li>Solve puzzles that test what you've learned</li>
+            <li>Make sure you remember all the important things</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lesson">
+        <h3>Lesson 12: Contact Us</h3>
+        <p>Get support and stay connected:</p>
+
+        <div class="explanation cs-student">
+          <h4>For CS Students:</h4>
+          <p>Access comprehensive support resources for continuous learning:</p>
+          <ul>
+            <li>
+              Technical Documentation: Detailed API references, whitepapers, and
+              implementation guides
+            </li>
+            <li>
+              Community Resources: AWS ML forums, GitHub repositories, and Stack
+              Overflow discussions
+            </li>
+            <li>
+              Advanced Learning: Research papers, case studies, and
+              architectural deep dives
+            </li>
+            <li>
+              Direct Support: AWS Support plans, ML specialists, and community
+              mentors
+            </li>
+          </ul>
+        </div>
+
+        <div class="explanation simple">
+          <h4>Simple Explanation:</h4>
+          <p>We're here to help you keep learning and growing!</p>
+          <ul>
+            <li>Get help when you have questions</li>
+            <li>Join a friendly group of people learning just like you</li>
+            <li>Find more fun things to learn and build</li>
+            <li>
+              Tell us what you liked and how we can make learning even better
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

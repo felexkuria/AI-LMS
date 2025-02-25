@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+.section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+.lesson {
+    margin: 15px 0;
+    padding: 15px;
+    background-color: white;
+    border-left: 4px solid #232f3e;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+h1, h2 {
+    color: #232f3e;
+}
+.aws-link {
+    color: #ec7211;
+    text-decoration: none;
+}
+.aws-link:hover {
+    text-decoration: underline;
+}
