@@ -295,9 +295,6 @@
               stopping
             </li>
           </ul>
-        </div>
-
-        <div class="explanation simple">
           <h4>Simple Explanation:</h4>
           <p>Let's learn how to teach our computer!</p>
           <ul>
@@ -305,6 +302,70 @@
             <li>Helping computers learn from their mistakes</li>
             <li>Using multiple computers to learn faster</li>
             <li>Checking how well our computer is learning</li>
+          </ul>
+          <h4>Model Training Concepts:</h4>
+          <p>Understanding optimization algorithms for model training:</p>
+          <ul>
+            <li>
+              Gradient Descent: An iterative optimization algorithm that
+              minimizes the loss function by updating model parameters in the
+              direction of the steepest descent of the gradient. It processes
+              the entire dataset in each iteration, making it computationally
+              expensive for large datasets.
+            </li>
+            <li>
+              Stochastic Gradient Descent (SGD): A variation of gradient descent
+              that updates parameters using a single randomly selected data
+              point in each iteration. While introducing more noise, SGD is much
+              faster and can help escape local minima.
+            </li>
+            <li>
+              Mini-batch Gradient Descent: A compromise between full gradient
+              descent and SGD that updates parameters using small random batches
+              of data points. This approach balances computational efficiency
+              with update stability.
+            </li>
+            <li>
+              Loss Functions: Mathematical functions that quantify the
+              difference between predicted and actual values. Common examples
+              include Mean Squared Error for regression and Cross-Entropy for
+              classification.
+            </li>
+            <li>
+              Log-Likelihood Loss: A probabilistic loss function that maximizes
+              the likelihood of observing the training data given the model
+              parameters. Often used in classification problems and expressed as
+              negative log-likelihood to convert maximization to minimization.
+            </li>
+          </ul>
+        </div>
+
+        <div class="explanation simple">
+          <h4>How Computers Learn:</h4>
+          <p>Understanding how computers improve their learning:</p>
+          <ul>
+            <li>
+              Gradient Descent: The computer looks at all examples at once and
+              takes small steps to get better, like studying an entire textbook
+              before making any changes to your understanding.
+            </li>
+            <li>
+              Stochastic Gradient Descent: The computer looks at just one
+              example at a time and makes quick adjustments, like learning from
+              each page of a book immediately.
+            </li>
+            <li>
+              Mini-batch Gradient Descent: The computer looks at small groups of
+              examples and then adjusts, like studying one chapter at a time.
+            </li>
+            <li>
+              Loss Functions: Special ways to measure mistakes, like a score
+              that shows how wrong the computer's guesses are.
+            </li>
+            <li>
+              Log-Likelihood Loss: A special measuring tool that helps the
+              computer understand how confident it should be in its answers.
+            </li>
           </ul>
         </div>
       </div>
@@ -331,6 +392,64 @@
             <li>
               Environment Management: Container orchestration, dependency
               management
+            </li>
+          </ul>
+          <!-- Additional detailed notes for ML engineering students -->
+          <h4>Detailed AWS Compute Environment Notes:</h4>
+          <p>
+            Key considerations for selecting optimal training infrastructure:
+          </p>
+          <ul>
+            <li>
+              <strong>CPU Instances (C-type):</strong> Ideal for traditional ML
+              algorithms (XGBoost, Random Forest), data preprocessing, and
+              inference workloads with low parallelization requirements.
+              Consider c5/c6g instances for cost-effective training of
+              small-to-medium models.
+            </li>
+            <li>
+              <strong>GPU Instances (P-type, G-type):</strong> Essential for
+              deep learning with large datasets. P4d instances with NVIDIA A100
+              GPUs offer 2.5x performance over previous generation. Use when
+              training CNNs, transformers, or models with >100M parameters.
+              Memory bandwidth often more important than compute capacity.
+            </li>
+            <li>
+              <strong>AWS Trainium (Trn1):</strong> Purpose-built for training
+              deep learning models with up to 50% cost savings over comparable
+              GPU instances. Optimized for PyTorch and TensorFlow. Best for
+              transformer models, computer vision, and NLP workloads at scale.
+            </li>
+            <li>
+              <strong>Instance Selection Guidelines:</strong>
+              <ul>
+                <li>
+                  Choose GPU when: training deep neural networks, working with
+                  image/video data, using transformer architectures, or
+                  requiring tensor operations at scale
+                </li>
+                <li>
+                  Choose CPU when: running traditional ML algorithms, performing
+                  feature engineering, handling small datasets, or optimizing
+                  for cost on simpler models
+                </li>
+                <li>
+                  Choose Trainium when: training large language models,
+                  optimizing for cost-efficiency at scale, or deploying
+                  production training pipelines for supported frameworks
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Memory Considerations:</strong> Ensure instance memory can
+              accommodate batch size × sample size × precision requirements. For
+              distributed training, consider network bandwidth between nodes
+              (EFA-enabled instances recommended).
+            </li>
+            <li>
+              <strong>Storage Integration:</strong> Configure FSx for Lustre for
+              high-throughput data loading or EFS for shared model artifacts
+              across distributed training jobs.
             </li>
           </ul>
         </div>
