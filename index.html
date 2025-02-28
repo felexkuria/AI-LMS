@@ -7,13 +7,6 @@
     <link rel="stylesheet" href="styles.css" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <div class="nav">
-      <a class="active" href="#">Home</a>
-      <a href="ml_course.html">ML Course</a>
-    </div>
-    <div class="container">
-      <h1>AI Learning Hub - AIF-c01 Exam Prep</h1>
   <body class="bg-gray-50">
     <nav class="bg-white shadow-lg">
       <div class="max-w-7xl mx-auto px-4">
@@ -23,19 +16,19 @@
               <a href="#" class="text-blue-600 font-bold text-lg">Home</a>
             </div>
             <div class="flex items-center py-4">
-              <a href="ml_course.html" class="text-gray-500 hover:text-blue-600">ML Course</a>
+              <a href="ml_course.html" class="text-gray-500 hover:text-blue-600"
+                >ML Course</a
+              >
             </div>
           </div>
         </div>
       </div>
     </nav>
 
-      <div class="course-outline">
-        <div class="stepper-container">
-          <div class="stepper-item">
-            <h2>
     <div class="max-w-7xl mx-auto px-4 py-8">
-      <h1 class="text-4xl font-bold text-gray-900 mb-8">AI Learning Hub - AIF-c01 Exam Prep</h1>
+      <h1 class="text-4xl font-bold text-gray-900 mb-8">
+        AI Learning Hub - AIF-c01 Exam Prep
+      </h1>
 
       <div class="bg-white rounded-lg shadow-md p-6">
         <div class="space-y-8">
@@ -43,77 +36,81 @@
             <h2 class="text-2xl font-semibold text-gray-800 mb-4">
               Fundamentals of Machine Learning and Artificial Intelligence
             </h2>
-            <span class="duration">1 hour</span>
-            <button class="btn" onclick="toggleContent('fundamentals')">
-            <span class="inline-block bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full mb-4">1 hour</span>
-            <button class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition duration-200" onclick="toggleContent('fundamentals')">
+            <span
+              class="inline-block bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full mb-4"
+              >1 hour</span
+            >
+            <button
+              class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition duration-200"
+              onclick="toggleContent('fundamentals')"
+            >
               Learn More
             </button>
-            <div id="fundamentals" class="content">
-              <h3>1.1 Basic AI Concepts and Terminologies</h3>
-              <ul>
-                <li>
-                  <strong>Artificial Intelligence (AI):</strong>
-                  <p>
+            <div id="fundamentals" class="mt-6 space-y-6">
+              <h3 class="text-xl font-semibold text-gray-800">
+                1.1 Basic AI Concepts and Terminologies
+              </h3>
+
+              <ul class="space-y-6">
+                <li class="bg-gray-50 rounded-lg p-6">
+                  <h4 class="text-lg font-semibold text-gray-900 mb-3">
+                    Artificial Intelligence (AI)
+                  </h4>
+                  <p class="text-gray-600 mb-4">
                     AI refers to systems that can simulate human intelligence
                     and perform tasks that typically require human intelligence.
                     In the AWS ecosystem, AI is implemented through various
                     services that help businesses:
-
-            <div id="fundamentals" class="mt-6 space-y-6">
-              <h3 class="text-xl font-semibold text-gray-800">1.1 Basic AI Concepts and Terminologies</h3>
-              
-              <ul class="space-y-6">
-                <li class="bg-gray-50 rounded-lg p-6">
-                  <h4 class="text-lg font-semibold text-gray-900 mb-3">Artificial Intelligence (AI)</h4>
-                  <p class="text-gray-600 mb-4">
-                    AI refers to systems that can simulate human intelligence and perform tasks that typically require human intelligence. 
-                    In the AWS ecosystem, AI is implemented through various services that help businesses:
                   </p>
-                  <ul>
+                  <ul class="list-disc pl-5 space-y-2 text-gray-600">
                     <li>
                       Process and understand natural language (Amazon
                       Comprehend)
                     </li>
-                  <ul class="list-disc pl-5 space-y-2 text-gray-600">
-                    <li>Process and understand natural language (Amazon Comprehend)</li>
                     <li>Convert text to lifelike speech (Amazon Polly)</li>
                     <li>Build conversational interfaces (Amazon Lex)</li>
                     <li>Analyze images and videos (Amazon Rekognition)</li>
                   </ul>
-                  <p>
-                    Real-world example: A customer service chatbot that
-                    understands customer queries and provides relevant responses
-                    using Amazon Lex and Amazon Comprehend.
-                  </p>
+                  <div class="mt-4 p-4 bg-blue-50 rounded-md">
+                    <p class="text-blue-800">
+                      <span class="font-medium">Real-world example:</span> A
+                      customer service chatbot that understands customer queries
+                      and provides relevant responses using Amazon Lex and
+                      Amazon Comprehend.
+                    </p>
+                  </div>
                 </li>
-                <li>
-                  <strong>Machine Learning (ML):</strong>
-                  <p>
+                <li class="bg-gray-50 rounded-lg p-6">
+                  <h4 class="text-lg font-semibold text-gray-900 mb-3">
+                    Machine Learning (ML)
+                  </h4>
+                  <p class="text-gray-600 mb-4">
                     ML is a subset of AI that enables systems to learn and
                     improve from experience without explicit programming. AWS
                     provides comprehensive ML tools through Amazon SageMaker,
                     including:
                   </p>
-                  <ul>
+                  <ul class="list-disc pl-5 space-y-2 text-gray-600">
                     <li>Data labeling and preparation tools</li>
                     <li>Built-in algorithms and frameworks</li>
                     <li>Automated model training and tuning</li>
                     <li>One-click deployment and monitoring</li>
                   </ul>
-                  <p>
+                  <p class="text-gray-600 mt-4">
                     Example: Using SageMaker to build a product recommendation
                     system that learns from customer purchase patterns.
                   </p>
                 </li>
-                <li>
-                  <strong>Deep Learning:</strong>
-                  <p>
+                <li class="bg-gray-50 rounded-lg p-6">
+                  <h4 class="text-lg font-semibold text-gray-900 mb-3">
+                    Deep Learning
+                  </h4>
+                  <p class="text-gray-600 mb-4">
                     Deep Learning is a specialized form of ML using neural
                     networks with multiple layers. AWS supports deep learning
                     through:
                   </p>
-                  <ul>
+                  <ul class="list-disc pl-5 space-y-2 text-gray-600">
                     <li>Amazon SageMaker Deep Learning Containers</li>
                     <li>Deep Learning AMIs</li>
                     <li>
@@ -121,36 +118,40 @@
                     </li>
                     <li>GPU-optimized instances for training</li>
                   </ul>
-                  <p>
+                  <p class="text-gray-600 mt-4">
                     Example: Building an image classification system using a
                     pre-trained model from SageMaker's built-in algorithms.
                   </p>
                 </li>
-                <li>
-                  <strong>Neural Networks:</strong>
-                  <p>
+                <li class="bg-gray-50 rounded-lg p-6">
+                  <h4 class="text-lg font-semibold text-gray-900 mb-3">
+                    Neural Networks
+                  </h4>
+                  <p class="text-gray-600 mb-4">
                     Neural networks are computing systems inspired by biological
                     neural networks. In AWS:
                   </p>
-                  <ul>
+                  <ul class="list-disc pl-5 space-y-2 text-gray-600">
                     <li>Implemented through various SageMaker algorithms</li>
                     <li>
                       Supported by specialized infrastructure (AWS Inferentia)
                     </li>
                     <li>Optimized with AWS Neuron SDK</li>
                   </ul>
-                  <p>
+                  <p class="text-gray-600 mt-4">
                     Example: Using neural networks in AWS to process medical
                     images for disease detection.
                   </p>
                 </li>
-                <li>
-                  <strong>Training Data:</strong>
-                  <p>
+                <li class="bg-gray-50 rounded-lg p-6">
+                  <h4 class="text-lg font-semibold text-gray-900 mb-3">
+                    Training Data
+                  </h4>
+                  <p class="text-gray-600 mb-4">
                     Training data is crucial for ML models. AWS provides several
                     tools for data management:
                   </p>
-                  <ul>
+                  <ul class="list-disc pl-5 space-y-2 text-gray-600">
                     <li>Amazon S3 for data storage</li>
                     <li>Amazon SageMaker Ground Truth for data labeling</li>
                     <li>
@@ -158,112 +159,205 @@
                     </li>
                     <li>Amazon SageMaker Data Wrangler for data preparation</li>
                   </ul>
-                  <p>Best Practices:</p>
-                  <ul>
+                  <p class="text-gray-600 mt-4 font-medium">Best Practices:</p>
+                  <ul class="list-disc pl-5 space-y-2 text-gray-600">
                     <li>Ensure data quality and representation</li>
                     <li>Implement proper data governance</li>
                     <li>Use version control for datasets</li>
                   </ul>
                 </li>
-                <li>
-                  <strong>Model:</strong>
-                  <p>
+                <li class="bg-gray-50 rounded-lg p-6">
+                  <h4 class="text-lg font-semibold text-gray-900 mb-3">
+                    Model
+                  </h4>
+                  <p class="text-gray-600 mb-4">
                     Models are mathematical representations trained to make
                     predictions. AWS supports model management through:
                   </p>
-                  <ul>
+                  <ul class="list-disc pl-5 space-y-2 text-gray-600">
                     <li>SageMaker Model Registry for versioning</li>
                     <li>Model monitoring capabilities</li>
                     <li>A/B testing support</li>
                     <li>Model explainability tools</li>
                   </ul>
-                  <p>
+                  <p class="text-gray-600 mt-4">
                     Example: Deploying multiple model versions using SageMaker
                     endpoints for production testing.
                   </p>
                 </li>
               </ul>
 
-              <div class="quiz-section">
-                <h4>Knowledge Check - AI Fundamentals</h4>
-                <div class="question">
-                  <p>
-                    Which AWS service would you primarily use for building and
-                    training custom ML models?
-                  </p>
-                  <ul>
-                    <li>
-                      <input type="radio" name="q1_1" value="a" /> Amazon
-                      Rekognition
-                    </li>
-                    <li>
-                      <input type="radio" name="q1_1" value="b" /> Amazon
-                      SageMaker
-                    </li>
-                    <li>
-                      <input type="radio" name="q1_1" value="c" /> Amazon
-                      Comprehend
-                    </li>
-                    <li>
-                      <input type="radio" name="q1_1" value="d" /> Amazon Lex
-                    </li>
-                  </ul>
-                  <button onclick="checkAnswer('q1_1', 'b')">
-                    Check Answer
-                  </button>
-                  <p class="feedback" id="q1_1-feedback"></p>
-                </div>
+              <div class="mt-8 bg-white shadow rounded-lg p-6">
+                <h4 class="text-xl font-semibold text-gray-800 mb-6">
+                  Knowledge Check - AI Fundamentals
+                </h4>
+                <div class="space-y-6">
+                  <div class="bg-gray-50 rounded-lg p-6">
+                    <p class="text-gray-800 font-medium mb-4">
+                      Which AWS service would you primarily use for building and
+                      training custom ML models?
+                    </p>
+                    <form id="quiz-form-1">
+                      <ul class="space-y-3">
+                        <li class="flex items-center">
+                          <input
+                            type="radio"
+                            id="q1_1_a"
+                            name="q1_1"
+                            value="a"
+                            class="h-4 w-4 text-blue-600 focus:ring-blue-500"
+                          />
+                          <label for="q1_1_a" class="ml-3 text-gray-700"
+                            >Amazon Rekognition</label
+                          >
+                        </li>
+                        <li class="flex items-center">
+                          <input
+                            type="radio"
+                            id="q1_1_b"
+                            name="q1_1"
+                            value="b"
+                            class="h-4 w-4 text-blue-600 focus:ring-blue-500"
+                          />
+                          <label for="q1_1_b" class="ml-3 text-gray-700"
+                            >Amazon SageMaker</label
+                          >
+                        </li>
+                        <li class="flex items-center">
+                          <input
+                            type="radio"
+                            id="q1_1_c"
+                            name="q1_1"
+                            value="c"
+                            class="h-4 w-4 text-blue-600 focus:ring-blue-500"
+                          />
+                          <label for="q1_1_c" class="ml-3 text-gray-700"
+                            >Amazon Comprehend</label
+                          >
+                        </li>
+                        <li class="flex items-center">
+                          <input
+                            type="radio"
+                            id="q1_1_d"
+                            name="q1_1"
+                            value="d"
+                            class="h-4 w-4 text-blue-600 focus:ring-blue-500"
+                          />
+                          <label for="q1_1_d" class="ml-3 text-gray-700"
+                            >Amazon Lex</label
+                          >
+                        </li>
+                      </ul>
+                      <button
+                        type="button"
+                        onclick="checkAnswer('q1_1', 'b')"
+                        class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition duration-200"
+                      >
+                        Check Answer
+                      </button>
+                      <div id="q1_1-feedback" class="mt-3 hidden"></div>
+                    </form>
+                  </div>
 
-                <div class="question">
-                  <p>
-                    What is the primary purpose of Amazon SageMaker Ground
-                    Truth?
-                  </p>
-                  <ul>
-                    <li>
-                      <input type="radio" name="q1_2" value="a" /> Model
-                      deployment
-                    </li>
-                    <li>
-                      <input type="radio" name="q1_2" value="b" /> Data storage
-                    </li>
-                    <li>
-                      <input type="radio" name="q1_2" value="c" /> Data labeling
-                    </li>
-                    <li>
-                      <input type="radio" name="q1_2" value="d" /> Model
-                      training
-                    </li>
-                  </ul>
-                  <button onclick="checkAnswer('q1_2', 'c')">
-                    Check Answer
-                  </button>
-                  <p class="feedback" id="q1_2-feedback"></p>
+                  <div class="bg-gray-50 rounded-lg p-6">
+                    <p class="text-gray-800 font-medium mb-4">
+                      What is the primary purpose of Amazon SageMaker Ground
+                      Truth?
+                    </p>
+                    <form id="quiz-form-2">
+                      <ul class="space-y-3">
+                        <li class="flex items-center">
+                          <input
+                            type="radio"
+                            id="q1_2_a"
+                            name="q1_2"
+                            value="a"
+                            class="h-4 w-4 text-blue-600 focus:ring-blue-500"
+                          />
+                          <label for="q1_2_a" class="ml-3 text-gray-700"
+                            >Model deployment</label
+                          >
+                        </li>
+                        <li class="flex items-center">
+                          <input
+                            type="radio"
+                            id="q1_2_b"
+                            name="q1_2"
+                            value="b"
+                            class="h-4 w-4 text-blue-600 focus:ring-blue-500"
+                          />
+                          <label for="q1_2_b" class="ml-3 text-gray-700"
+                            >Data storage</label
+                          >
+                        </li>
+                        <li class="flex items-center">
+                          <input
+                            type="radio"
+                            id="q1_2_c"
+                            name="q1_2"
+                            value="c"
+                            class="h-4 w-4 text-blue-600 focus:ring-blue-500"
+                          />
+                          <label for="q1_2_c" class="ml-3 text-gray-700"
+                            >Data labeling</label
+                          >
+                        </li>
+                        <li class="flex items-center">
+                          <input
+                            type="radio"
+                            id="q1_2_d"
+                            name="q1_2"
+                            value="d"
+                            class="h-4 w-4 text-blue-600 focus:ring-blue-500"
+                          />
+                          <label for="q1_2_d" class="ml-3 text-gray-700"
+                            >Model training</label
+                          >
+                        </li>
+                      </ul>
+                      <button
+                        type="button"
+                        onclick="checkAnswer('q1_2', 'c')"
+                        class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition duration-200"
+                      >
+                        Check Answer
+                      </button>
+                      <div id="q1_2-feedback" class="mt-3 hidden"></div>
+                    </form>
+                  </div>
                 </div>
               </div>
 
-              <h3>1.2 Types of Machine Learning</h3>
-              <div class="learning-section">
-                <h4>Supervised Learning</h4>
-                <div class="content-block">
-                  <p>
+              <h3 class="text-xl font-semibold text-gray-800 mt-8">
+                1.2 Types of Machine Learning
+              </h3>
+              <div class="space-y-6">
+                <div class="bg-gray-50 rounded-lg p-6">
+                  <h4 class="text-lg font-semibold text-gray-900 mb-3">
+                    Supervised Learning
+                  </h4>
+                  <p class="text-gray-600 mb-4">
                     <strong>Definition:</strong> A type of machine learning
                     where models learn from labeled data to make predictions or
                     classifications.
                   </p>
 
-                  <h5>Key Characteristics:</h5>
-                  <ul>
+                  <h5 class="font-medium text-gray-800 mt-4 mb-2">
+                    Key Characteristics:
+                  </h5>
+                  <ul class="list-disc pl-5 space-y-2 text-gray-600">
                     <li>Requires paired input-output training data</li>
                     <li>Clear feedback on prediction accuracy</li>
                     <li>Suitable for prediction and classification tasks</li>
                   </ul>
 
-                  <h5>AWS Implementation:</h5>
-                  <ul>
+                  <h5 class="font-medium text-gray-800 mt-4 mb-2">
+                    AWS Implementation:
+                  </h5>
+                  <ul class="space-y-3 text-gray-600">
                     <li>
                       <strong>Amazon SageMaker Built-in Algorithms:</strong>
-                      <ul>
+                      <ul class="list-disc pl-5 space-y-1 mt-1">
                         <li>XGBoost - for classification and regression</li>
                         <li>Linear Learner - for linear/logistic regression</li>
                         <li>Image Classification - CNN-based deep learning</li>
@@ -271,7 +365,7 @@
                     </li>
                     <li>
                       <strong>AWS Services:</strong>
-                      <ul>
+                      <ul class="list-disc pl-5 space-y-1 mt-1">
                         <li>Amazon Forecast - for time-series prediction</li>
                         <li>Amazon Rekognition - for image/video analysis</li>
                         <li>Amazon Comprehend - for text classification</li>
@@ -279,17 +373,15 @@
                     </li>
                   </ul>
 
-                  <div class="practical-example">
-                    <h5>Practical Example:</h5>
-                    <p>
+                  <div class="mt-4 p-4 bg-blue-50 rounded-md">
+                    <h5 class="font-medium text-blue-800 mb-2">
+                      Practical Example:
+                    </h5>
+                    <p class="text-blue-800 mb-2">
                       Using Amazon SageMaker to build a customer churn
                       prediction model:
-                  <div class="mt-4 p-4 bg-blue-50 rounded-md">
-                    <p class="text-blue-800">
-                      <span class="font-medium">Real-world example:</span> A customer service chatbot that understands customer queries 
-                      and provides relevant responses using Amazon Lex and Amazon Comprehend.
                     </p>
-                    <ol>
+                    <ol class="list-decimal pl-5 space-y-1 text-blue-800">
                       <li>
                         Collect historical customer data with churn labels
                       </li>
@@ -301,29 +393,32 @@
                     </ol>
                   </div>
                 </div>
-                </li>
 
-                <h4>Unsupervised Learning</h4>
-                <div class="content-block">
-                  <p>
+                <div class="bg-gray-50 rounded-lg p-6">
+                  <h4 class="text-lg font-semibold text-gray-900 mb-3">
+                    Unsupervised Learning
+                  </h4>
+                  <p class="text-gray-600 mb-4">
                     <strong>Definition:</strong> Learning approach where models
                     identify patterns in unlabeled data.
                   </p>
-                <!-- Similar styling for other sections -->
-              </ul>
 
-                  <h5>Key Characteristics:</h5>
-                  <ul>
+                  <h5 class="font-medium text-gray-800 mt-4 mb-2">
+                    Key Characteristics:
+                  </h5>
+                  <ul class="list-disc pl-5 space-y-2 text-gray-600">
                     <li>No labeled training data required</li>
                     <li>Discovers hidden patterns and structures</li>
                     <li>Often used for exploratory data analysis</li>
                   </ul>
 
-                  <h5>AWS Implementation:</h5>
-                  <ul>
+                  <h5 class="font-medium text-gray-800 mt-4 mb-2">
+                    AWS Implementation:
+                  </h5>
+                  <ul class="space-y-3 text-gray-600">
                     <li>
                       <strong>Amazon SageMaker Algorithms:</strong>
-                      <ul>
+                      <ul class="list-disc pl-5 space-y-1 mt-1">
                         <li>K-means - for clustering</li>
                         <li>
                           Principal Component Analysis (PCA) - for
@@ -334,7 +429,7 @@
                     </li>
                     <li>
                       <strong>AWS Services:</strong>
-                      <ul>
+                      <ul class="list-disc pl-5 space-y-1 mt-1">
                         <li>Amazon Personalize - for recommendation systems</li>
                         <li>Amazon Macie - for sensitive data discovery</li>
                         <li>AWS CloudWatch Anomaly Detection</li>
@@ -342,10 +437,14 @@
                     </li>
                   </ul>
 
-                  <div class="practical-example">
-                    <h5>Practical Example:</h5>
-                    <p>Customer Segmentation using Amazon SageMaker:</p>
-                    <ol>
+                  <div class="mt-4 p-4 bg-blue-50 rounded-md">
+                    <h5 class="font-medium text-blue-800 mb-2">
+                      Practical Example:
+                    </h5>
+                    <p class="text-blue-800 mb-2">
+                      Customer Segmentation using Amazon SageMaker:
+                    </p>
+                    <ol class="list-decimal pl-5 space-y-1 text-blue-800">
                       <li>Collect customer behavior data</li>
                       <li>Use K-means clustering to identify segments</li>
                       <li>Visualize results using Amazon QuickSight</li>
@@ -354,25 +453,31 @@
                   </div>
                 </div>
 
-                <h4>Reinforcement Learning</h4>
-                <div class="content-block">
-                  <p>
+                <div class="bg-gray-50 rounded-lg p-6">
+                  <h4 class="text-lg font-semibold text-gray-900 mb-3">
+                    Reinforcement Learning
+                  </h4>
+                  <p class="text-gray-600 mb-4">
                     <strong>Definition:</strong> Learning approach where agents
                     learn optimal actions through trial and error.
                   </p>
 
-                  <h5>Key Characteristics:</h5>
-                  <ul>
+                  <h5 class="font-medium text-gray-800 mt-4 mb-2">
+                    Key Characteristics:
+                  </h5>
+                  <ul class="list-disc pl-5 space-y-2 text-gray-600">
                     <li>Learns from environment interactions</li>
                     <li>Uses reward/penalty feedback</li>
                     <li>Balances exploration and exploitation</li>
                   </ul>
 
-                  <h5>AWS Implementation:</h5>
-                  <ul>
+                  <h5 class="font-medium text-gray-800 mt-4 mb-2">
+                    AWS Implementation:
+                  </h5>
+                  <ul class="space-y-3 text-gray-600">
                     <li>
                       <strong>Amazon SageMaker RL:</strong>
-                      <ul>
+                      <ul class="list-disc pl-5 space-y-1 mt-1">
                         <li>Managed RL training environments</li>
                         <li>Integration with AWS RoboMaker</li>
                         <li>Support for popular RL frameworks</li>
@@ -380,7 +485,7 @@
                     </li>
                     <li>
                       <strong>Key Features:</strong>
-                      <ul>
+                      <ul class="list-disc pl-5 space-y-1 mt-1">
                         <li>Distributed training capability</li>
                         <li>Built-in RL algorithms</li>
                         <li>Custom environment support</li>
@@ -388,10 +493,14 @@
                     </li>
                   </ul>
 
-                  <div class="practical-example">
-                    <h5>Practical Example:</h5>
-                    <p>Industrial Process Optimization:</p>
-                    <ol>
+                  <div class="mt-4 p-4 bg-blue-50 rounded-md">
+                    <h5 class="font-medium text-blue-800 mb-2">
+                      Practical Example:
+                    </h5>
+                    <p class="text-blue-800 mb-2">
+                      Industrial Process Optimization:
+                    </p>
+                    <ol class="list-decimal pl-5 space-y-1 text-blue-800">
                       <li>Define optimization objectives</li>
                       <li>Create simulation environment</li>
                       <li>Train RL agent using SageMaker</li>
@@ -400,111 +509,186 @@
                   </div>
                 </div>
 
-                <div class="quiz-section">
-                  <h4>Knowledge Check - Types of Machine Learning</h4>
+                <div class="mt-8 bg-white shadow rounded-lg p-6">
+                  <h4 class="text-xl font-semibold text-gray-800 mb-6">
+                    Knowledge Check - Types of Machine Learning
+                  </h4>
+                  <div class="space-y-6">
+                    <div class="bg-gray-50 rounded-lg p-6">
+                      <p class="text-gray-800 font-medium mb-4">
+                        Which type of machine learning would be most appropriate
+                        for identifying fraudulent transactions when you have
+                        historical data labeled as fraudulent or legitimate?
+                      </p>
+                      <form id="quiz-form-3">
+                        <ul class="space-y-3">
+                          <li class="flex items-center">
+                            <input
+                              type="radio"
+                              id="q2_1_a"
+                              name="q2_1"
+                              value="a"
+                              class="h-4 w-4 text-blue-600 focus:ring-blue-500"
+                            />
+                            <label for="q2_1_a" class="ml-3 text-gray-700"
+                              >Unsupervised Learning</label
+                            >
+                          </li>
+                          <li class="flex items-center">
+                            <input
+                              type="radio"
+                              id="q2_1_b"
+                              name="q2_1"
+                              value="b"
+                              class="h-4 w-4 text-blue-600 focus:ring-blue-500"
+                            />
+                            <label for="q2_1_b" class="ml-3 text-gray-700"
+                              >Supervised Learning</label
+                            >
+                          </li>
+                          <li class="flex items-center">
+                            <input
+                              type="radio"
+                              id="q2_1_c"
+                              name="q2_1"
+                              value="c"
+                              class="h-4 w-4 text-blue-600 focus:ring-blue-500"
+                            />
+                            <label for="q2_1_c" class="ml-3 text-gray-700"
+                              >Reinforcement Learning</label
+                            >
+                          </li>
+                        </ul>
+                        <button
+                          type="button"
+                          onclick="checkAnswer('q2_1', 'b')"
+                          class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition duration-200"
+                        >
+                          Check Answer
+                        </button>
+                        <div id="q2_1-feedback" class="mt-3 hidden"></div>
+                      </form>
+                    </div>
 
-                  <div class="question">
-                    <p>
-                      Which type of machine learning would be most appropriate
-                      for identifying fraudulent transactions when you have
-                      historical data labeled as fraudulent or legitimate?
-              <div class="mt-8">
-                <h4 class="text-xl font-semibold text-gray-800 mb-6">Knowledge Check - AI Fundamentals</h4>
-                <div class="space-y-6">
-                  <div class="bg-white shadow rounded-lg p-6">
-                    <p class="text-gray-800 font-medium mb-4">
-                      Which AWS service would you primarily use for building and training custom ML models?
-                    </p>
-                    <ul>
-                      <li>
-                        <input type="radio" name="q2_1" value="a" />
-                        Unsupervised Learning
-                    <ul class="space-y-3">
-                      <li class="flex items-center">
-                        <input type="radio" name="q1_1" value="a" class="h-4 w-4 text-blue-600 focus:ring-blue-500" />
-                        <label class="ml-3 text-gray-700">Amazon Rekognition</label>
-                      </li>
-                      <li>
-                        <input type="radio" name="q2_1" value="b" /> Supervised
-                        Learning
-                      <li class="flex items-center">
-                        <input type="radio" name="q1_1" value="b" class="h-4 w-4 text-blue-600 focus:ring-blue-500" />
-                        <label class="ml-3 text-gray-700">Amazon SageMaker</label>
-                      </li>
-                      <li>
-                        <input type="radio" name="q2_1" value="c" />
-                        Reinforcement Learning
-                      <li class="flex items-center">
-                        <input type="radio" name="q1_1" value="c" class="h-4 w-4 text-blue-600 focus:ring-blue-500" />
-                        <label class="ml-3 text-gray-700">Amazon Comprehend</label>
-                      </li>
-                    </ul>
-                    <button onclick="checkAnswer('q2_1', 'b')">
-                      Check Answer
-                    </button>
-                    <p class="feedback" id="q2_1-feedback"></p>
-                  </div>
+                    <div class="bg-gray-50 rounded-lg p-6">
+                      <p class="text-gray-800 font-medium mb-4">
+                        Which AWS service would you use for customer
+                        segmentation when you don't have predefined customer
+                        groups?
+                      </p>
+                      <form id="quiz-form-4">
+                        <ul class="space-y-3">
+                          <li class="flex items-center">
+                            <input
+                              type="radio"
+                              id="q2_2_a"
+                              name="q2_2"
+                              value="a"
+                              class="h-4 w-4 text-blue-600 focus:ring-blue-500"
+                            />
+                            <label for="q2_2_a" class="ml-3 text-gray-700"
+                              >Amazon SageMaker K-means</label
+                            >
+                          </li>
+                          <li class="flex items-center">
+                            <input
+                              type="radio"
+                              id="q2_2_b"
+                              name="q2_2"
+                              value="b"
+                              class="h-4 w-4 text-blue-600 focus:ring-blue-500"
+                            />
+                            <label for="q2_2_b" class="ml-3 text-gray-700"
+                              >Amazon Forecast</label
+                            >
+                          </li>
+                          <li class="flex items-center">
+                            <input
+                              type="radio"
+                              id="q2_2_c"
+                              name="q2_2"
+                              value="c"
+                              class="h-4 w-4 text-blue-600 focus:ring-blue-500"
+                            />
+                            <label for="q2_2_c" class="ml-3 text-gray-700"
+                              >Amazon Comprehend</label
+                            >
+                          </li>
+                        </ul>
+                        <button
+                          type="button"
+                          onclick="checkAnswer('q2_2', 'a')"
+                          class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition duration-200"
+                        >
+                          Check Answer
+                        </button>
+                        <div id="q2_2-feedback" class="mt-3 hidden"></div>
+                      </form>
+                    </div>
 
-                  <div class="question">
-                    <p>
-                      Which AWS service would you use for customer segmentation
-                      when you don't have predefined customer groups?
-                    </p>
-                    <ul>
-                      <li>
-                        <input type="radio" name="q2_2" value="a" /> Amazon
-                        SageMaker K-means
-                      <li class="flex items-center">
-                        <input type="radio" name="q1_1" value="d" class="h-4 w-4 text-blue-600 focus:ring-blue-500" />
-                        <label class="ml-3 text-gray-700">Amazon Lex</label>
-                      </li>
-                      <li>
-                        <input type="radio" name="q2_2" value="b" /> Amazon
-                        Forecast
-                      </li>
-                      <li>
-                        <input type="radio" name="q2_2" value="c" /> Amazon
-                        Comprehend
-                      </li>
-                    </ul>
-                    <button onclick="checkAnswer('q2_2', 'a')">
-                    <button onclick="checkAnswer('q1_1', 'b')" class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition duration-200">
-                      Check Answer
-                    </button>
-                    <p class="feedback" id="q2_2-feedback"></p>
-                    <p class="feedback mt-3 text-gray-600" id="q1_1-feedback"></p>
-                  </div>
-
-                  <div class="question">
-                    <p>
-                      Which type of learning would be most appropriate for
-                      training a robot to navigate a warehouse?
-                    </p>
-                    <ul>
-                      <li>
-                        <input type="radio" name="q2_3" value="a" /> Supervised
-                        Learning
-                      </li>
-                      <li>
-                        <input type="radio" name="q2_3" value="b" />
-                        Unsupervised Learning
-                      </li>
-                      <li>
-                        <input type="radio" name="q2_3" value="c" />
-                        Reinforcement Learning
-                      </li>
-                    </ul>
-                    <button onclick="checkAnswer('q2_3', 'c')">
-                      Check Answer
-                    </button>
-                    <p class="feedback" id="q2_3-feedback"></p>
+                    <div class="bg-gray-50 rounded-lg p-6">
+                      <p class="text-gray-800 font-medium mb-4">
+                        Which type of learning would be most appropriate for
+                        training a robot to navigate a warehouse?
+                      </p>
+                      <form id="quiz-form-5">
+                        <ul class="space-y-3">
+                          <li class="flex items-center">
+                            <input
+                              type="radio"
+                              id="q2_3_a"
+                              name="q2_3"
+                              value="a"
+                              class="h-4 w-4 text-blue-600 focus:ring-blue-500"
+                            />
+                            <label for="q2_3_a" class="ml-3 text-gray-700"
+                              >Supervised Learning</label
+                            >
+                          </li>
+                          <li class="flex items-center">
+                            <input
+                              type="radio"
+                              id="q2_3_b"
+                              name="q2_3"
+                              value="b"
+                              class="h-4 w-4 text-blue-600 focus:ring-blue-500"
+                            />
+                            <label for="q2_3_b" class="ml-3 text-gray-700"
+                              >Unsupervised Learning</label
+                            >
+                          </li>
+                          <li class="flex items-center">
+                            <input
+                              type="radio"
+                              id="q2_3_c"
+                              name="q2_3"
+                              value="c"
+                              class="h-4 w-4 text-blue-600 focus:ring-blue-500"
+                            />
+                            <label for="q2_3_c" class="ml-3 text-gray-700"
+                              >Reinforcement Learning</label
+                            >
+                          </li>
+                        </ul>
+                        <button
+                          type="button"
+                          onclick="checkAnswer('q2_3', 'c')"
+                          class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition duration-200"
+                        >
+                          Check Answer
+                        </button>
+                        <div id="q2_3-feedback" class="mt-3 hidden"></div>
+                      </form>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <h3>1.3 ML Development Lifecycle</h3>
-              <div class="lifecycle-section">
-                <p class="intro">
+              <h3 class="text-xl font-semibold text-gray-800 mt-8">
+                1.3 ML Development Lifecycle
+              </h3>
+              <div class="bg-gray-50 rounded-lg p-6">
+                <p class="text-gray-600 mb-6">
                   The ML development lifecycle is a systematic approach to
                   building and deploying machine learning solutions in AWS. Each
                   phase requires careful planning, appropriate tools, and best
@@ -513,1933 +697,261 @@
                   stage of the lifecycle, from problem definition to model
                   deployment and monitoring.
                 </p>
-                <div class="lifecycle-steps">
-                  <li class="lifecycle-step">
-                    <div class="step-content">
-                      <h4>1. Problem Definition Phase</h4>
-                      <p>
-                        The foundation of any successful ML project begins with
-                        a clear understanding of the business problem and
-                        determining if ML is the right approach.
-                      </p>
-
-                      <div class="key-components">
-                        <h5>Essential Components:</h5>
-                        <ul>
-                          <li>
-                            <strong>Business Understanding</strong>
-                            <ul>
-                              <li>
-                                Define clear, measurable business objectives
-                              </li>
-                              <li>
-                                Identify key stakeholders and their requirements
-                              </li>
-                              <li>Establish success metrics and KPIs</li>
-                              <li>Document constraints and limitations</li>
-                            </ul>
-                          </li>
-                          <li>
-                            <strong>ML Feasibility Assessment</strong>
-                            <ul>
-                              <li>Evaluate data availability and quality</li>
-                              <li>Assess technical infrastructure needs</li>
-                              <li>Consider alternative solutions</li>
-                              <li>
-                                Identify potential risks and mitigation
-                                strategies
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </div>
-
-                      <div class="aws-implementation">
-                        <h5>AWS Tools and Services:</h5>
-                        <ul>
-                          <li>
-                            <strong>Amazon SageMaker Canvas</strong>
-                            <ul>
-                              <li>No-code solution exploration</li>
-                              <li>Quick prototyping and validation</li>
-                              <li>Visual data analysis</li>
-                            </ul>
-                          </li>
-                          <li>
-                            <strong>AWS Solutions Library</strong>
-                            <ul>
-                              <li>Pre-built ML solution architectures</li>
-                              <li>Implementation best practices</li>
-                              <li>Cost estimation templates</li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </div>
-
-                      <div class="case-study">
-                        <h5>Case Study: Retail Demand Forecasting</h5>
-                        <div class="example-details">
-                          <p>
-                            <strong>Business Context:</strong> A retail chain
-                            wants to optimize inventory management
-                          </p>
-                          <ol>
-                            <li>
-                              Problem Statement:
-                              <ul>
-                                <li>Current inventory accuracy: 75%</li>
-                                <li>Stockout rate: 15%</li>
-                                <li>Excess inventory cost: $2M annually</li>
-                              </ul>
-                            </li>
-                            <li>
-                              Success Criteria:
-                              <ul>
-                                <li>Improve forecast accuracy to 90%</li>
-                                <li>Reduce stockouts by 50%</li>
-                                <li>Decrease excess inventory by 30%</li>
-                              </ul>
-                            </li>
-                            <li>
-                              ML Approach:
-                              <ul>
-                                <li>
-                                  Time series forecasting using Amazon Forecast
-                                </li>
-                                <li>
-                                  Integration with existing inventory systems
-                                </li>
-                                <li>
-                                  Real-time demand prediction capabilities
-                                </li>
-                              </ul>
-                            </li>
-                          </ol>
-                        </div>
-                      </div>
-
-                      <div class="best-practices">
-                        <h5>Best Practices:</h5>
-                        <ul>
-                          <li>
-                            Follow AWS Well-Architected Framework - ML Lens
-                          </li>
-                          <li>Use SMART criteria for objectives</li>
-                          <li>Document assumptions and constraints</li>
-                          <li>
-                            Involve all stakeholders in problem definition
-                          </li>
-                        </ul>
-                      </div>
-
-                      <div class="knowledge-check">
-                        <h5>Quick Knowledge Check:</h5>
-                        <div class="question">
-                          <p>
-                            Which is NOT a key consideration during the problem
-                            definition phase?
-                          </p>
-                          <ul>
-                            <li>
-                              <input type="radio" name="q3_1" value="a" />
-                              Defining business objectives
-                            </li>
-                            <li>
-                              <input type="radio" name="q3_1" value="b" /> Model
-                              architecture selection
-                            </li>
-                            <li>
-                              <input type="radio" name="q3_1" value="c" />
-                              Success metrics identification
-                            </li>
-                            <li>
-                              <input type="radio" name="q3_1" value="d" /> Data
-                              availability assessment
-                            </li>
-                          </ul>
-                          <button onclick="checkAnswer('q3_1', 'b')">
-                            Check Answer
-                          </button>
-                          <p class="feedback" id="q3_1-feedback"></p>
-                        </div>
-                      </div>
-
-                      <div class="resources">
-                        <h5>Additional Resources:</h5>
-                        <ul>
-                          <li>
-                            <a
-                              href="https://docs.aws.amazon.com/wellarchitected/latest/machine-learning-lens/welcome.html"
-                              >AWS Well-Architected ML Lens</a
-                            >
-                          </li>
-                          <li>
-                            <a href="https://aws.amazon.com/sagemaker/canvas/"
-                              >Amazon SageMaker Canvas Documentation</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="https://aws.amazon.com/solutions/machine-learning/"
-                              >AWS ML Solutions Library</a
-                            >
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="lifecycle-step">
-                    <div class="step-content">
-                      <h4>2. Data Collection and Preparation</h4>
-                      <p>
-                        A critical phase that focuses on gathering, processing,
-                        and transforming data into a format suitable for ML
-                        model training. The quality of your data directly
-                        impacts model performance.
-                      </p>
-
-                      <div class="key-components">
-                        <h5>Essential Components:</h5>
-                        <ul>
-                          <li>
-                            <strong>Data Collection</strong>
-                            <ul>
-                              <li>Identify data sources and requirements</li>
-                              <li>Establish data ingestion pipelines</li>
-                              <li>Implement data versioning</li>
-                              <li>Set up data cataloging</li>
-                            </ul>
-                          </li>
-                          <li>
-                            <strong>Data Preparation</strong>
-                            <ul>
-                              <li>Clean and validate data</li>
-                              <li>Handle missing values and outliers</li>
-                              <li>Normalize and scale features</li>
-                              <li>Convert data types appropriately</li>
-                            </ul>
-                          </li>
-                          <li>
-                            <strong>Feature Engineering</strong>
-                            <ul>
-                              <li>Create relevant features</li>
-                              <li>Transform variables</li>
-                              <li>Reduce dimensionality</li>
-                              <li>Select important features</li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </div>
-
-                      <div class="aws-implementation">
-                        <h5>AWS Tools and Services:</h5>
-                        <ul>
-                          <li>
-                            <strong>Storage and Collection</strong>
-                            <ul>
-                              <li>Amazon S3 - scalable object storage</li>
-                              <li>Amazon RDS - relational databases</li>
-                              <li>Amazon DynamoDB - NoSQL database</li>
-                              <li>AWS Lake Formation - data lake service</li>
-                            </ul>
-                          </li>
-                          <li>
-                            <strong>Data Processing</strong>
-                            <ul>
-                              <li>
-                                Amazon SageMaker Data Wrangler - visual data
-                                preparation
-                              </li>
-                              <li>AWS Glue - ETL service</li>
-                              <li>Amazon EMR - big data processing</li>
-                              <li>Amazon Athena - SQL queries on S3</li>
-                            </ul>
-                          </li>
-                          <li>
-                            <strong>Feature Management</strong>
-                            <ul>
-                              <li>
-                                Amazon SageMaker Feature Store - feature
-                                repository
-                              </li>
-                              <li>
-                                Amazon SageMaker Processing - distributed data
-                                processing
-                              </li>
-                              <li>Amazon SageMaker Clarify - bias detection</li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </div>
-
-                      <div class="case-study">
-                        <h5>Case Study: Customer Churn Analysis</h5>
-                        <div class="example-details">
-                          <p>
-                            <strong>Scenario:</strong> Preparing data for a
-                            customer churn prediction model
-                          </p>
-                          <ol>
-                            <li>
-                              Data Collection:
-                              <ul>
-                                <li>Customer demographics from RDS</li>
-                                <li>Transaction history from DynamoDB</li>
-                                <li>Customer service logs from S3</li>
-                                <li>
-                                  Website interaction data from CloudWatch
-                                </li>
-                              </ul>
-                            </li>
-                            <li>
-                              Data Preparation Steps:
-                              <ul>
-                                <li>
-                                  Use Data Wrangler for initial exploration
-                                </li>
-                                <li>
-                                  Clean missing values with SageMaker Processing
-                                </li>
-                                <li>Create feature groups in Feature Store</li>
-                                <li>Check for bias using SageMaker Clarify</li>
-                              </ul>
-                            </li>
-                          </ol>
-                        </div>
-                      </div>
-
-                      <div class="best-practices">
-                        <h5>Best Practices:</h5>
-                        <ul>
-                          <li>Implement data validation checks</li>
-                          <li>Use automated data pipelines</li>
-                          <li>Version control your datasets</li>
-                          <li>Document data transformations</li>
-                          <li>Monitor data quality metrics</li>
-                          <li>Implement proper security controls</li>
-                        </ul>
-                      </div>
-
-                      <div class="knowledge-check">
-                        <h5>Quick Knowledge Check:</h5>
-                        <div class="question">
-                          <p>
-                            Which AWS service would you use for visual data
-                            preparation and transformation?
-                          </p>
-                          <ul>
-                            <li>
-                              <input type="radio" name="q3_2" value="a" />
-                              Amazon S3
-                            </li>
-                            <li>
-                              <input type="radio" name="q3_2" value="b" />
-                              Amazon SageMaker Data Wrangler
-                            </li>
-                            <li>
-                              <input type="radio" name="q3_2" value="c" />
-                              Amazon RDS
-                            </li>
-                            <li>
-                              <input type="radio" name="q3_2" value="d" />
-                              Amazon EMR
-                            </li>
-                          </ul>
-                          <button onclick="checkAnswer('q3_2', 'b')">
-                            Check Answer
-                          </button>
-                          <p class="feedback" id="q3_2-feedback"></p>
-                        </div>
-
-                        <div class="question">
-                          <p>
-                            What is the primary purpose of Amazon SageMaker
-                            Feature Store?
-                          </p>
-                          <ul>
-                            <li>
-                              <input type="radio" name="q3_3" value="a" /> Store
-                              raw data
-                            </li>
-                            <li>
-                              <input type="radio" name="q3_3" value="b" />
-                              Process streaming data
-                            </li>
-                            <li>
-                              <input type="radio" name="q3_3" value="c" />
-                              Manage and reuse features
-                            </li>
-                            <li>
-                              <input type="radio" name="q3_3" value="d" /> Train
-                              ML models
-                            </li>
-                          </ul>
-                          <button onclick="checkAnswer('q3_3', 'c')">
-                            Check Answer
-                          </button>
-                          <p class="feedback" id="q3_3-feedback"></p>
-                        </div>
-                      </div>
-
-                      <div class="resources">
-                        <h5>Additional Resources:</h5>
-                        <ul>
-                          <li>
-                            <a
-                              href="https://docs.aws.amazon.com/sagemaker/latest/dg/data-wrangler.html"
-                              >SageMaker Data Wrangler Documentation</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="https://docs.aws.amazon.com/sagemaker/latest/dg/feature-store.html"
-                              >SageMaker Feature Store Guide</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="https://aws.amazon.com/blogs/machine-learning/category/artificial-intelligence/data-preparation/"
-                              >AWS ML Blog - Data Preparation</a
-                            >
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="lifecycle-step">
-                    <div class="step-content">
-                      <h4>3. Model Development</h4>
-                      <p>
-                        The phase where you select, train, and optimize machine
-                        learning models to solve your business problem. AWS
-                        provides comprehensive tools and services to streamline
-                        the model development process.
-                      </p>
-
-                      <div class="key-components">
-                        <h5>Essential Components:</h5>
-                        <ul>
-                          <li>
-                            <strong>Algorithm Selection</strong>
-                            <ul>
-                              <li>Choose from built-in algorithms</li>
-                              <li>Bring your own algorithms</li>
-                              <li>Evaluate algorithm requirements</li>
-                              <li>Consider model interpretability needs</li>
-                            </ul>
-                          </li>
-                          <li>
-                            <strong>Model Training</strong>
-                            <ul>
-                              <li>Configure training jobs</li>
-                              <li>Manage compute resources</li>
-                              <li>Handle distributed training</li>
-                              <li>Implement cross-validation</li>
-                            </ul>
-                          </li>
-                          <li>
-                            <strong>Hyperparameter Optimization</strong>
-                            <ul>
-                              <li>Define parameter ranges</li>
-                              <li>Select optimization strategy</li>
-                              <li>Monitor tuning progress</li>
-                              <li>Evaluate optimization results</li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </div>
-
-                      <div class="aws-implementation">
-                        <h5>AWS Tools and Services:</h5>
-                        <ul>
-                          <li>
-                            <strong>Amazon SageMaker Training:</strong>
-                            <ul>
-                              <li>
-                                Built-in Algorithms
-                                <ul>
-                                  <li>XGBoost - for structured data</li>
-                                  <li>DeepAR - for forecasting</li>
-                                  <li>
-                                    Object Detection - for computer vision
-                                  </li>
-                                </ul>
-                              </li>
-                              <li>
-                                Training Infrastructure
-                                <ul>
-                                  <li>Managed Spot Training</li>
-                                  <li>Distributed Training</li>
-                                  <li>Custom Training Containers</li>
-                                </ul>
-                              </li>
-                            </ul>
-                          </li>
-                          <li>
-                            <strong>Experiment Management:</strong>
-                            <ul>
-                              <li>
-                                SageMaker Experiments - tracking and organizing
-                              </li>
-                              <li>SageMaker Debugger - real-time debugging</li>
-                              <li>SageMaker Model Monitor - drift detection</li>
-                            </ul>
-                          </li>
-                          <li>
-                            <strong>Hyperparameter Tuning:</strong>
-                            <ul>
-                              <li>Automatic Model Tuning</li>
-                              <li>Multi-objective optimization</li>
-                              <li>Early stopping capabilities</li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </div>
-
-                      <div class="case-study">
-                        <h5>Case Study: Credit Card Fraud Detection</h5>
-                        <div class="example-details">
-                          <p>
-                            <strong>Scenario:</strong> Building a fraud
-                            detection model for a financial institution
-                          </p>
-                          <ol>
-                            <li>
-                              Model Development Strategy:
-                              <ul>
-                                <li>Algorithm: XGBoost (built-in)</li>
-                                <li>Training Data: 1M transactions</li>
-                                <li>Compute: ml.p3.2xlarge instance</li>
-                                <li>Framework: SageMaker SDK</li>
-                              </ul>
-                            </li>
-                            <li>
-                              Implementation Steps:
-                              <ul>
-                                <li>
-                                  Configure training job with class weights
-                                </li>
-                                <li>
-                                  Enable managed spot training for cost savings
-                                </li>
-                                <li>
-                                  Implement cross-validation using processing
-                                  jobs
-                                </li>
-                                <li>
-                                  Track experiments with SageMaker Experiments
-                                </li>
-                              </ul>
-                            </li>
-                            <li>
-                              Hyperparameter Tuning:
-                              <ul>
-                                <li>Optimize learning rate and tree depth</li>
-                                <li>Use Bayesian optimization strategy</li>
-                                <li>Run 20 training jobs in parallel</li>
-                                <li>Enable early stopping</li>
-                              </ul>
-                            </li>
-                          </ol>
-                        </div>
-                      </div>
-
-                      <div class="best-practices">
-                        <h5>Best Practices:</h5>
-                        <ul>
-                          <li>Start with simple models and iterate</li>
-                          <li>Use cross-validation for robust evaluation</li>
-                          <li>Implement experiment tracking</li>
-                          <li>Monitor training metrics in real-time</li>
-                          <li>Document model development decisions</li>
-                          <li>Consider compute costs and optimization</li>
-                        </ul>
-                      </div>
-
-                      <div class="knowledge-check">
-                        <h5>Quick Knowledge Check:</h5>
-                        <div class="question">
-                          <p>
-                            Which SageMaker feature helps you automatically find
-                            the best hyperparameters for your model?
-                          </p>
-                          <ul>
-                            <li>
-                              <input type="radio" name="q3_4" value="a" />
-                              SageMaker Debugger
-                            </li>
-                            <li>
-                              <input type="radio" name="q3_4" value="b" />
-                              Automatic Model Tuning
-                            </li>
-                            <li>
-                              <input type="radio" name="q3_4" value="c" />
-                              SageMaker Experiments
-                            </li>
-                            <li>
-                              <input type="radio" name="q3_4" value="d" /> Model
-                              Monitor
-                            </li>
-                          </ul>
-                          <button onclick="checkAnswer('q3_4', 'b')">
-                            Check Answer
-                          </button>
-                          <p class="feedback" id="q3_4-feedback"></p>
-                        </div>
-
-                        <div class="question">
-                          <p>
-                            Which AWS feature can help reduce training costs
-                            while using GPU instances?
-                          </p>
-                          <ul>
-                            <li>
-                              <input type="radio" name="q3_5" value="a" />
-                              SageMaker Debugger
-                            </li>
-                            <li>
-                              <input type="radio" name="q3_5" value="b" />
-                              Elastic Inference
-                            </li>
-                            <li>
-                              <input type="radio" name="q3_5" value="c" />
-                              Managed Spot Training
-                            </li>
-                            <li>
-                              <input type="radio" name="q3_5" value="d" />
-                              AutoML
-                            </li>
-                          </ul>
-                          <button onclick="checkAnswer('q3_5', 'c')">
-                            Check Answer
-                          </button>
-                          <p class="feedback" id="q3_5-feedback"></p>
-                        </div>
-                      </div>
-
-                      <div class="resources">
-                        <h5>Additional Resources:</h5>
-                        <ul>
-                          <li>
-                            <a
-                              href="https://docs.aws.amazon.com/sagemaker/latest/dg/algos.html"
-                              >SageMaker Built-in Algorithms</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="https://docs.aws.amazon.com/sagemaker/latest/dg/automatic-model-tuning.html"
-                              >SageMaker Automatic Model Tuning</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="https://aws.amazon.com/blogs/machine-learning/tag/training/"
-                              >AWS ML Blog - Model Training</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="https://docs.aws.amazon.com/sagemaker/latest/dg/experiments.html"
-                              >SageMaker Experiments Documentation</a
-                            >
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="lifecycle-step">
-                    <div class="step-content">
-                      <h4>4. Model Evaluation</h4>
-                      <p>
-                        A crucial phase where you assess model performance,
-                        validate results against business requirements, and
-                        ensure the model meets quality standards before
-                        deployment.
-                      </p>
-
-                      <div class="key-components">
-                        <h5>Essential Components:</h5>
-                        <ul>
-                          <li>
-                            <strong>Performance Evaluation</strong>
-                            <ul>
-                              <li>
-                                Calculate key metrics (accuracy, precision,
-                                recall, etc.)
-                              </li>
-                              <li>Perform cross-validation</li>
-                              <li>Analyze confusion matrices</li>
-                              <li>Assess ROC curves and AUC</li>
-                            </ul>
-                          </li>
-                          <li>
-                            <strong>Business Validation</strong>
-                            <ul>
-                              <li>Compare against success criteria</li>
-                              <li>Measure business impact</li>
-                              <li>Assess cost-benefit analysis</li>
-                              <li>Validate with stakeholders</li>
-                            </ul>
-                          </li>
-                          <li>
-                            <strong>Model Analysis</strong>
-                            <ul>
-                              <li>Check for bias and fairness</li>
-                              <li>Evaluate model explainability</li>
-                              <li>Test model robustness</li>
-                              <li>Compare with baseline models</li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </div>
-
-                      <div class="aws-implementation">
-                        <h5>AWS Tools and Services:</h5>
-                        <ul>
-                          <li>
-                            <strong>SageMaker Model Evaluation:</strong>
-                            <ul>
-                              <li>
-                                Model Monitor
-                                <ul>
-                                  <li>Data quality monitoring</li>
-                                  <li>Model quality monitoring</li>
-                                  <li>Bias drift monitoring</li>
-                                  <li>Feature attribution drift monitoring</li>
-                                </ul>
-                              </li>
-                              <li>
-                                SageMaker Clarify
-                                <ul>
-                                  <li>Bias detection and mitigation</li>
-                                  <li>Model explainability</li>
-                                  <li>Feature importance analysis</li>
-                                </ul>
-                              </li>
-                            </ul>
-                          </li>
-                          <li>
-                            <strong>Visualization Tools:</strong>
-                            <ul>
-                              <li>Amazon QuickSight for ML insights</li>
-                              <li>SageMaker Studio visualization tools</li>
-                              <li>CloudWatch metrics and dashboards</li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </div>
-
-                      <div class="case-study">
-                        <h5>
-                          Case Study: Customer Churn Prediction Evaluation
-                        </h5>
-                        <div class="example-details">
-                          <p>
-                            <strong>Scenario:</strong> Evaluating a churn
-                            prediction model before deployment
-                          </p>
-                          <ol>
-                            <li>
-                              Technical Evaluation:
-                              <ul>
-                                <li>Accuracy: 85% on test set</li>
-                                <li>Precision: 82% for churn prediction</li>
-                                <li>Recall: 78% for high-risk customers</li>
-                                <li>F1 Score: 0.80</li>
-                              </ul>
-                            </li>
-                            <li>
-                              Business Impact Analysis:
-                              <ul>
-                                <li>Potential cost savings: $1.5M annually</li>
-                                <li>ROI projection: 250% first year</li>
-                                <li>Customer retention improvement: 15%</li>
-                                <li>Implementation cost analysis</li>
-                              </ul>
-                            </li>
-                            <li>
-                              Model Validation Steps:
-                              <ul>
-                                <li>A/B testing with current system</li>
-                                <li>Bias assessment using SageMaker Clarify</li>
-                                <li>Stakeholder review and approval</li>
-                                <li>Documentation and compliance check</li>
-                              </ul>
-                            </li>
-                          </ol>
-                        </div>
-                      </div>
-
-                      <div class="best-practices">
-                        <h5>Best Practices:</h5>
-                        <ul>
-                          <li>Use multiple evaluation metrics</li>
-                          <li>Conduct thorough cross-validation</li>
-                          <li>Test with real-world scenarios</li>
-                          <li>Monitor for bias and fairness</li>
-                          <li>Document evaluation results</li>
-                          <li>Validate with business stakeholders</li>
-                        </ul>
-                      </div>
-
-                      <div class="knowledge-check">
-                        <h5>Quick Knowledge Check:</h5>
-                        <div class="question">
-                          <p>
-                            Which AWS service would you use to detect and
-                            analyze bias in your ML model?
-                          </p>
-                          <ul>
-                            <li>
-                              <input type="radio" name="q3_6" value="a" />
-                              SageMaker Debugger
-                            </li>
-                            <li>
-                              <input type="radio" name="q3_6" value="b" />
-                              SageMaker Clarify
-                            </li>
-                            <li>
-                              <input type="radio" name="q3_6" value="c" />
-                              SageMaker Canvas
-                            </li>
-                            <li>
-                              <input type="radio" name="q3_6" value="d" /> Model
-                              Monitor
-                            </li>
-                          </ul>
-                          <button onclick="checkAnswer('q3_6', 'b')">
-                            Check Answer
-                          </button>
-                          <p class="feedback" id="q3_6-feedback"></p>
-                        </div>
-
-                        <div class="question">
-                          <p>
-                            What is the primary purpose of SageMaker Model
-                            Monitor?
-                          </p>
-                          <ul>
-                            <li>
-                              <input type="radio" name="q3_7" value="a" /> Train
-                              ML models
-                            </li>
-                            <li>
-                              <input type="radio" name="q3_7" value="b" />
-                              Deploy models to production
-                            </li>
-                            <li>
-                              <input type="radio" name="q3_7" value="c" />
-                              Monitor production model quality and drift
-                            </li>
-                            <li>
-                              <input type="radio" name="q3_7" value="d" />
-                              Perform hyperparameter tuning
-                            </li>
-                          </ul>
-                          <button onclick="checkAnswer('q3_7', 'c')">
-                            Check Answer
-                          </button>
-                          <p class="feedback" id="q3_7-feedback"></p>
-                        </div>
-                      </div>
-
-                      <div class="resources">
-                        <h5>Additional Resources:</h5>
-                        <ul>
-                          <li>
-                            <a
-                              href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-monitor.html"
-                              >SageMaker Model Monitor Documentation</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-configure-processing-jobs.html"
-                              >SageMaker Clarify Documentation</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="https://aws.amazon.com/blogs/machine-learning/tag/evaluation/"
-                              >AWS ML Blog - Model Evaluation</a
-                            >
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="lifecycle-step">
-                    <div class="step-content">
-                      <h4>5. Model Deployment and Monitoring</h4>
-                      <p>
-                        The final phase where you deploy your model to
-                        production and establish continuous monitoring and
-                        maintenance procedures.
-                      </p>
-
-                      <div class="key-components">
-                        <h5>Essential Components:</h5>
-                        <ul>
-                          <li>
-                            <strong>Deployment Strategy</strong>
-                            <ul>
-                              <li>
-                                Choose deployment pattern (real-time, batch,
-                                edge)
-                              </li>
-                              <li>
-                                Plan scaling and availability requirements
-                              </li>
-                              <li>Implement deployment automation</li>
-                              <li>Set up CI/CD pipelines</li>
-                            </ul>
-                          </li>
-                          <li>
-                            <strong>Production Monitoring</strong>
-                            <ul>
-                              <li>Configure performance monitoring</li>
-                              <li>Set up alerts and notifications</li>
-                              <li>Track model drift and data quality</li>
-                              <li>Monitor system health metrics</li>
-                            </ul>
-                          </li>
-                          <li>
-                            <strong>Maintenance and Updates</strong>
-                            <ul>
-                              <li>Implement model retraining strategy</li>
-                              <li>
-                                Plan version control and rollback procedures
-                              </li>
-                              <li>Schedule regular maintenance windows</li>
-                              <li>Document operational procedures</li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </div>
-
-                      <div class="aws-implementation">
-                        <h5>AWS Tools and Services:</h5>
-                        <ul>
-                          <li>
-                            <strong>SageMaker Deployment Options:</strong>
-                            <ul>
-                              <li>
-                                Real-time Endpoints
-                                <ul>
-                                  <li>Auto-scaling capabilities</li>
-                                  <li>Multi-model endpoints</li>
-                                  <li>A/B testing with variants</li>
-                                </ul>
-                              </li>
-                              <li>
-                                Batch Transform
-                                <ul>
-                                  <li>Large-scale inference</li>
-                                  <li>Pre-processing capabilities</li>
-                                  <li>Cost optimization features</li>
-                                </ul>
-                              </li>
-                              <li>
-                                Edge Deployment
-                                <ul>
-                                  <li>SageMaker Edge Manager</li>
-                                  <li>AWS IoT Greengrass</li>
-                                  <li>Model optimization for edge</li>
-                                </ul>
-                              </li>
-                            </ul>
-                          </li>
-                          <li>
-                            <strong>Monitoring and Maintenance:</strong>
-                            <ul>
-                              <li>
-                                Amazon CloudWatch
-                                <ul>
-                                  <li>Metrics and dashboards</li>
-                                  <li>Alarms and notifications</li>
-                                  <li>Log analysis</li>
-                                </ul>
-                              </li>
-                              <li>
-                                SageMaker Model Monitor
-                                <ul>
-                                  <li>Data quality monitoring</li>
-                                  <li>Model quality monitoring</li>
-                                  <li>Bias drift detection</li>
-                                </ul>
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </div>
-
-                      <div class="case-study">
-                        <h5>Case Study: Real-time Recommendation System</h5>
-                        <div class="example-details">
-                          <p>
-                            <strong>Scenario:</strong> Deploying a product
-                            recommendation model for an e-commerce platform
-                          </p>
-                          <ol>
-                            <li>
-                              Deployment Architecture:
-                              <ul>
-                                <li>
-                                  SageMaker real-time endpoint with auto-scaling
-                                </li>
-                                <li>
-                                  Multi-AZ deployment for high availability
-                                </li>
-                                <li>
-                                  Integration with application via API Gateway
-                                </li>
-                                <li>CloudWatch dashboards for monitoring</li>
-                              </ul>
-                            </li>
-                            <li>
-                              Monitoring Setup:
-                              <ul>
-                                <li>Latency threshold alerts</li>
-                                <li>Error rate monitoring</li>
-                                <li>Model drift detection</li>
-                                <li>Resource utilization tracking</li>
-                              </ul>
-                            </li>
-                            <li>
-                              Maintenance Plan:
-                              <ul>
-                                <li>Weekly model retraining</li>
-                                <li>Monthly performance review</li>
-                                <li>Automated rollback procedures</li>
-                                <li>Regular security patches</li>
-                              </ul>
-                            </li>
-                          </ol>
-                        </div>
-                      </div>
-
-                      <div class="best-practices">
-                        <h5>Best Practices:</h5>
-                        <ul>
-                          <li>Implement blue-green deployments</li>
-                          <li>Use infrastructure as code</li>
-                          <li>Automate deployment pipelines</li>
-                          <li>Set up comprehensive monitoring</li>
-                          <li>Plan for disaster recovery</li>
-                          <li>Document operational procedures</li>
-                        </ul>
-                      </div>
-
-                      <div class="knowledge-check">
-                        <h5>Quick Knowledge Check:</h5>
-                        <div class="question">
-                          <p>
-                            Which deployment option would you choose for
-                            real-time, low-latency inference requirements?
-                          </p>
-                          <ul>
-                            <li>
-                              <input type="radio" name="q3_8" value="a" />
-                              SageMaker Batch Transform
-                            </li>
-                            <li>
-                              <input type="radio" name="q3_8" value="b" />
-                              SageMaker Real-time Endpoints
-                            </li>
-                            <li>
-                              <input type="radio" name="q3_8" value="c" />
-                              SageMaker Processing Jobs
-                            </li>
-                            <li>
-                              <input type="radio" name="q3_8" value="d" />
-                              Amazon EMR
-                            </li>
-                          </ul>
-                          <button onclick="checkAnswer('q3_8', 'b')">
-                            Check Answer
-                          </button>
-                          <p class="feedback" id="q3_8-feedback"></p>
-                        </div>
-
-                        <div class="question">
-                          <p>
-                            Which feature allows you to deploy multiple models
-                            to a single endpoint?
-                          </p>
-                          <ul>
-                            <li>
-                              <input type="radio" name="q3_9" value="a" />
-                              Multi-model endpoints
-                            </li>
-                            <li>
-                              <input type="radio" name="q3_9" value="b" />
-                              Auto-scaling
-                            </li>
-                            <li>
-                              <input type="radio" name="q3_9" value="c" /> Batch
-                              transform
-                            </li>
-                            <li>
-                              <input type="radio" name="q3_9" value="d" /> Model
-                              monitoring
-                            </li>
-                          </ul>
-                          <button onclick="checkAnswer('q3_9', 'a')">
-                            Check Answer
-                          </button>
-                          <p class="feedback" id="q3_9-feedback"></p>
-                        </div>
-                      </div>
-
-                      <div class="resources">
-                        <h5>Additional Resources:</h5>
-                        <ul>
-                          <li>
-                            <a
-                              href="https://docs.aws.amazon.com/sagemaker/latest/dg/deploy-model.html"
-                              >SageMaker Model Deployment Guide</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="https://docs.aws.amazon.com/sagemaker/latest/dg/monitoring-overview.html"
-                              >SageMaker Monitoring Documentation</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="https://aws.amazon.com/blogs/machine-learning/tag/deployment/"
-                              >AWS ML Blog - Model Deployment</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="https://docs.aws.amazon.com/sagemaker/latest/dg/deployment-guardrails.html"
-                              >Deployment Guardrails Documentation</a
-                            >
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </li>
-                </div>
-              </div>
-
-              <h3>Key AWS AI/ML Services</h3>
-              <div class="services-section">
-                <p class="intro">
-                  AWS provides a comprehensive suite of AI/ML services that
-                  cater to different skill levels and use cases. These services
-                  range from fully managed solutions to customizable frameworks
-                  for advanced ML implementations.
-                </p>
-
-                <div class="service-category">
-                  <h4>1. Amazon SageMaker</h4>
-                  <p>
-                    A fully managed service that provides every developer and
-                    data scientist with the ability to build, train, and deploy
-                    machine learning models quickly.
-                  </p>
-
-                  <div class="key-features">
-                    <h5>Core Capabilities:</h5>
-                    <ul>
-                      <li>
-                        <strong>Data Preparation</strong>
-                        <ul>
-                          <li>SageMaker Data Wrangler for data preparation</li>
-                          <li>Ground Truth for data labeling</li>
-                          <li>Feature Store for feature management</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <strong>Model Development</strong>
-                        <ul>
-                          <li>Built-in algorithms for common ML tasks</li>
-                          <li>Support for custom algorithms</li>
-                          <li>Notebook instances for development</li>
-                          <li>Automated ML capabilities</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <strong>Training and Tuning</strong>
-                        <ul>
-                          <li>Distributed training support</li>
-                          <li>Automated hyperparameter tuning</li>
-                          <li>Experiment tracking</li>
-                          <li>Debug and profile training jobs</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <strong>Deployment and Monitoring</strong>
-                        <ul>
-                          <li>Real-time and batch inference</li>
-                          <li>Model monitoring and alerts</li>
-                          <li>A/B testing capabilities</li>
-                          <li>Auto-scaling endpoints</li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div class="practical-example">
-                    <h5>Implementation Example: Image Classification System</h5>
-                    <ol>
-                      <li>
-                        Data Preparation:
-                        <ul>
-                          <li>Upload labeled images to S3</li>
-                          <li>Create augmented training dataset</li>
-                          <li>Configure data channels</li>
-                        </ul>
-                      </li>
-                      <li>
-                        Model Development:
-                        <ul>
-                          <li>Use built-in image classification algorithm</li>
-                          <li>Set up training infrastructure</li>
-                          <li>Configure hyperparameters</li>
-                        </ul>
-                      </li>
-                      <li>
-                        Deployment:
-                        <ul>
-                          <li>Create endpoint configuration</li>
-                          <li>Deploy model to production</li>
-                          <li>Set up monitoring</li>
-                        </ul>
-                      </li>
-                    </ol>
-                  </div>
-                </div>
-
-                <div class="service-category">
-                  <h4>2. AWS AI Services</h4>
-                  <p>
-                    Pre-trained AI services that can be integrated into
-                    applications without ML expertise.
-                  </p>
-
-                  <div class="service-list">
-                    <h5>Vision Services:</h5>
-                    <ul>
-                      <li>
-                        <strong>Amazon Rekognition</strong>
-                        <ul>
-                          <li>Image and video analysis</li>
-                          <li>Facial recognition and analysis</li>
-                          <li>Object and scene detection</li>
-                          <li>Text detection in images</li>
-                        </ul>
-                      </li>
-                    </ul>
-
-                    <h5>Language Services:</h5>
-                    <ul>
-                      <li>
-                        <strong>Amazon Comprehend</strong>
-                        <ul>
-                          <li>Natural language processing</li>
-                          <li>Sentiment analysis</li>
-                          <li>Entity recognition</li>
-                          <li>Document classification</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <strong>Amazon Translate</strong>
-                        <ul>
-                          <li>Neural machine translation</li>
-                          <li>Real-time translation</li>
-                          <li>Custom terminology</li>
-                        </ul>
-                      </li>
-                    </ul>
-
-                    <h5>Speech Services:</h5>
-                    <ul>
-                      <li>
-                        <strong>Amazon Transcribe</strong>
-                        <ul>
-                          <li>Speech-to-text conversion</li>
-                          <li>Multiple language support</li>
-                          <li>Custom vocabulary</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <strong>Amazon Polly</strong>
-                        <ul>
-                          <li>Text-to-speech conversion</li>
-                          <li>Natural-sounding voices</li>
-                          <li>SSML support</li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="service-category">
-                  <h4>3. Amazon Bedrock</h4>
-                  <p>
-                    A fully managed service that makes foundation models from
-                    leading AI companies accessible via an API.
-                  </p>
-
-                  <div class="key-features">
-                    <h5>Core Features:</h5>
-                    <ul>
-                      <li>
-                        <strong>Foundation Model Access</strong>
-                        <ul>
-                          <li>Claude models from Anthropic</li>
-                          <li>Titan models from Amazon</li>
-                          <li>Jurassic models from AI21 Labs</li>
-                          <li>Command models from Cohere</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <strong>Customization Options</strong>
-                        <ul>
-                          <li>Model fine-tuning capabilities</li>
-                          <li>Custom model hosting</li>
-                          <li>Integration with private data</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <strong>Enterprise Features</strong>
-                        <ul>
-                          <li>Private endpoints</li>
-                          <li>Model governance</li>
-                          <li>Monitoring and observability</li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div class="practical-example">
-                    <h5>Implementation Example: Customer Service Chatbot</h5>
-                    <ol>
-                      <li>
-                        Setup:
-                        <ul>
-                          <li>Select appropriate foundation model</li>
-                          <li>Configure API access</li>
-                          <li>Set up security controls</li>
-                        </ul>
-                      </li>
-                      <li>
-                        Implementation:
-                        <ul>
-                          <li>Fine-tune model with company data</li>
-                          <li>Integrate with existing systems</li>
-                          <li>Set up monitoring and logging</li>
-                        </ul>
-                      </li>
-                      <li>
-                        Optimization:
-                        <ul>
-                          <li>Analyze response quality</li>
-                          <li>Adjust model parameters</li>
-                          <li>Implement feedback loop</li>
-                        </ul>
-                      </li>
-                    </ol>
-                  </div>
-                </div>
-
-                <div class="knowledge-check">
-                  <h5>Quick Knowledge Check:</h5>
-                  <div class="question">
-                    <p>
-                      Which AWS service would you use for developing a custom
-                      object detection model?
+                <div class="space-y-8">
+                  <div>
+                    <h4 class="text-lg font-semibold text-gray-900 mb-3">
+                      1. Problem Definition Phase
+                    </h4>
+                    <p class="text-gray-600 mb-4">
+                      The foundation of any successful ML project begins with a
+                      clear understanding of the business problem and
+                      determining if ML is the right approach.
                     </p>
-                    <ul>
-                      <li>
-                        <input type="radio" name="q4_1" value="a" /> Amazon
-                        Rekognition
-                      </li>
-                      <li>
-                        <input type="radio" name="q4_1" value="b" /> Amazon
-                        SageMaker
-                      </li>
-                      <li>
-                        <input type="radio" name="q4_1" value="c" /> Amazon
-                        Bedrock
-                      </li>
-                      <li>
-                        <input type="radio" name="q4_1" value="d" /> Amazon
-                        Comprehend
-                      </li>
-                    </ul>
-                    <button onclick="checkAnswer('q4_1', 'b')">
-                      Check Answer
-                    </button>
-                    <p class="feedback" id="q4_1-feedback"></p>
-                  </div>
 
-                  <div class="question">
-                    <p>
-                      Which service provides pre-trained models for image and
-                      video analysis?
-                    </p>
-                    <ul>
-                      <li>
-                        <input type="radio" name="q4_2" value="a" /> Amazon
-                        SageMaker
-                      </li>
-                      <li>
-                        <input type="radio" name="q4_2" value="b" /> Amazon
-                        Textract
-                      </li>
-                      <li>
-                        <input type="radio" name="q4_2" value="c" /> Amazon
-                        Rekognition
-                      </li>
-                      <li>
-                        <input type="radio" name="q4_2" value="d" /> Amazon
-                        Polly
-                      </li>
-                    </ul>
-                    <button onclick="checkAnswer('q4_2', 'c')">
-                      Check Answer
-                    </button>
-                    <p class="feedback" id="q4_2-feedback"></p>
-                  </div>
-
-                  <div class="question">
-                    <p>
-                      Which service would you use to access and customize
-                      foundation models?
-                    </p>
-                    <ul>
-                      <li>
-                        <input type="radio" name="q4_3" value="a" /> Amazon
-                        SageMaker
-                      </li>
-                      <li>
-                        <input type="radio" name="q4_3" value="b" /> Amazon
-                        Bedrock
-                      </li>
-                      <li>
-                        <input type="radio" name="q4_3" value="c" /> Amazon
-                        Rekognition
-                      </li>
-                      <li>
-                        <input type="radio" name="q4_3" value="d" /> Amazon
-                        Comprehend
-                      </li>
-                    </ul>
-                    <button onclick="checkAnswer('q4_3', 'b')">
-                      Check Answer
-                    </button>
-                    <p class="feedback" id="q4_3-feedback"></p>
-                  </div>
-                </div>
-
-                <div class="resources">
-                  <h5>Additional Resources:</h5>
-                  <ul>
-                    <li>
-                      <a href="https://aws.amazon.com/machine-learning/"
-                        >AWS Machine Learning Overview</a
-                      >
-                    </li>
-                    <li>
-                      <a href="https://docs.aws.amazon.com/sagemaker/"
-                        >Amazon SageMaker Documentation</a
-                      >
-                    </li>
-                    <li>
-                      <a href="https://aws.amazon.com/bedrock/"
-                        >Amazon Bedrock Documentation</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="https://aws.amazon.com/machine-learning/ai-services/"
-                        >AWS AI Services Guide</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <h3>Best Practices for AWS AI/ML Implementation</h3>
-              <div class="best-practices-section">
-                <p class="intro">
-                  Following AWS best practices ensures successful development,
-                  deployment, and maintenance of AI/ML solutions while
-                  maintaining security, cost-effectiveness, and scalability.
-                </p>
-
-                <div class="practice-category">
-                  <h4>1. Strategic Planning and Governance</h4>
-                  <ul>
-                    <li>
-                      <strong>Business Alignment</strong>
-                      <ul>
+                    <div class="mt-4">
+                      <h5 class="font-medium text-gray-800 mb-2">
+                        Essential Components:
+                      </h5>
+                      <ul class="space-y-3 text-gray-600">
                         <li>
-                          Define clear business outcomes and success metrics
+                          <strong>Business Understanding</strong>
+                          <ul class="list-disc pl-5 space-y-1 mt-1">
+                            <li>
+                              Define clear, measurable business objectives
+                            </li>
+                            <li>
+                              Identify key stakeholders and their requirements
+                            </li>
+                            <li>Establish success metrics and KPIs</li>
+                            <li>Document constraints and limitations</li>
+                          </ul>
                         </li>
-                        <li>Establish ROI measurement framework</li>
-                        <li>Create cross-functional ML teams</li>
+                        <li>
+                          <strong>ML Feasibility Assessment</strong>
+                          <ul class="list-disc pl-5 space-y-1 mt-1">
+                            <li>Evaluate data availability and quality</li>
+                            <li>Assess technical infrastructure needs</li>
+                            <li>Consider alternative solutions</li>
+                            <li>
+                              Identify potential risks and mitigation strategies
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="mt-6">
+                      <h5 class="font-medium text-gray-800 mb-2">
+                        AWS Tools and Services:
+                      </h5>
+                      <ul class="space-y-3 text-gray-600">
+                        <li>
+                          <strong>Amazon SageMaker Canvas</strong>
+                          <ul class="list-disc pl-5 space-y-1 mt-1">
+                            <li>No-code solution exploration</li>
+                            <li>Quick prototyping and validation</li>
+                            <li>Visual data analysis</li>
+                          </ul>
+                        </li>
+                        <li>
+                          <strong>AWS Solutions Library</strong>
+                          <ul class="list-disc pl-5 space-y-1 mt-1">
+                            <li>Pre-built ML solution architectures</li>
+                            <li>Implementation best practices</li>
+                            <li>Cost estimation templates</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="mt-6 p-4 bg-blue-50 rounded-md">
+                      <h5 class="font-medium text-blue-800 mb-2">
+                        Case Study: Retail Demand Forecasting
+                      </h5>
+                      <p class="text-blue-800 mb-2">
+                        <strong>Business Context:</strong> A retail chain wants
+                        to optimize inventory management
+                      </p>
+                      <ol class="space-y-2 text-blue-800">
+                        <li>
+                          Problem Statement:
+                          <ul class="list-disc pl-5 space-y-1 mt-1">
+                            <li>Current inventory accuracy: 75%</li>
+                            <li>Stockout rate: 15%</li>
+                            <li>Excess inventory cost: $2M annually</li>
+                          </ul>
+                        </li>
+                        <li>
+                          Success Criteria:
+                          <ul class="list-disc pl-5 space-y-1 mt-1">
+                            <li>Improve forecast accuracy to 90%</li>
+                            <li>Reduce stockouts by 50%</li>
+                            <li>Decrease excess inventory by 30%</li>
+                          </ul>
+                        </li>
+                        <li>
+                          ML Approach:
+                          <ul class="list-disc pl-5 space-y-1 mt-1">
+                            <li>
+                              Time series forecasting using Amazon Forecast
+                            </li>
+                            <li>Integration with existing inventory systems</li>
+                            <li>Real-time demand prediction capabilities</li>
+                          </ul>
+                        </li>
+                      </ol>
+                    </div>
+
+                    <div class="mt-6">
+                      <h5 class="font-medium text-gray-800 mb-2">
+                        Best Practices:
+                      </h5>
+                      <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                        <li>Follow AWS Well-Architected Framework - ML Lens</li>
+                        <li>Use SMART criteria for objectives</li>
                         <li>Document assumptions and constraints</li>
+                        <li>Involve all stakeholders in problem definition</li>
                       </ul>
-                    </li>
-                    <li>
-                      <strong>ML Governance</strong>
-                      <ul>
-                        <li>Implement model versioning and tracking</li>
-                        <li>Set up model approval workflows</li>
-                        <li>Define model update procedures</li>
-                        <li>Establish ethical AI guidelines</li>
-                      </ul>
-                    </li>
-                  </ul>
+                    </div>
 
-                  <div class="aws-implementation">
-                    <h5>AWS Tools:</h5>
-                    <ul>
-                      <li>
-                        Amazon SageMaker MLOps
-                        <ul>
-                          <li>Model Registry for versioning</li>
-                          <li>Pipeline templates for workflows</li>
-                          <li>Project templates for governance</li>
+                    <div class="mt-6 bg-white shadow rounded-lg p-6">
+                      <h5 class="font-medium text-gray-800 mb-3">
+                        Quick Knowledge Check:
+                      </h5>
+                      <form id="quiz-form-6">
+                        <p class="text-gray-800 mb-3">
+                          Which is NOT a key consideration during the problem
+                          definition phase?
+                        </p>
+                        <ul class="space-y-3">
+                          <li class="flex items-center">
+                            <input
+                              type="radio"
+                              id="q3_1_a"
+                              name="q3_1"
+                              value="a"
+                              class="h-4 w-4 text-blue-600 focus:ring-blue-500"
+                            />
+                            <label for="q3_1_a" class="ml-3 text-gray-700"
+                              >Defining business objectives</label
+                            >
+                          </li>
+                          <li class="flex items-center">
+                            <input
+                              type="radio"
+                              id="q3_1_b"
+                              name="q3_1"
+                              value="b"
+                              class="h-4 w-4 text-blue-600 focus:ring-blue-500"
+                            />
+                            <label for="q3_1_b" class="ml-3 text-gray-700"
+                              >Model architecture selection</label
+                            >
+                          </li>
+                          <li class="flex items-center">
+                            <input
+                              type="radio"
+                              id="q3_1_c"
+                              name="q3_1"
+                              value="c"
+                              class="h-4 w-4 text-blue-600 focus:ring-blue-500"
+                            />
+                            <label for="q3_1_c" class="ml-3 text-gray-700"
+                              >Success metrics identification</label
+                            >
+                          </li>
+                          <li class="flex items-center">
+                            <input
+                              type="radio"
+                              id="q3_1_d"
+                              name="q3_1"
+                              value="d"
+                              class="h-4 w-4 text-blue-600 focus:ring-blue-500"
+                            />
+                            <label for="q3_1_d" class="ml-3 text-gray-700"
+                              >Data availability assessment</label
+                            >
+                          </li>
                         </ul>
-                      </li>
-                      <li>
-                        AWS Service Catalog
-                        <ul>
-                          <li>Standardized ML infrastructure</li>
-                          <li>Compliance controls</li>
-                          <li>Cost management</li>
-                        </ul>
-                      </li>
-                    </ul>
+                        <button
+                          type="button"
+                          onclick="checkAnswer('q3_1', 'b')"
+                          class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition duration-200"
+                        >
+                          Check Answer
+                        </button>
+                        <div id="q3_1-feedback" class="mt-3 hidden"></div>
+                      </form>
+                    </div>
+
+                    <div class="mt-6">
+                      <h5 class="font-medium text-gray-800 mb-2">
+                        Additional Resources:
+                      </h5>
+                      <ul class="space-y-2 text-blue-600">
+                        <li>
+                          <a
+                            href="https://docs.aws.amazon.com/wellarchitected/latest/machine-learning-lens/welcome.html"
+                            class="hover:underline"
+                          >
+                            AWS Well-Architected ML Lens
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://aws.amazon.com/sagemaker/canvas/"
+                            class="hover:underline"
+                          >
+                            Amazon SageMaker Canvas Documentation
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="https://aws.amazon.com/solutions/machine-learning/"
+                            class="hover:underline"
+                          >
+                            AWS ML Solutions Library
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-                </div>
 
-                <div class="practice-category">
-                  <h4>2. Data Management and Quality</h4>
-                  <ul>
-                    <li>
-                      <strong>Data Quality Assurance</strong>
-                      <ul>
-                        <li>Implement data validation checks</li>
-                        <li>Monitor data drift</li>
-                        <li>Maintain data lineage</li>
-                        <li>Ensure data consistency</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <strong>Data Security</strong>
-                      <ul>
-                        <li>Encrypt data at rest and in transit</li>
-                        <li>Implement access controls</li>
-                        <li>Regular security audits</li>
-                        <li>Data privacy compliance</li>
-                      </ul>
-                    </li>
-                  </ul>
-
-                  <div class="aws-implementation">
-                    <h5>AWS Tools:</h5>
-                    <ul>
-                      <li>
-                        Amazon SageMaker Data Wrangler
-                        <ul>
-                          <li>Data quality verification</li>
-                          <li>Data visualization</li>
-                          <li>Feature engineering</li>
-                        </ul>
-                      </li>
-                      <li>
-                        AWS Lake Formation
-                        <ul>
-                          <li>Fine-grained access control</li>
-                          <li>Data cataloging</li>
-                          <li>Security monitoring</li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="practice-category">
-                  <h4>3. Model Development and Training</h4>
-                  <ul>
-                    <li>
-                      <strong>Development Best Practices</strong>
-                      <ul>
-                        <li>Start with simple models</li>
-                        <li>Use cross-validation</li>
-                        <li>Implement experiment tracking</li>
-                        <li>Document model decisions</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <strong>Training Optimization</strong>
-                      <ul>
-                        <li>Use managed spot training</li>
-                        <li>Implement distributed training</li>
-                        <li>Monitor resource utilization</li>
-                        <li>Optimize hyperparameters</li>
-                      </ul>
-                    </li>
-                  </ul>
-
-                  <div class="aws-implementation">
-                    <h5>AWS Tools:</h5>
-                    <ul>
-                      <li>
-                        SageMaker Training Features
-                        <ul>
-                          <li>Experiment tracking</li>
-                          <li>Debugger for monitoring</li>
-                          <li>Automated tuning</li>
-                        </ul>
-                      </li>
-                      <li>
-                        Cost Optimization
-                        <ul>
-                          <li>Managed Spot Training</li>
-                          <li>Instance right-sizing</li>
-                          <li>Automated shutdown</li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="practice-category">
-                  <h4>4. Model Deployment and Monitoring</h4>
-                  <ul>
-                    <li>
-                      <strong>Deployment Strategy</strong>
-                      <ul>
-                        <li>Implement blue-green deployments</li>
-                        <li>Use infrastructure as code</li>
-                        <li>Set up auto-scaling</li>
-                        <li>Configure load balancing</li>
-                      </ul>
-                    </li>
-                    <li>
-                      <strong>Monitoring and Maintenance</strong>
-                      <ul>
-                        <li>Monitor model performance</li>
-                        <li>Track prediction quality</li>
-                        <li>Set up alerting</li>
-                        <li>Plan regular updates</li>
-                      </ul>
-                    </li>
-                  </ul>
-
-                  <div class="aws-implementation">
-                    <h5>AWS Tools:</h5>
-                    <ul>
-                      <li>
-                        SageMaker Deployment Options
-                        <ul>
-                          <li>Real-time endpoints</li>
-                          <li>Batch transformation</li>
-                          <li>Multi-model endpoints</li>
-                        </ul>
-                      </li>
-                      <li>
-                        Monitoring Tools
-                        <ul>
-                          <li>Model Monitor</li>
-                          <li>CloudWatch metrics</li>
-                          <li>CloudTrail logging</li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="knowledge-check">
-                  <h5>Best Practices Knowledge Check</h5>
-                  <div class="question">
-                    <p>
-                      Which AWS service should you use to track ML experiments
-                      and model versions?
+                  <div>
+                    <h4 class="text-lg font-semibold text-gray-900 mb-3">
+                      2. Data Collection and Preparation
+                    </h4>
+                    <p class="text-gray-600 mb-4">
+                      A critical phase that focuses on gathering, processing,
+                      and transforming data into a format suitable for ML model
+                      training. The quality of your data directly impacts model
+                      performance.
                     </p>
-                    <ul>
-                      <li>
-                        <input type="radio" name="q5_1" value="a" /> Amazon S3
-                      </li>
-                      <li>
-                        <input type="radio" name="q5_1" value="b" /> Amazon
-                        CloudWatch
-                      </li>
-                      <li>
-                        <input type="radio" name="q5_1" value="c" /> SageMaker
-                        Model Registry
-                      </li>
-                      <li>
-                        <input type="radio" name="q5_1" value="d" /> AWS Lambda
-                      </li>
-                    </ul>
-                    <button onclick="checkAnswer('q5_1', 'c')">
-                      Check Answer
-                    </button>
-                    <p class="feedback" id="q5_1-feedback"></p>
-                  </div>
 
-                  <div class="question">
-                    <p>
-                      Which deployment strategy helps minimize downtime when
-                      updating models in production?
-                    </p>
-                    <ul>
-                      <li>
-                        <input type="radio" name="q5_2" value="a" /> Direct
-                        deployment
-                      </li>
-                      <li>
-                        <input type="radio" name="q5_2" value="b" /> Blue-green
-                        deployment
-                      </li>
-                      <li>
-                        <input type="radio" name="q5_2" value="c" /> Manual
-                        deployment
-                      </li>
-                      <li>
-                        <input type="radio" name="q5_2" value="d" />
-                        Single-stage deployment
-                      </li>
-                    </ul>
-                    <button onclick="checkAnswer('q5_2', 'b')">
-                      Check Answer
-                    </button>
-                    <p class="feedback" id="q5_2-feedback"></p>
+                    <div class="mt-4">
+                      <h5 class="font-medium text-gray-800 mb-2">
+                        Essential Components:
+                      </h5>
+                      <ul class="space-y-3 text-gray-600">
+                        <li>
+                          <strong>Data Collection</strong>
+                          <ul class="list-disc pl-5 space-y-1 mt-1">
+                            <li>Identify data sources and requirements</li>
+                            <li>Establish data ingestion pipelines</li>
+                            <li>Implement data versioning</li>
+                            <li>Set up data cataloging</li>
+                          </ul>
+                        </li>
+                        ```
+                      </ul>
+                    </div>
                   </div>
-                </div>
-
-                <div class="resources">
-                  <h5>Additional Best Practices Resources:</h5>
-                  <ul>
-                    <li>
-                      <a
-                        href="https://docs.aws.amazon.com/wellarchitected/latest/machine-learning-lens/welcome.html"
-                        >AWS ML Well-Architected Lens</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="https://docs.aws.amazon.com/sagemaker/latest/dg/best-practices.html"
-                        >SageMaker Best Practices Guide</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="https://aws.amazon.com/architecture/machine-learning/"
-                        >AWS ML Architecture Center</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="https://aws.amazon.com/blogs/machine-learning/tag/best-practices/"
-                        >AWS ML Blog - Best Practices</a
-                      >
-                    </li>
-                  </ul>
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="stepper-item">
-            <h2>
-              Exploring Artificial Intelligence Use Cases and Applications
-            </h2>
-            <span class="duration">1 hour</span>
-            <button class="btn" onclick="toggleContent('usecases')">
-              Learn More
-            </button>
-            <div id="usecases" class="content">
-              <!-- Content will be added -->
-            </div>
-          </div>
-
-          <div class="stepper-item">
-            <h2>Responsible Artificial Intelligence Practices</h2>
-            <span class="duration">1 hour</span>
-            <button class="btn" onclick="toggleContent('responsible')">
-              Learn More
-            </button>
-            <div id="responsible" class="content">
-              <!-- Content will be added -->
-            </div>
-          </div>
-
-          <div class="stepper-item">
-            <h2>Developing Machine Learning Solutions</h2>
-            <span class="duration">1 hour</span>
-            <button class="btn" onclick="toggleContent('mlsolutions')">
-              Learn More
-            </button>
-            <div id="mlsolutions" class="content">
-              <!-- Content will be added -->
-            </div>
-          </div>
-
-          <div class="stepper-item">
-            <h2>Developing Generative Artificial Intelligence Solutions</h2>
-            <span class="duration">1 hour</span>
-            <button class="btn" onclick="toggleContent('genai')">
-              Learn More
-            </button>
-            <div id="genai" class="content">
-              <!-- Content will be added -->
-            </div>
-          </div>
-
-          <div class="stepper-item">
-            <h2>Essentials of Prompt Engineering</h2>
-            <span class="duration">1 hour</span>
-            <button class="btn" onclick="toggleContent('prompt')">
-              Learn More
-            </button>
-            <div id="prompt" class="content">
-              <!-- Content will be added -->
-            </div>
-          </div>
-
-          <div class="stepper-item">
-            <h2>Optimizing Foundation Models</h2>
-            <span class="duration">1 hour</span>
-            <button class="btn" onclick="toggleContent('foundation')">
-              Learn More
-            </button>
-            <div id="foundation" class="content">
-              <!-- Content will be added -->
-            </div>
-          </div>
-
-          <div class="stepper-item">
-            <h2>Security, Compliance, and Governance for AI Solutions</h2>
-            <span class="duration">1 hour</span>
-            <button class="btn" onclick="toggleContent('security')">
-              Learn More
-            </button>
-            <div id="security" class="content">
-              <!-- Content will be added -->
-            </div>
-          </div>
-
-          <div class="stepper-item">
-            <h2>Generative AI for Executives</h2>
-            <span class="duration">0.25 hour</span>
-            <button class="btn" onclick="toggleContent('executives')">
-              Learn More
-            </button>
-            <div id="executives" class="content">
-              <!-- Content will be added -->
-            </div>
-          </div>
-
-          <div class="stepper-item">
-            <h2>Amazon Q Business Getting Started</h2>
-            <span class="duration">0.75 hour</span>
-            <button class="btn" onclick="toggleContent('amazonq')">
-              Learn More
-            </button>
-            <div id="amazonq" class="content">
-              <!-- Content will be added -->
-            </div>
-          </div>
-
-          <div class="stepper-item">
-            <h2>Amazon Bedrock Getting Started</h2>
-            <span class="duration">1 hour</span>
-            <button class="btn" onclick="toggleContent('bedrock')">
-              Learn More
-            </button>
-            <div id="bedrock" class="content">
-              <!-- Content will be added -->
-            </div>
-          </div>
-
-          <div class="stepper-item">
-            <h2>
-              Getting Started with Amazon Comprehend: Custom Classification
-            </h2>
-            <span class="duration">1.25 hours</span>
-            <button class="btn" onclick="toggleContent('comprehend')">
-              Learn More
-            </button>
-            <div id="comprehend" class="content">
-              <!-- Content will be added -->
-            </div>
-          </div>
-
-          <div class="stepper-item">
-            <h2>Build a Question-Answering Bot Using Generative AI</h2>
-            <span class="duration">1.5 hours</span>
-            <button class="btn" onclick="toggleContent('qabot')">
-              Learn More
-            </button>
-            <div id="qabot" class="content">
-              <!-- Content will be added -->
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="quiz">
-        <h2>Practice Questions</h2>
-        <div class="question">
-          <p>1. Which type of learning requires labeled training data?</p>
-          <button onclick="checkAnswer('q1', 'supervised')">
-            Supervised Learning
-          </button>
-          <button onclick="checkAnswer('q1', 'unsupervised')">
-            Unsupervised Learning
-          </button>
-          <button onclick="checkAnswer('q1', 'reinforcement')">
-            Reinforcement Learning
-          </button>
-          <p id="q1-feedback" class="feedback"></p>
-        </div>
-        <div class="question">
-          <p>
-            2. Which learning method is best suited for clustering unlabeled
-            data?
-          </p>
-          <button onclick="checkAnswer('q2', 'unsupervised')">
-            Unsupervised Learning
-          </button>
-          <button onclick="checkAnswer('q2', 'supervised')">
-            Supervised Learning
-          </button>
-          <button onclick="checkAnswer('q2', 'reinforcement')">
-            Reinforcement Learning
-          </button>
-          <p id="q2-feedback" class="feedback"></p>
-        </div>
-        <div class="question">
-          <p>
-            3. In which type of learning does an agent learn through trial and
-            error?
-          </p>
-          <button onclick="checkAnswer('q3', 'reinforcement')">
-            Reinforcement Learning
-          </button>
-          <button onclick="checkAnswer('q3', 'supervised')">
-            Supervised Learning
-          </button>
-          <button onclick="checkAnswer('q3', 'unsupervised')">
-            Unsupervised Learning
-          </button>
-          <p id="q3-feedback" class="feedback"></p>
         </div>
       </div>
     </div>
-
-    <script src="script.js"></script>
   </body>
 </html>
