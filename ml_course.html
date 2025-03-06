@@ -1670,5 +1670,17 @@
         </div>
       </div>
     </div>
+    <!-- Add this line where you want section5_complete.html to be included -->
+    <div id="section5-content"></div>
+
+    <!-- Add this script at the end of the body tag -->
+    <script>
+      fetch("section5_complete.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("section5-content").innerHTML = data;
+        })
+        .catch((error) => console.error("Error loading section5:", error));
+    </script>
   </body>
 </html>

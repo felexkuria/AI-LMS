@@ -1,0 +1,409 @@
+<section class="ml-course">
+  <div class="course-header">
+    <h1>Machine Learning Model Evaluation and Debugging</h1>
+    <div class="course-meta">
+      <span class="level">Advanced Level</span>
+      <span class="duration">1.5 Hours</span>
+    </div>
+  </div>
+
+  <div class="course-overview">
+    <h2>Course Overview</h2>
+    <p>
+      Learn advanced techniques for evaluating and debugging machine learning
+      models using AWS services like Amazon SageMaker Clarify and Debugger.
+    </p>
+
+    <div class="prerequisites">
+      <h3>Prerequisites</h3>
+      <ul>
+        <li>1+ year experience with SageMaker and AWS ML services</li>
+        <li>
+          1+ year in related role (backend developer, DevOps, data engineer)
+        </li>
+        <li>Python programming fundamentals</li>
+        <li>Prior courses in AWS ML Engineer Associate Learning Plan</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="course-objectives">
+    <h2>Learning Objectives</h2>
+    <ul>
+      <li>Create and analyze model performance baselines</li>
+      <li>Evaluate classification and regression metrics</li>
+      <li>Identify and resolve model convergence issues</li>
+      <li>Use SageMaker Clarify for model interpretability</li>
+      <li>Conduct reproducible ML experiments</li>
+      <li>Debug models with SageMaker Debugger</li>
+    </ul>
+  </div>
+
+  <div class="course-content">
+    <h2>Course Outline</h2>
+
+    <div class="section">
+      <h3>Section 1: Introduction</h3>
+      <ul>
+        <li>
+          How to Use This Course
+          <div class="section-content">
+            <p>Learn to navigate the course materials effectively:</p>
+            <ul>
+              <li>Course platform navigation</li>
+              <li>Accessing hands-on labs</li>
+              <li>Using supplementary resources</li>
+              <li>Getting technical support</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          Course Overview
+          <div class="section-content">
+            <p>Understanding the course structure and expectations:</p>
+            <ul>
+              <li>Course objectives and outcomes</li>
+              <li>Learning path progression</li>
+              <li>Assessment criteria</li>
+              <li>Time management recommendations</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          Performance Baselines
+          <div class="section-content">
+            <p>Establishing model performance standards:</p>
+            <ul>
+              <li>Defining baseline metrics</li>
+              <li>Setting performance thresholds</li>
+              <li>Benchmark models</li>
+              <li>Industry standards and best practices</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <li>SageMaker Clarify and Metrics Overview</li>
+    <li>Interpret Model Outputs Using SageMaker Clarify</li>
+    <li>Amazon SageMaker Experiments</li>
+    <li>
+      Model Evaluation Techniques and Metrics
+      <div class="section-content">
+        <p>Comprehensive coverage of evaluation methods:</p>
+        <ul>
+          <li>Classification metrics (accuracy, precision, recall, F1)</li>
+          <li>Regression metrics (MSE, RMSE, MAE)</li>
+          <li>Cross-validation techniques</li>
+          <li>ROC curves and AUC analysis</li>
+        </ul>
+      </div>
+    </li>
+    <li>
+      Convergence Issues
+      <div class="section-content">
+        <p>Understanding and addressing model convergence:</p>
+        <ul>
+          <li>Common convergence problems</li>
+          <li>Gradient vanishing/exploding</li>
+          <li>Learning rate optimization</li>
+          <li>Batch size considerations</li>
+        </ul>
+      </div>
+    </li>
+    <li>
+      Debug Model Convergence with SageMaker Debugger
+      <div class="section-content">
+        <p>Hands-on debugging with SageMaker:</p>
+        <ul>
+          <li>
+            Setting up debugging hooks
+            <ul>
+              <li>
+                Configure built-in debugging hooks for tensors, metrics and
+                parameters
+              </li>
+              <li>
+                Create custom debugging hooks for model-specific monitoring
+              </li>
+              <li>Set up hook frequency and sampling rates</li>
+              <li>Enable automatic tensor collections</li>
+            </ul>
+          </li>
+          <li>
+            Real-time monitoring
+            <ul>
+              <li>Track loss curves and gradient updates in real-time</li>
+              <li>
+                Monitor system metrics like GPU utilization and memory usage
+              </li>
+              <li>Set up automated alerts for training issues</li>
+              <li>Visualize training progress with built-in dashboards</li>
+            </ul>
+          </li>
+          <li>
+            Analyzing training metrics
+            <ul>
+              <li>Inspect loss function behavior and convergence patterns</li>
+              <li>Evaluate gradient magnitudes and weight updates</li>
+              <li>Detect vanishing/exploding gradients</li>
+              <li>Compare metrics across training runs</li>
+            </ul>
+          </li>
+          <li>
+            Implementing debugging rules
+            <ul>
+              <li>Configure built-in rules for common training issues</li>
+              <li>Create custom rules for model-specific problems</li>
+              <li>Set up automated training job stops on rule violations</li>
+              <li>Debug distributed training across multiple nodes</li>
+            </ul>
+          </li>
+        </ul>
+        <p>Key concepts covered:</p>
+        <ul>
+          <li>Tensor collections and debugging hook APIs</li>
+          <li>Rule configuration and automated actions</li>
+          <li>Profiling system resource utilization</li>
+          <li>Distributed training debugging patterns</li>
+        </ul>
+        <p>Hands-on exercises:</p>
+        <ul>
+          <li>Set up a basic debugging configuration</li>
+          <li>Monitor a training job in real-time</li>
+          <li>Analyze debugging outputs and visualizations</li>
+          <li>Implement custom debugging rules</li>
+        </ul>
+      </div>
+    </li>
+    <li>
+      SageMaker Clarify and Metrics Overview
+      <div class="section-content">
+        <p>Understanding model transparency:</p>
+        <!-- Overview -->
+        <p>
+          SageMaker Clarify helps you understand and explain your ML models by
+          providing:
+        </p>
+
+        <ul>
+          <!-- Bias Detection -->
+          <li>
+            Bias detection
+            <ul>
+              <li>Pre-training data bias analysis</li>
+              <li>Post-training model bias detection</li>
+              <li>Demographic disparity metrics</li>
+              <li>Bias mitigation techniques</li>
+            </ul>
+          </li>
+
+          <!-- Feature Importance -->
+          <li>
+            Feature importance
+            <ul>
+              <li>SHAP (SHapley Additive exPlanations) values</li>
+              <li>Global feature importance rankings</li>
+              <li>Local feature attributions</li>
+              <li>Feature correlation analysis</li>
+            </ul>
+          </li>
+
+          <!-- Model Explainability -->
+          <li>
+            Model explainability
+            <ul>
+              <li>Partial Dependence Plots (PDP)</li>
+              <li>Individual Conditional Expectation (ICE)</li>
+              <li>Accumulated Local Effects (ALE)</li>
+              <li>Example-based explanations</li>
+            </ul>
+          </li>
+
+          <!-- Fairness Metrics -->
+          <li>
+            Fairness metrics
+            <ul>
+              <li>Disparate Impact Ratio</li>
+              <li>Equal Opportunity Difference</li>
+              <li>Demographic Parity</li>
+              <li>Treatment Equality</li>
+            </ul>
+          </li>
+        </ul>
+
+        <!-- Practical Examples -->
+        <p>Hands-on exercises:</p>
+        <ul>
+          <li>Setting up Clarify with a SageMaker endpoint</li>
+          <li>Generating bias reports</li>
+          <li>Interpreting feature importance plots</li>
+          <li>Analyzing model decisions</li>
+        </ul>
+
+        <!-- Best Practices -->
+        <p>Best practices:</p>
+        <ul>
+          <li>Regular model monitoring</li>
+          <li>Documentation of bias findings</li>
+          <li>Iterative model improvement</li>
+          <li>Stakeholder communication</li>
+        </ul>
+      </div>
+    </li>
+    <li>
+      Interpret Model Outputs Using SageMaker Clarify
+      <div class="section-content">
+        <p>Practical model interpretation:</p>
+        <ul>
+          <li>SHAP values analysis</li>
+          <li>Partial dependence plots</li>
+          <li>Feature attribution</li>
+          <li>Bias mitigation strategies</li>
+        </ul>
+      </div>
+    </li>
+    <li>
+      Amazon SageMaker Experiments
+      <div class="section-content">
+        <p>Managing ML experiments:</p>
+        <ul>
+          <li>Experiment tracking</li>
+          <li>Version control</li>
+          <li>Reproducibility best practices</li>
+          <li>Comparing experiment results</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>Section 3: Conclusion</h3>
+        <ul>
+          <li>Course Summary</li>
+          <li>Assessment</li>
+          <li>Contact Us</li>
+          <li>
+            Course Summary
+            <div class="section-content">
+              <p>Consolidating key learnings:</p>
+              <ul>
+                <li>Review of main concepts</li>
+                <li>Best practices recap</li>
+                <li>Common pitfalls to avoid</li>
+                <li>Next steps in ML journey</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            Assessment
+            <div class="section-content">
+              <p>Evaluating your knowledge:</p>
+              <ul>
+                <li>Final project requirements</li>
+                <li>Grading criteria</li>
+                <li>Submission guidelines</li>
+                <li>Certification process</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            Contact Us
+            <div class="section-content">
+              <p>Support resources:</p>
+              <ul>
+                <li>Technical support channels</li>
+                <li>Discussion forums</li>
+                <li>Office hours schedule</li>
+                <li>Additional learning resources</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </li>
+  </div>
+
+  <div class="course-activities">
+    <h2>Course Activities</h2>
+    <ul>
+      <li>Online learning materials</li>
+      <li>Hands-on exercises</li>
+      <li>Knowledge check questions</li>
+    </ul>
+  </div>
+</section>
+
+<style>
+  .ml-course {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .course-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .course-meta {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+
+  .level,
+  .duration {
+    padding: 0.5rem 1rem;
+    background: #f0f0f0;
+    border-radius: 4px;
+  }
+
+  .course-overview {
+    margin-bottom: 3rem;
+  }
+
+  .prerequisites {
+    background: #f8f8f8;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+  }
+
+  .course-objectives ul,
+  .course-content ul,
+  .course-activities ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .course-objectives li,
+  .course-content li,
+  .course-activities li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .section {
+    margin-bottom: 2rem;
+  }
+
+  .section h3 {
+    color: #333;
+    margin-bottom: 1rem;
+  }
+
+  .section-content {
+    padding-left: 1.5rem;
+    margin: 0.5rem 0;
+  }
+
+  .section-content ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+  }
+
+  .section-content li {
+    border: none;
+    padding: 0.25rem 0;
+  }
+</style>
