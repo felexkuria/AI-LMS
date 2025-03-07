@@ -10,7 +10,7 @@
   <body>
     <h1>AWS Machine Learning Engineering Course</h1>
 
-    <div class="section">
+    <div fclass="section">
       <h2>Section 1: Introduction</h2>
       <div class="lesson">
         <h3>Lesson 1: How to Use This Course</h3>
@@ -1670,7 +1670,7 @@
         </div>
       </div>
     </div>
-    <!-- Add this line where you want section5_complete.html to be included -->
+    <!-- Add this line where fyou want section5_complete.html to be included -->
     <div id="section5-content"></div>
 
     <!-- Add this script at the end of the body tag -->
@@ -1682,5 +1682,69 @@
         })
         .catch((error) => console.error("Error loading section5:", error));
     </script>
+    <div class="lesson">
+      <h3>Lesson: Selecting Model Deployment Infrastructure</h3>
+      <p>Choosing the right deployment infrastructure for ML models:</p>
+
+      <div class="explanation cs-student">
+        <h4>For CS Students:</h4>
+        <p>Technical considerations for model deployment infrastructure:</p>
+        <ul>
+          <li>
+            Serverless Deployment: AWS Lambda integration patterns, cold/warm
+            start optimization, memory configuration, and execution time
+            constraints. Analysis of cost versus latency tradeoffs.
+          </li>
+          <li>
+            Container-based Deployment: Docker containerization strategies,
+            ECS/EKS orchestration, auto-scaling configurations, and resource
+            optimization. Implementation of health checks and rolling updates.
+          </li>
+          <li>
+            Real-time Inference: SageMaker real-time endpoints architecture,
+            instance selection optimization, multi-model endpoints, and traffic
+            routing patterns. Analysis of concurrent request handling and queue
+            management.
+          </li>
+          <li>
+            Batch Transform: Implementation of batch processing pipelines,
+            parallel processing strategies, data chunking optimizations, and
+            resource utilization patterns. Cost optimization for large-scale
+            inference.
+          </li>
+        </ul>
+      </div>
+
+      <div class="explanation simple">
+        <h4>Simple Explanation:</h4>
+        <p>Choosing how to run our smart computer in the real world:</p>
+        <ul>
+          <li>
+            Quick and simple setup that only runs when needed (like turning on a
+            light)
+          </li>
+          <li>
+            Running in special boxes that can grow or shrink based on needs
+            (like having more delivery trucks during busy times)
+          </li>
+          <li>
+            Always-ready systems for immediate answers (like having a customer
+            service desk)
+          </li>
+          <li>
+            Processing lots of information all at once (like sorting mail in a
+            post office)
+          </li>
+        </ul>
+      </div>
+      <p>
+        Reference:
+        <a
+          href="https://docs.aws.amazon.com/sagemaker/latest/dg/deploy-model.html"
+          class="aws-link"
+          >SageMaker Deployment Options</a
+        >
+      </p>
+    </div>
   </body>
 </html>
