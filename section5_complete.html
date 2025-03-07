@@ -1,28 +1,27 @@
 <section class="ml-course">
   <div class="course-header">
-    <h1>Machine Learning Model Evaluation and Debugging</h1>
+    <h1>Model Deployment and Orchestration</h1>
     <div class="course-meta">
       <span class="level">Advanced Level</span>
-      <span class="duration">1.5 Hours</span>
+      <span class="duration">2 Hours</span>
     </div>
   </div>
 
   <div class="course-overview">
     <h2>Course Overview</h2>
     <p>
-      Learn advanced techniques for evaluating and debugging machine learning
-      models using AWS services like Amazon SageMaker Clarify and Debugger.
+      This course covers Domain 3 of the AWS Machine Learning Specialty certification: Deployment and Orchestration of ML Workflows.
+      You will learn how to select appropriate deployment infrastructure, create and script infrastructure for ML workloads, 
+      and implement CI/CD pipelines for machine learning solutions.
     </p>
 
     <div class="prerequisites">
       <h3>Prerequisites</h3>
       <ul>
-        <li>1+ year experience with SageMaker and AWS ML services</li>
-        <li>
-          1+ year in related role (backend developer, DevOps, data engineer)
-        </li>
-        <li>Python programming fundamentals</li>
-        <li>Prior courses in AWS ML Engineer Associate Learning Plan</li>
+        <li>Understanding of AWS core services</li>
+        <li>Basic knowledge of machine learning concepts</li>
+        <li>Experience with Python programming</li>
+        <li>Familiarity with Docker containers</li>
       </ul>
     </div>
   </div>
@@ -30,12 +29,12 @@
   <div class="course-objectives">
     <h2>Learning Objectives</h2>
     <ul>
-      <li>Create and analyze model performance baselines</li>
-      <li>Evaluate classification and regression metrics</li>
-      <li>Identify and resolve model convergence issues</li>
-      <li>Use SageMaker Clarify for model interpretability</li>
-      <li>Conduct reproducible ML experiments</li>
-      <li>Debug models with SageMaker Debugger</li>
+      <li>Select appropriate deployment infrastructure for ML workloads</li>
+      <li>Create and script infrastructure using AWS services</li>
+      <li>Implement CI/CD pipelines for ML solutions</li>
+      <li>Apply best practices for ML model deployment</li>
+      <li>Design scalable and secure ML infrastructure</li>
+      <li>Automate the ML deployment lifecycle</li>
     </ul>
   </div>
 
@@ -43,291 +42,357 @@
     <h2>Course Outline</h2>
 
     <div class="section">
-      <h3>Section 1: Introduction</h3>
-      <ul>
-        <li>
-          How to Use This Course
-          <div class="section-content">
-            <p>Learn to navigate the course materials effectively:</p>
-            <ul>
-              <li>Course platform navigation</li>
-              <li>Accessing hands-on labs</li>
-              <li>Using supplementary resources</li>
-              <li>Getting technical support</li>
-            </ul>
-          </div>
-        </li>
-        <li>
-          Course Overview
-          <div class="section-content">
-            <p>Understanding the course structure and expectations:</p>
-            <ul>
-              <li>Course objectives and outcomes</li>
-              <li>Learning path progression</li>
-              <li>Assessment criteria</li>
-              <li>Time management recommendations</li>
-            </ul>
-          </div>
-        </li>
-        <li>
-          Performance Baselines
-          <div class="section-content">
-            <p>Establishing model performance standards:</p>
-            <ul>
-              <li>Defining baseline metrics</li>
-              <li>Setting performance thresholds</li>
-              <li>Benchmark models</li>
-              <li>Industry standards and best practices</li>
-            </ul>
-          </div>
-        </li>
-      </ul>
+      <h3>Introduction</h3>
+      <div class="section-content">
+        <p>Model deployment is the process of integrating a trained machine learning model into a production environment where it can deliver predictions or insights to users or other systems. Orchestration refers to automating and managing the workflow of ML processes from data preparation to model deployment and monitoring.</p>
+        <p>Key concepts in model deployment and orchestration:</p>
+        <ul>
+          <li>Architectural considerations: scalability, fault tolerance, and latency requirements</li>
+          <li>Infrastructure selection criteria: compute optimization, cost management, and operational overhead</li>
+          <li>Deployment strategies: blue/green deployments, canary releases, and shadow mode testing</li>
+          <li>Monitoring requirements: drift detection, performance metrics, and anomaly detection</li>
+        </ul>
+      </div>
     </div>
 
-    <li>SageMaker Clarify and Metrics Overview</li>
-    <li>Interpret Model Outputs Using SageMaker Clarify</li>
-    <li>Amazon SageMaker Experiments</li>
-    <li>
-      Model Evaluation Techniques and Metrics
+    <div class="section">
+      <h3>3.1 Select deployment infrastructure based on existing architecture and requirements</h3>
       <div class="section-content">
-        <p>Comprehensive coverage of evaluation methods:</p>
+        <p>Selecting the right deployment infrastructure involves analyzing business requirements, technical constraints, and existing architecture to determine the most suitable deployment option.</p>
+        
+        <h4>AWS Deployment Options</h4>
         <ul>
-          <li>Classification metrics (accuracy, precision, recall, F1)</li>
-          <li>Regression metrics (MSE, RMSE, MAE)</li>
-          <li>Cross-validation techniques</li>
-          <li>ROC curves and AUC analysis</li>
+          <li><strong>SageMaker Endpoints:</strong> Managed real-time inference with auto-scaling capabilities
+            <ul>
+              <li>Real-time endpoints for synchronous, low-latency predictions</li>
+              <li>Serverless inference for infrequent or unpredictable workloads</li>
+              <li>Multi-model endpoints for hosting multiple models on a single endpoint</li>
+            </ul>
+          </li>
+          
+          <li><strong>Batch Transform:</strong> Large-scale asynchronous processing
+            <ul>
+              <li>Process large datasets without maintaining persistent endpoints</li>
+              <li>Cost-effective for non-time-sensitive predictions</li>
+              <li>Parallel processing with multiple compute instances</li>
+            </ul>
+          </li>
+          
+          <li><strong>AWS Lambda:</strong> Serverless functions for lightweight models
+            <ul>
+              <li>Suitable for models with small memory footprints</li>
+              <li>Event-driven inference with automatic scaling</li>
+              <li>Limited by execution time and memory constraints</li>
+            </ul>
+          </li>
+          
+          <li><strong>Container Services:</strong> ECS/EKS for custom deployment needs
+            <ul>
+              <li>Greater flexibility and control over infrastructure</li>
+              <li>Support for complex deployment architectures</li>
+              <li>Integration with existing container orchestration systems</li>
+            </ul>
+          </li>
+          
+          <li><strong>Edge Deployment:</strong> Running models on edge devices
+            <ul>
+              <li>SageMaker Edge Manager for deploying to IoT devices</li>
+              <li>AWS IoT Greengrass for edge computing capabilities</li>
+              <li>Offline inference without requiring connectivity</li>
+            </ul>
+          </li>
+        </ul>
+        
+        <p>When selecting deployment infrastructure, consider:</p>
+        <ul>
+          <li><strong>Performance Requirements:</strong> Latency, throughput, and scalability needs</li>
+          <li><strong>Operational Constraints:</strong> Budget, maintenance capacity, and monitoring capabilities</li>
+          <li><strong>Integration Needs:</strong> Compatibility with existing systems and data pipelines</li>
+          <li><strong>Security Requirements:</strong> Access controls, encryption, and compliance considerations</li>
         </ul>
       </div>
-    </li>
-    <li>
-      Convergence Issues
+    </div>
+    
+    <div class="section">
+      <h3>3.2 Create and script infrastructure based on existing architecture and requirements</h3>
       <div class="section-content">
-        <p>Understanding and addressing model convergence:</p>
+        <p>Infrastructure as Code (IaC) provides a systematic approach to creating, managing, and scaling ML infrastructure, ensuring consistency and reproducibility.</p>
+        
+        <h4>AWS Infrastructure Provisioning Tools</h4>
         <ul>
-          <li>Common convergence problems</li>
-          <li>Gradient vanishing/exploding</li>
-          <li>Learning rate optimization</li>
-          <li>Batch size considerations</li>
+          <li><strong>AWS CloudFormation:</strong> Template-based infrastructure definition
+            <ul>
+              <li>JSON or YAML templates for declaring AWS resources</li>
+              <li>Stack management for grouping related resources</li>
+              <li>Change sets for previewing infrastructure modifications</li>
+            </ul>
+          </li>
+          
+          <li><strong>AWS Cloud Development Kit (CDK):</strong> Infrastructure defined using programming languages
+            <ul>
+              <li>Define infrastructure with TypeScript, Python, Java, or .NET</li>
+              <li>Reusable components and abstractions</li>
+              <li>Integration with existing development workflows</li>
+            </ul>
+          </li>
+          
+          <li><strong>AWS SageMaker Python SDK:</strong> ML-specific infrastructure definitions
+            <ul>
+              <li>Programmatic creation of ML workflows and pipelines</li>
+              <li>Model training and deployment orchestration</li>
+              <li>Environment configuration and resource allocation</li>
+            </ul>
+          </li>
         </ul>
+        
+        <h4>Infrastructure Scripting Best Practices</h4>
+        <ul>
+          <li><strong>Version Control:</strong> Store infrastructure code in git repositories</li>
+          <li><strong>Modularization:</strong> Create reusable infrastructure components</li>
+          <li><strong>Environment Parity:</strong> Maintain consistency across development, testing, and production</li>
+          <li><strong>Parameter Management:</strong> Use AWS Systems Manager Parameter Store or Secrets Manager</li>
+          <li><strong>Documentation:</strong> Include comprehensive comments and documentation</li>
+        </ul>
+        
+        <h4>Example: SageMaker Model Deployment with AWS CDK</h4>
+        <pre><code>import * as cdk from 'aws-cdk-lib';
+import * as sagemaker from 'aws-cdk-lib/aws-sagemaker';
+import * as iam from 'aws-cdk-lib/aws-iam';
+
+export class MlModelStack extends cdk.Stack {
+  constructor(scope: Construct, id: string, props?: cdk.StackProps) {
+    super(scope, id, props);
+    
+    // Create IAM role for SageMaker
+    const role = new iam.Role(this, 'SageMakerExecutionRole', {
+      assumedBy: new iam.ServicePrincipal('sagemaker.amazonaws.com')
+    });
+    
+    // Create model resource
+    const model = new sagemaker.CfnModel(this, 'Model', {
+      executionRoleArn: role.roleArn,
+      primaryContainer: {
+        image: '${account}.dkr.ecr.${region}.amazonaws.com/my-model:latest',
+        modelDataUrl: 's3://my-bucket/model.tar.gz'
+      }
+    });
+    
+    // Create endpoint configuration
+    const endpointConfig = new sagemaker.CfnEndpointConfig(this, 'EndpointConfig', {
+      productionVariants: [{
+        initialInstanceCount: 1,
+        instanceType: 'ml.m5.large',
+        modelName: model.attrModelName,
+        variantName: 'AllTraffic'
+      }]
+    });
+    
+    // Create endpoint
+    const endpoint = new sagemaker.CfnEndpoint(this, 'Endpoint', {
+      endpointConfigName: endpointConfig.attrEndpointConfigName
+    });
+  }
+}</code></pre>
       </div>
-    </li>
-    <li>
-      Debug Model Convergence with SageMaker Debugger
+    </div>
+    
+    <div class="section">
+      <h3>3.3 Use automated orchestration tools to set up continuous integration and continuous delivery (CI/CD) pipelines</h3>
       <div class="section-content">
-        <p>Hands-on debugging with SageMaker:</p>
+        <p>MLOps combines DevOps principles with ML-specific requirements to create automated workflows for model development, testing, deployment, and monitoring.</p>
+        
+        <h4>AWS CI/CD Tools for ML</h4>
         <ul>
-          <li>
-            Setting up debugging hooks
+          <li><strong>SageMaker Pipelines:</strong> ML-specific workflow orchestration
             <ul>
-              <li>
-                Configure built-in debugging hooks for tensors, metrics and
-                parameters
-              </li>
-              <li>
-                Create custom debugging hooks for model-specific monitoring
-              </li>
-              <li>Set up hook frequency and sampling rates</li>
-              <li>Enable automatic tensor collections</li>
+              <li>Define end-to-end ML workflows as directed acyclic graphs (DAGs)</li>
+              <li>Track lineage and artifact dependencies</li>
+              <li>Parameterized execution of pipeline steps</li>
             </ul>
           </li>
-          <li>
-            Real-time monitoring
+          
+          <li><strong>AWS CodePipeline:</strong> Integrated CI/CD service
             <ul>
-              <li>Track loss curves and gradient updates in real-time</li>
-              <li>
-                Monitor system metrics like GPU utilization and memory usage
-              </li>
-              <li>Set up automated alerts for training issues</li>
-              <li>Visualize training progress with built-in dashboards</li>
+              <li>Visual workflow editor for pipeline construction</li>
+              <li>Integration with CodeBuild for automated build and testing</li>
+              <li>Manual approval gates for controlled deployments</li>
             </ul>
           </li>
-          <li>
-            Analyzing training metrics
+          
+          <li><strong>SageMaker Model Registry:</strong> Model versioning and deployment tracking
             <ul>
-              <li>Inspect loss function behavior and convergence patterns</li>
-              <li>Evaluate gradient magnitudes and weight updates</li>
-              <li>Detect vanishing/exploding gradients</li>
-              <li>Compare metrics across training runs</li>
-            </ul>
-          </li>
-          <li>
-            Implementing debugging rules
-            <ul>
-              <li>Configure built-in rules for common training issues</li>
-              <li>Create custom rules for model-specific problems</li>
-              <li>Set up automated training job stops on rule violations</li>
-              <li>Debug distributed training across multiple nodes</li>
+              <li>Versioned catalog of registered models</li>
+              <li>Approval workflows for promoting models to production</li>
+              <li>Deployment history and tracking</li>
             </ul>
           </li>
         </ul>
-        <p>Key concepts covered:</p>
+        
+        <h4>Key ML CI/CD Pipeline Components</h4>
         <ul>
-          <li>Tensor collections and debugging hook APIs</li>
-          <li>Rule configuration and automated actions</li>
-          <li>Profiling system resource utilization</li>
-          <li>Distributed training debugging patterns</li>
+          <li><strong>Source Stage:</strong> Code and configuration management in repositories</li>
+          <li><strong>Build Stage:</strong> Creating container images and artifacts</li>
+          <li><strong>Test Stage:</strong> Data validation, model evaluation, and integration testing</li>
+          <li><strong>Deployment Stage:</strong> Model registration, approval, and infrastructure provisioning</li>
+          <li><strong>Monitoring Stage:</strong> Continuous evaluation and drift detection</li>
         </ul>
-        <p>Hands-on exercises:</p>
+        
+        <h4>ML-Specific CI/CD Considerations</h4>
         <ul>
-          <li>Set up a basic debugging configuration</li>
-          <li>Monitor a training job in real-time</li>
-          <li>Analyze debugging outputs and visualizations</li>
-          <li>Implement custom debugging rules</li>
+          <li><strong>Data Validation:</strong> Ensure data quality and schema consistency</li>
+          <li><strong>Model Evaluation:</strong> Automated performance testing against baselines</li>
+          <li><strong>Artifact Management:</strong> Track models, datasets, and configuration</li>
+          <li><strong>Deployment Strategies:</strong> Blue/green, canary, and shadow deployments</li>
+          <li><strong>Feedback Loops:</strong> Capturing performance metrics for continuous improvement</li>
         </ul>
       </div>
-    </li>
-    <li>
-      SageMaker Clarify and Metrics Overview
+    </div>
+    
+    <div class="section">
+      <h3>Review and Practice</h3>
       <div class="section-content">
-        <p>Understanding model transparency:</p>
-        <!-- Overview -->
-        <p>
-          SageMaker Clarify helps you understand and explain your ML models by
-          providing:
-        </p>
-
+        <h4>Key Takeaways</h4>
         <ul>
-          <!-- Bias Detection -->
-          <li>
-            Bias detection
-            <ul>
-              <li>Pre-training data bias analysis</li>
-              <li>Post-training model bias detection</li>
-              <li>Demographic disparity metrics</li>
-              <li>Bias mitigation techniques</li>
-            </ul>
-          </li>
-
-          <!-- Feature Importance -->
-          <li>
-            Feature importance
-            <ul>
-              <li>SHAP (SHapley Additive exPlanations) values</li>
-              <li>Global feature importance rankings</li>
-              <li>Local feature attributions</li>
-              <li>Feature correlation analysis</li>
-            </ul>
-          </li>
-
-          <!-- Model Explainability -->
-          <li>
-            Model explainability
-            <ul>
-              <li>Partial Dependence Plots (PDP)</li>
-              <li>Individual Conditional Expectation (ICE)</li>
-              <li>Accumulated Local Effects (ALE)</li>
-              <li>Example-based explanations</li>
-            </ul>
-          </li>
-
-          <!-- Fairness Metrics -->
-          <li>
-            Fairness metrics
-            <ul>
-              <li>Disparate Impact Ratio</li>
-              <li>Equal Opportunity Difference</li>
-              <li>Demographic Parity</li>
-              <li>Treatment Equality</li>
-            </ul>
-          </li>
-        </ul>
-
-        <!-- Practical Examples -->
-        <p>Hands-on exercises:</p>
-        <ul>
-          <li>Setting up Clarify with a SageMaker endpoint</li>
-          <li>Generating bias reports</li>
-          <li>Interpreting feature importance plots</li>
-          <li>Analyzing model decisions</li>
-        </ul>
-
-        <!-- Best Practices -->
-        <p>Best practices:</p>
-        <ul>
-          <li>Regular model monitoring</li>
-          <li>Documentation of bias findings</li>
-          <li>Iterative model improvement</li>
-          <li>Stakeholder communication</li>
+          <li>Select deployment infrastructure based on performance requirements, cost constraints, and existing architecture</li>
+          <li>Use Infrastructure as Code to ensure consistent and reproducible deployments</li>
+          <li>Implement ML-specific CI/CD pipelines to automate the model deployment lifecycle</li>
+          <li>Consider model monitoring and feedback loops as part of the deployment strategy</li>
+          <li>Apply progressive deployment strategies to minimize risk</li>
         </ul>
       </div>
-    </li>
-    <li>
-      Interpret Model Outputs Using SageMaker Clarify
+    </div>
+    
+    <div class="section">
+      <h3>Walkthrough Questions</h3>
       <div class="section-content">
-        <p>Practical model interpretation:</p>
-        <ul>
-          <li>SHAP values analysis</li>
-          <li>Partial dependence plots</li>
-          <li>Feature attribution</li>
-          <li>Bias mitigation strategies</li>
-        </ul>
+        <div class="question">
+          <p><strong>Question 1:</strong> Which AWS service would you choose for deploying a machine learning model that needs to process large batches of data overnight without real-time response requirements?</p>
+          <ol type="a">
+            <li>Amazon SageMaker real-time endpoints</li>
+            <li>Amazon SageMaker Batch Transform</li>
+            <li>AWS Lambda</li>
+            <li>Amazon API Gateway</li>
+          </ol>
+          <p class="answer"><strong>Answer:</strong> b. Amazon SageMaker Batch Transform is designed for offline processing of large datasets without the need for persistent endpoints, making it ideal for non-real-time batch processing scenarios.</p>
+        </div>
+        
+        <div class="question">
+          <p><strong>Question 2:</strong> Which deployment strategy involves running two identical environments simultaneously with only one receiving live traffic, allowing for instant rollback if issues occur?</p>
+          <ol type="a">
+            <li>Canary deployment</li>
+            <li>Rolling deployment</li>
+            <li>Blue/Green deployment</li>
+            <li>Shadow deployment</li>
+          </ol>
+          <p class="answer"><strong>Answer:</strong> c. Blue/Green deployment involves maintaining two identical environments (blue and green) with only one active at a time, enabling instant switching between versions for rollbacks.</p>
+        </div>
+        
+        <div class="question">
+          <p><strong>Question 3:</strong> Which AWS service allows you to define infrastructure using programming languages like Python or TypeScript instead of JSON or YAML templates?</p>
+          <ol type="a">
+            <li>AWS CloudFormation</li>
+            <li>AWS Cloud Development Kit (CDK)</li>
+            <li>AWS Elastic Beanstalk</li>
+            <li>AWS Systems Manager</li>
+          </ol>
+          <p class="answer"><strong>Answer:</strong> b. AWS Cloud Development Kit (CDK) allows developers to define cloud infrastructure using familiar programming languages such as TypeScript, Python, Java, and .NET.</p>
+        </div>
       </div>
-    </li>
-    <li>
-      Amazon SageMaker Experiments
+    </div>
+    
+    <div class="section">
+      <h3>Bonus Questions</h3>
       <div class="section-content">
-        <p>Managing ML experiments:</p>
+        <div class="question">
+          <p><strong>Question 4:</strong> What is a key advantage of using SageMaker multi-model endpoints compared to deploying multiple single-model endpoints?</p>
+          <ol type="a">
+            <li>Improved model accuracy</li>
+            <li>Cost savings through resource sharing</li>
+            <li>Simplified model training</li>
+            <li>Automatic hyperparameter tuning</li>
+          </ol>
+          <p class="answer"><strong>Answer:</strong> b. Cost savings through resource sharing. Multi-model endpoints enable multiple models to share the same compute resources, reducing infrastructure costs compared to deploying separate endpoints for each model.</p>
+        </div>
+        
+        <div class="question">
+          <p><strong>Question 5:</strong> Which AWS service would you use to implement automated model retraining when data drift is detected?</p>
+          <ol type="a">
+            <li>AWS Lambda with EventBridge</li>
+            <li>Amazon SageMaker Model Monitor with SageMaker Pipelines</li>
+            <li>Amazon Rekognition</li>
+            <li>Amazon Comprehend</li>
+          </ol>
+          <p class="answer"><strong>Answer:</strong> b. Amazon SageMaker Model Monitor with SageMaker Pipelines. Model Monitor can detect data and concept drift, while SageMaker Pipelines can automate the retraining process when triggered by drift detection.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section">
+      <h3>Additional Resources</h3>
+      <div class="section-content">
         <ul>
-          <li>Experiment tracking</li>
-          <li>Version control</li>
-          <li>Reproducibility best practices</li>
-          <li>Comparing experiment results</li>
+          <li><a href="https://docs.aws.amazon.com/sagemaker/latest/dg/deploy-model.html" target="_blank">SageMaker Deployment Options</a></li>
+          <li><a href="https://docs.aws.amazon.com/sagemaker/latest/dg/how-it-works-deployment.html" target="_blank">SageMaker Hosting Services</a></li>
+          <li><a href="https://aws.amazon.com/blogs/machine-learning/deploying-machine-learning-models-with-sagemaker/" target="_blank">AWS Blog: Deploying ML Models with SageMaker</a></li>
+          <li><a href="https://docs.aws.amazon.com/cdk/latest/guide/home.html" target="_blank">AWS CDK Documentation</a></li>
+          <li><a href="https://aws.amazon.com/blogs/machine-learning/building-efficient-and-scalable-mlops-workflows/" target="_blank">AWS Blog: Building Efficient MLOps Workflows</a></li>
         </ul>
       </div>
-
-      <div class="section">
-        <h3>Section 3: Conclusion</h3>
-        <ul>
-          <li>Course Summary</li>
-          <li>Assessment</li>
-          <li>Contact Us</li>
-          <li>
-            Course Summary
-            <div class="section-content">
-              <p>Consolidating key learnings:</p>
-              <ul>
-                <li>Review of main concepts</li>
-                <li>Best practices recap</li>
-                <li>Common pitfalls to avoid</li>
-                <li>Next steps in ML journey</li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            Assessment
-            <div class="section-content">
-              <p>Evaluating your knowledge:</p>
-              <ul>
-                <li>Final project requirements</li>
-                <li>Grading criteria</li>
-                <li>Submission guidelines</li>
-                <li>Certification process</li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            Contact Us
-            <div class="section-content">
-              <p>Support resources:</p>
-              <ul>
-                <li>Technical support channels</li>
-                <li>Discussion forums</li>
-                <li>Office hours schedule</li>
-                <li>Additional learning resources</li>
-              </ul>
-            </div>
-          </li>
-        </ul>
+    </div>
+    
+    <div class="section">
+      <h3>Flashcards</h3>
+      <div class="section-content">
+        <div class="flashcard">
+          <div class="front">SageMaker Batch Transform</div>
+          <div class="back">A method for processing large datasets offline, optimized for throughput rather than latency, without requiring a persistent endpoint.</div>
+        </div>
+        
+        <div class="flashcard">
+          <div class="front">Blue/Green Deployment</div>
+          <div class="back">A deployment strategy with two identical environments where only one serves production traffic, allowing for instant rollback by switching between them.</div>
+        </div>
+        
+        <div class="flashcard">
+          <div class="front">Infrastructure as Code (IaC)</div>
+          <div class="back">The practice of managing and provisioning infrastructure through machine-readable definition files rather than manual processes.</div>
+        </div>
+        
+        <div class="flashcard">
+          <div class="front">SageMaker Model Registry</div>
+          <div class="back">A centralized repository for registering, managing, and tracking ML models through their lifecycle.</div>
+        </div>
+        
+        <div class="flashcard">
+          <div class="front">Multi-model Endpoints</div>
+          <div class="back">A cost-effective deployment option that allows multiple models to share the same compute resources within a single SageMaker endpoint.</div>
+        </div>
+        
+        <div class="flashcard">
+          <div class="front">Canary Deployment</div>
+          <div class="back">A deployment strategy that gradually shifts traffic from the old version to the new version, allowing for monitoring and validation before full rollout.</div>
+        </div>
+        
+        <div class="flashcard">
+          <div class="front">SageMaker Pipelines</div>
+          <div class="back">A purpose-built CI/CD service for ML that enables you to create, automate, and manage end-to-end ML workflows.</div>
+        </div>
+        
+        <div class="flashcard">
+          <div class="front">Model Monitor</div>
+          <div class="back">A SageMaker capability that automatically monitors deployed models for data quality, model quality, bias, and feature attribution drift.</div>
+        </div>
       </div>
-    </li>
+    </div>
   </div>
 
   <div class="course-activities">
     <h2>Course Activities</h2>
     <ul>
       <li>Online learning materials</li>
-      <li>Hands-on exercises</li>
-      <li>Knowledge check questions</li>
+      <li>Hands-on deployment exercises</li>
+      <li>Infrastructure scripting practice</li>
+      <li>CI/CD pipeline implementation</li>
     </ul>
   </div>
 </section>
@@ -337,6 +402,7 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   }
 
   .course-header {
@@ -351,8 +417,7 @@
     margin-top: 1rem;
   }
 
-  .level,
-  .duration {
+  .level, .duration {
     padding: 0.5rem 1rem;
     background: #f0f0f0;
     border-radius: 4px;
@@ -370,14 +435,12 @@
   }
 
   .course-objectives ul,
-  .course-content ul,
   .course-activities ul {
     list-style-type: none;
     padding-left: 0;
   }
 
   .course-objectives li,
-  .course-content li,
   .course-activities li {
     padding: 0.5rem 0;
     border-bottom: 1px solid #eee;
@@ -398,12 +461,64 @@
   }
 
   .section-content ul {
-    list-style-type: disc;
     padding-left: 1.5rem;
   }
 
   .section-content li {
-    border: none;
     padding: 0.25rem 0;
+  }
+
+  pre {
+    background: #f5f5f5;
+    padding: 1rem;
+    border-radius: 5px;
+    overflow-x: auto;
+  }
+
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 0.9em;
+  }
+
+  .question {
+    background: #f5f5f5;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+  }
+
+  .answer {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ddd;
+    color: #2563eb;
+  }
+
+  .flashcard {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+
+  .flashcard .front {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+
+  .flashcard .back {
+    color: #555;
+  }
+
+  a {
+    color: #2563eb;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 </style>
