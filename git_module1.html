@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Module 1: Getting Started - Git &amp; GitHub Mastery Course</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <style>
       .video-container {
         position: relative;
@@ -26,70 +30,183 @@
         border-radius: 0.5rem;
         padding: 1rem;
         overflow-x: auto;
+        position: relative;
       }
       code {
         font-family: monospace;
       }
+      .progress-ring {
+        transform: rotate(-90deg);
+      }
+      .lesson-card {
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      .lesson-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+      .copy-btn {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        background: rgba(255, 255, 255, 0.8);
+        border: none;
+        border-radius: 4px;
+        padding: 4px 8px;
+        cursor: pointer;
+        font-size: 12px;
+        opacity: 0;
+        transition: opacity 0.2s;
+      }
+      pre:hover .copy-btn {
+        opacity: 1;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .fade-in {
+        animation: fadeIn 0.5s ease-in-out;
+      }
     </style>
   </head>
-  <!-- Previous head content remains the same -->
   <body class="bg-gray-50">
-    <nav class="bg-white shadow-lg">
+    <!-- Top Navbar -->
+    <nav class="bg-white shadow-md sticky top-0 z-40">
       <div class="max-w-7xl mx-auto px-4">
-        <div class="flex justify-between">
-          <div class="flex space-x-7">
-            <div class="flex items-center py-4">
-              <a href="index.html" class="text-gray-500 hover:text-blue-600"
-                >Home</a
-              >
-            </div>
-            <div class="flex items-center py-4">
-              <a href="ml_course.html" class="text-gray-500 hover:text-blue-600"
-                >ML Course</a
-              >
-            </div>
-            <div class="flex items-center py-4">
-              <a href="git_landing_page.html" class="text-blue-600 font-bold"
-                >Git Course</a
-              >
-            </div>
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <a href="git_course.html" class="flex items-center">
+              <i class="fas fa-code-branch text-blue-600 text-2xl mr-2"></i>
+              <span class="font-bold text-xl text-blue-600">Git Mastery</span>
+            </a>
           </div>
+          <div class="hidden md:flex items-center space-x-6">
+            <a
+              href="index.html"
+              class="text-gray-600 hover:text-blue-600 transition-colors"
+              >Home</a
+            >
+            <a
+              href="ml_course.html"
+              class="text-gray-600 hover:text-blue-600 transition-colors"
+              >ML Course</a
+            >
+            <a
+              href="git_landing_page.html"
+              class="text-gray-600 hover:text-blue-600 transition-colors"
+              >Git Course</a
+            >
+            <button
+              class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition-colors"
+            >
+              <i class="fas fa-user mr-2"></i>My Account
+            </button>
+          </div>
+          <div class="flex items-center md:hidden">
+            <button
+              id="mobileMenuBtn"
+              class="text-gray-600 hover:text-gray-900 focus:outline-none"
+            >
+              <i class="fas fa-bars text-2xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile menu, show/hide based on menu state -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden bg-white shadow-md absolute w-full z-40"
+      >
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a
+            href="index.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+            >Home</a
+          >
+          <a
+            href="ml_course.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+            >ML Course</a
+          >
+          <a
+            href="git_landing_page.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-blue-600 font-bold"
+            >Git Course</a
+          >
         </div>
       </div>
     </nav>
 
+    <!-- Course Header Banner -->
     <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
       <div class="max-w-7xl mx-auto px-4 py-12">
         <div class="text-center">
-          <h1 class="text-3xl font-bold mb-2">Module 1: Getting Started</h1>
-          <p class="text-xl">Git &amp; GitHub Mastery Course</p>
+          <h1 class="text-3xl md:text-4xl font-bold mb-2">
+            Module 1: Getting Started
+          </h1>
+          <p class="text-xl opacity-90">Git &amp; GitHub Mastery Course</p>
+
+          <!-- Progress Bar -->
+          <div
+            class="mt-6 max-w-md mx-auto bg-white bg-opacity-20 rounded-full h-4 overflow-hidden"
+          >
+            <div
+              class="bg-green-400 h-full rounded-full"
+              style="width: 12.5%"
+            ></div>
+          </div>
+          <p class="text-sm mt-2 text-white text-opacity-90">
+            12.5% Complete - Module 1/8
+          </p>
         </div>
       </div>
     </header>
 
-    <!-- Previous nav content remains the same -->
+    <!-- Main Content Area -->
     <div class="max-w-7xl mx-auto px-4 py-8">
       <div class="flex flex-col md:flex-row">
         <!-- Main content -->
         <div class="md:w-2/3 md:pr-8">
-          <div class="mb-12">
-            <h2 class="text-2xl font-bold mb-6">Introduction to Git</h2>
-            <p class="mb-4">
+          <div class="bg-white rounded-lg shadow-sm p-6 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">
+              Introduction to Git
+            </h2>
+            <p class="mb-4 text-gray-700">
               Welcome to Module 1 of the Git and GitHub Mastery Course! In this
               first module, we'll cover the essentials to get you started with
               Git and GitHub:
             </p>
-            <!-- Main content remains the same -->
 
-            <ul class="list-disc pl-6 mb-6 space-y-2">
-              <li>✅ Installing Git on different operating systems</li>
-              <li>✅ Setting up your GitHub account</li>
-              <li>✅ Configuring Git for first-time use</li>
-              <li>✅ Creating your first GitHub Pages website</li>
-              <li>✅ Understanding basic CI/CD concepts</li>
+            <ul class="mb-6 space-y-2">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                <span>Installing Git on different operating systems</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                <span>Setting up your GitHub account</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                <span>Configuring Git for first-time use</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                <span>Creating your first GitHub Pages website</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                <span>Understanding basic CI/CD concepts</span>
+              </li>
             </ul>
 
-            <div class="video-container mb-8">
+            <div class="video-container mb-4">
               <iframe
                 src="https://www.youtube.com/embed/n9MUhWLvanc"
                 frameborder="0"
@@ -97,39 +214,48 @@
                 allowfullscreen
               ></iframe>
             </div>
+            <p class="text-sm text-gray-600 text-center">
+              Introduction to Git and GitHub - Course Overview
+            </p>
           </div>
 
-          <div class="mb-12">
-            <h2 class="text-2xl font-bold mb-6">
+          <div class="bg-white rounded-lg shadow-sm p-6 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">
               1. How to Download Git on Mac/Windows/Linux
             </h2>
 
-            <h3 class="text-xl font-semibold mb-3">
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">
               Installing Git on Windows
             </h3>
-            <ol class="list-decimal pl-6 mb-4 space-y-2">
-              <li>
-                Go to
-                <a
-                  href="https://git-scm.com/download/win"
-                  class="text-blue-600 hover:underline"
-                  >https://git-scm.com/download/win</a
-                >
-              </li>
-              <li>Download the latest Git for Windows installer</li>
-              <li>Run the installer and follow the installation wizard</li>
-              <li>
-                Choose the default options unless you have specific preferences
-              </li>
-              <li>Complete the installation</li>
-            </ol>
+            <div class="pl-4 border-l-4 border-blue-100 mb-6">
+              <ol class="list-decimal pl-6 mb-4 space-y-2 text-gray-700">
+                <li>
+                  Go to
+                  <a
+                    href="https://git-scm.com/download/win"
+                    class="text-blue-600 hover:underline"
+                    >https://git-scm.com/download/win</a
+                  >
+                </li>
+                <li>Download the latest Git for Windows installer</li>
+                <li>Run the installer and follow the installation wizard</li>
+                <li>
+                  Choose the default options unless you have specific
+                  preferences
+                </li>
+                <li>Complete the installation</li>
+              </ol>
+            </div>
 
-            <h3 class="text-xl font-semibold mb-3 mt-6">
+            <h3 class="text-xl font-semibold mb-3 mt-6 text-gray-800">
               Installing Git on macOS
             </h3>
-            <p class="mb-2">There are several ways to install Git on macOS:</p>
-            <p class="mb-4">
-              <strong>Option 1:</strong> Using Homebrew (recommended)
+            <p class="mb-2 text-gray-700">
+              There are several ways to install Git on macOS:
+            </p>
+            <p class="mb-2 text-gray-700">
+              <span class="font-medium">Option 1:</span> Using Homebrew
+              (recommended)
             </p>
             <pre><code># Install Homebrew if you don't have it
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -137,113 +263,150 @@
 # Install Git
 brew install git</code></pre>
 
-            <p class="mb-4 mt-4">
-              <strong>Option 2:</strong> Download the installer
+            <p class="mb-2 mt-4 text-gray-700">
+              <span class="font-medium">Option 2:</span> Download the installer
             </p>
-            <ol class="list-decimal pl-6 mb-4 space-y-2">
-              <li>
-                Go to
-                <a
-                  href="https://git-scm.com/download/mac"
-                  class="text-blue-600 hover:underline"
-                  >https://git-scm.com/download/mac</a
-                >
-              </li>
-              <li>Download and run the macOS Git installer</li>
-            </ol>
+            <div class="pl-4 border-l-4 border-blue-100 mb-6">
+              <ol class="list-decimal pl-6 mb-4 space-y-2 text-gray-700">
+                <li>
+                  Go to
+                  <a
+                    href="https://git-scm.com/download/mac"
+                    class="text-blue-600 hover:underline"
+                    >https://git-scm.com/download/mac</a
+                  >
+                </li>
+                <li>Download and run the macOS Git installer</li>
+              </ol>
+            </div>
 
-            <h3 class="text-xl font-semibold mb-3 mt-6">
+            <h3 class="text-xl font-semibold mb-3 mt-6 text-gray-800">
               Installing Git on Linux
             </h3>
-            <p class="mb-2">For Debian/Ubuntu based distributions:</p>
+            <p class="mb-2 text-gray-700">
+              For Debian/Ubuntu based distributions:
+            </p>
             <pre><code>sudo apt update
 sudo apt install git</code></pre>
 
-            <p class="mb-2 mt-4">For Fedora:</p>
+            <p class="mb-2 mt-4 text-gray-700">For Fedora:</p>
             <pre><code>sudo dnf install git</code></pre>
 
-            <p class="mb-2 mt-4">For CentOS/RHEL:</p>
+            <p class="mb-2 mt-4 text-gray-700">For CentOS/RHEL:</p>
             <pre><code>sudo yum install git</code></pre>
 
-            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mt-6">
-              <p class="text-blue-800">
-                After installation, verify Git is properly installed by opening
-                a terminal or command prompt and typing:
-              </p>
-              <pre><code>git --version</code></pre>
-              <p class="text-blue-800 mt-2">
-                You should see the Git version number displayed.
-              </p>
+            <div
+              class="bg-blue-50 border-l-4 border-blue-500 p-4 mt-6 rounded-r-md"
+            >
+              <div class="flex">
+                <div class="flex-shrink-0">
+                  <i class="fas fa-info-circle text-blue-600"></i>
+                </div>
+                <div class="ml-3">
+                  <p class="text-blue-700 font-medium">Verification Tip</p>
+                  <p class="text-blue-700">
+                    After installation, verify Git is properly installed by
+                    opening a terminal or command prompt and typing:
+                  </p>
+                  <pre
+                    class="mt-2 bg-blue-100 p-2 rounded"
+                  ><code>git --version</code></pre>
+                  <p class="text-blue-700 mt-2">
+                    You should see the Git version number displayed.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="mb-12">
-            <h2 class="text-2xl font-bold mb-6">
+          <div class="bg-white rounded-lg shadow-sm p-6 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">
               2. GitHub Pages &amp; CI/CD: Website Deployment
             </h2>
 
-            <p class="mb-4">
+            <div class="video-container mb-4">
+              <iframe
+                src="https://www.youtube.com/embed/U3ywm2bVZ3Q"
+                title="GitHub Pages &amp; CI/CD Mastery: Automate Your Website Deployment in 15 Minutes"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              >
+              </iframe>
+            </div>
+            <p class="text-sm text-gray-600 text-center mb-4">
+              GitHub Pages &amp; CI/CD Mastery: Automate Your Website Deployment
+            </p>
+
+            <p class="mb-4 text-gray-700">
               GitHub Pages is a static site hosting service that takes HTML,
               CSS, and JavaScript files directly from a GitHub repository and
               publishes a website.
             </p>
 
-            <h3 class="text-xl font-semibold mb-3">Setting Up GitHub Pages</h3>
-            <ol class="list-decimal pl-6 mb-6 space-y-2">
-              <li>
-                Create a GitHub account at
-                <a
-                  href="https://github.com"
-                  class="text-blue-600 hover:underline"
-                  >github.com</a
-                >
-                if you don't have one already
-              </li>
-              <li>
-                Create a new repository named <code>username.github.io</code>,
-                where username is your GitHub username
-              </li>
-              <li>Clone the repository to your local machine</li>
-              <li>
-                Add your website files (HTML, CSS, JavaScript) to the repository
-              </li>
-              <li>Commit and push the changes to GitHub</li>
-              <li>
-                Wait a few minutes, then visit
-                <code>username.github.io</code> to see your website live!
-              </li>
-            </ol>
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">
+              Setting Up GitHub Pages
+            </h3>
+            <div class="pl-4 border-l-4 border-blue-100 mb-6">
+              <ol class="list-decimal pl-6 mb-6 space-y-2 text-gray-700">
+                <li>
+                  Create a GitHub account at
+                  <a
+                    href="https://github.com"
+                    class="text-blue-600 hover:underline"
+                    >github.com</a
+                  >
+                  if you don't have one already
+                </li>
+                <li>
+                  Create a new repository named <code>username.github.io</code>,
+                  where username is your GitHub username
+                </li>
+                <li>Clone the repository to your local machine</li>
+                <li>
+                  Add your website files (HTML, CSS, JavaScript) to the
+                  repository
+                </li>
+                <li>Commit and push the changes to GitHub</li>
+                <li>
+                  Wait a few minutes, then visit
+                  <code>username.github.io</code> to see your website live!
+                </li>
+              </ol>
+            </div>
 
-            <h3 class="text-xl font-semibold mb-3">
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">
               Introduction to CI/CD with GitHub Actions
             </h3>
-            <p class="mb-4">
+            <p class="mb-4 text-gray-700">
               Continuous Integration and Continuous Deployment (CI/CD) is a
               method to frequently deliver apps by introducing automation into
               the development process.
             </p>
 
-            <p class="mb-4">
+            <p class="mb-4 text-gray-700">
               GitHub Actions allows you to automate your workflow from idea to
               production:
             </p>
 
-            <ol class="list-decimal pl-6 mb-6 space-y-2">
-              <li>
-                Create a <code>.github/workflows</code> directory in your
-                repository
-              </li>
-              <li>
-                Add a YAML file (e.g., <code>deploy.yml</code>) to define your
-                workflow
-              </li>
-              <li>
-                Define the workflow to build and deploy your website
-                automatically
-              </li>
-            </ol>
+            <div class="pl-4 border-l-4 border-blue-100 mb-6">
+              <ol class="list-decimal pl-6 mb-6 space-y-2 text-gray-700">
+                <li>
+                  Create a <code>.github/workflows</code> directory in your
+                  repository
+                </li>
+                <li>
+                  Add a YAML file (e.g., <code>deploy.yml</code>) to define your
+                  workflow
+                </li>
+                <li>
+                  Define the workflow to build and deploy your website
+                  automatically
+                </li>
+              </ol>
+            </div>
 
-            <p class="mb-4">
+            <p class="mb-4 text-gray-700">
               Here's a basic GitHub Actions workflow example for deploying to
               GitHub Pages:
             </p>
@@ -267,237 +430,317 @@ jobs:
           branch: gh-pages
           folder: .</code></pre>
 
-            <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 mt-6">
-              <p class="font-bold text-yellow-800">Pro Tip:</p>
-              <p class="text-yellow-800">
-                Using GitHub Actions, you can automate tasks like running tests,
-                linting code, and deploying your application whenever you push
-                changes to your repository.
-              </p>
+            <div
+              class="bg-yellow-50 border-l-4 border-yellow-500 p-4 mt-6 rounded-r-md"
+            >
+              <div class="flex">
+                <div class="flex-shrink-0">
+                  <i class="fas fa-lightbulb text-yellow-600"></i>
+                </div>
+                <div class="ml-3">
+                  <p class="font-medium text-yellow-800">Pro Tip:</p>
+                  <p class="text-yellow-800">
+                    Using GitHub Actions, you can automate tasks like running
+                    tests, linting code, and deploying your application whenever
+                    you push changes to your repository.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="mb-12">
-            <h2 class="text-2xl font-bold mb-6">Module 1 Practice Exercises</h2>
+          <div class="bg-white rounded-lg shadow-sm p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-6 text-gray-900">
+              Module 1 Practice Exercises
+            </h2>
 
-            <ol class="list-decimal pl-6 space-y-4">
-              <li>
-                <p class="font-semibold">
-                  Install Git on your computer and verify the installation.
-                </p>
-                <p class="text-gray-600">
-                  Use the command <code>git --version</code> to verify.
-                </p>
-              </li>
-              <li>
-                <p class="font-semibold">
-                  Create a GitHub account if you don't have one.
-                </p>
-              </li>
-              <li>
-                <p class="font-semibold">
-                  Configure Git with your name and email.
-                </p>
-                <pre><code>git config --global user.name "Your Name"
-git config --global user.email "your.email@example.com"</code></pre>
-              </li>
-              <li>
-                <p class="font-semibold">
-                  Create a simple HTML page and deploy it to GitHub Pages.
-                </p>
-              </li>
-              <li>
-                <p class="font-semibold">
-                  Set up a basic GitHub Actions workflow for your repository.
-                </p>
-              </li>
-            </ol>
-          </div>
-        </div>
-
-        <!-- Sidebar -->
-        <div class="md:w-1/3 mt-8 md:mt-0">
-          <!-- Hamburger Menu Button -->
-          <button
-            id="menuToggle"
-            class="md:hidden fixed top-4 left-4 z-50 bg-white p-2 rounded-lg shadow-md"
-          >
-            <svg
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              ></path>
-            </svg>
-          </button>
-          <!-- Sidebar Menu -->
-          <div
-            id="sideMenu"
-            class="fixed left-0 top-0 h-full w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-200 ease-in-out z-40"
-          >
-            <div class="p-6">
-              <h3 class="text-xl font-bold mb-4">Module Navigation</h3>
-              <ul class="space-y-2">
-                <li class="font-semibold text-blue-600">
-                  → Module 1: Getting Started
-                </li>
-                <li>
-                  <a
-                    href="git_module2.html"
-                    class="text-gray-700 hover:text-blue-600"
-                    >Module 2: Git Fundamentals</a
-                  >
-                </li>
-                <!-- Rest of module navigation remains the same -->
-              </ul>
-
-              <!-- Sidebar Menu -->
-              <div
-                id="sideMenu"
-                class="fixed left-0 top-0 h-full w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-200 ease-in-out z-40"
-              >
-                <div class="p-6">
-                  <h3 class="text-xl font-bold mb-4">Module Navigation</h3>
-                  <ul class="space-y-2">
-                    <li class="font-semibold text-blue-600">
-                      → Module 1: Getting Started
-                    </li>
-                    <li>
-                      <a
-                        href="git_module2.html"
-                        class="text-gray-700 hover:text-blue-600"
-                        >Module 2: Git Fundamentals</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="git_module3.html"
-                        class="text-gray-700 hover:text-blue-600"
-                        >Module 3: Essential Git Commands</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="git_module4.html"
-                        class="text-gray-700 hover:text-blue-600"
-                        >Module 4: GitHub Essentials</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="git_module5.html"
-                        class="text-gray-700 hover:text-blue-600"
-                        >Module 5: Collaboration &amp; Advanced</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="git_module6.html"
-                        class="text-gray-700 hover:text-blue-600"
-                        >Module 6: CI/CD &amp; Deployment</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="git_module7.html"
-                        class="text-gray-700 hover:text-blue-600"
-                        >Module 7: Professional Git Tools</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="git_module8.html"
-                        class="text-gray-700 hover:text-blue-600"
-                        >Module 8: Real-World Scenarios</a
-                      >
-                    </li>
-                  </ul>
-
-                  <div class="mt-8">
-                    <h3 class="text-xl font-bold mb-4">Resources</h3>
-                    <ul class="space-y-2">
-                      <li>
-                        <a
-                          href="https://git-scm.com/doc"
-                          class="text-blue-600 hover:underline"
-                          >Git Documentation</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          href="https://docs.github.com/en/pages"
-                          class="text-blue-600 hover:underline"
-                          >GitHub Pages Documentation</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          href="https://docs.github.com/en/actions"
-                          class="text-blue-600 hover:underline"
-                          >GitHub Actions Documentation</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <div class="flex-shrink-0 mr-3">
+                  <input
+                    type="checkbox"
+                    id="exercise1"
+                    class="task-checkbox h-5 w-5 rounded border-gray-300 text-blue-600 focus:ring-blue-500 cursor-pointer"
+                  />
+                </div>
+                <div>
+                  <label for="exercise1" class="font-semibold cursor-pointer">
+                    Install Git on your computer and verify the installation.
+                  </label>
+                  <p class="text-gray-600 mt-1">
+                    Use the command <code>git --version</code> to verify.
+                  </p>
                 </div>
               </div>
 
-              <script>
-                const menuToggle = document.getElementById("menuToggle");
+              <div class="flex items-start">
+                <div class="flex-shrink-0 mr-3">
+                  <input
+                    type="checkbox"
+                    id="exercise2"
+                    class="task-checkbox h-5 w-5 rounded border-gray-300 text-blue-600 focus:ring-blue-500 cursor-pointer"
+                  />
+                </div>
+                <div>
+                  <label for="exercise2" class="font-semibold cursor-pointer">
+                    Create a GitHub account if you don't have one.
+                  </label>
+                </div>
+              </div>
 
-                menuToggle.addEventListener("click", () => {
-                  sideMenu.classList.toggle("-translate-x-full");
-                });
+              <div class="flex items-start">
+                <div class="flex-shrink-0 mr-3">
+                  <input
+                    type="checkbox"
+                    id="exercise3"
+                    class="task-checkbox h-5 w-5 rounded border-gray-300 text-blue-600 focus:ring-blue-500 cursor-pointer"
+                  />
+                </div>
+                <div>
+                  <label for="exercise3" class="font-semibold cursor-pointer">
+                    Configure Git with your name and email.
+                  </label>
+                  <pre><code>git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"</code></pre>
+                </div>
+              </div>
 
-                // Close menu when clicking outside
-                document.addEventListener("click", (e) => {
-                  if (
-                    !sideMenu.contains(e.target) &&
-                    !menuToggle.contains(e.target)
-                  ) {
-                    sideMenu.classList.add("-translate-x-full");
-                  }
-                });
-              </script>
-            </div>
-            <div class="mt-8">
-              <h3 class="text-xl font-bold mb-4">Next Steps</h3>
-              <a
-                href="git_module2.html"
-                class="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 px-4 rounded-lg font-medium"
-              >
-                Continue to Module 2: Git Fundamentals →
-              </a>
-              <div class="mt-8">
-                <h3 class="text-xl font-bold mb-4">Resources</h3>
-                <ul class="space-y-2">
-                  <!-- Resources links remain the same -->
-                </ul>
+              <div class="flex items-start">
+                <div class="flex-shrink-0 mr-3">
+                  <input
+                    type="checkbox"
+                    id="exercise4"
+                    class="task-checkbox h-5 w-5 rounded border-gray-300 text-blue-600 focus:ring-blue-500 cursor-pointer"
+                  />
+                </div>
+                <div>
+                  <label for="exercise4" class="font-semibold cursor-pointer">
+                    Create a simple HTML page and deploy it to GitHub Pages.
+                  </label>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="flex-shrink-0 mr-3">
+                  <input
+                    type="checkbox"
+                    id="exercise5"
+                    class="task-checkbox h-5 w-5 rounded border-gray-300 text-blue-600 focus:ring-blue-500 cursor-pointer"
+                  />
+                </div>
+                <div>
+                  <label for="exercise5" class="font-semibold cursor-pointer">
+                    Set up a basic GitHub Actions workflow for your repository.
+                  </label>
+                </div>
+              </div>
+
+              <div class="mt-6 text-right">
+                <button
+                  id="markComplete"
+                  class="bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg text-sm flex items-center ml-auto"
+                >
+                  <i class="fas fa-check-circle mr-2"></i>
+                  Mark Module Complete
+                </button>
               </div>
             </div>
           </div>
-
-          <script>
-            const sideMenu = document.getElementById("sideMenu");
-
-            // Close menu when clicking outside
-            document.addEventListener("click", (e) => {
-              if (!sideMenu.contains(e.target)) {
-                sideMenu.classList.add("-translate-x-full");
-              }
-            });
-          </script>
         </div>
-        <!-- Rest of content remains the same -->
+
+        <!-- Course Sidebar -->
+        <div class="md:w-1/3 mt-8 md:mt-0">
+          <div class="bg-white rounded-lg shadow-sm p-6 sticky top-20">
+            <div class="flex items-center mb-6">
+              <div class="mr-3 relative">
+                <svg class="progress-ring w-12 h-12">
+                  <circle
+                    r="20"
+                    cx="24"
+                    cy="24"
+                    fill="transparent"
+                    stroke="#e5e7eb"
+                    stroke-width="4"
+                  ></circle>
+                  <circle
+                    r="20"
+                    cx="24"
+                    cy="24"
+                    fill="transparent"
+                    stroke="#10b981"
+                    stroke-width="4"
+                    stroke-dasharray="125.6"
+                    stroke-dashoffset="110"
+                  ></circle>
+                </svg>
+                <span
+                  class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-sm font-semibold"
+                  >12%</span
+                >
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-900">Your Progress</h3>
+                <p class="text-sm text-gray-600">Keep going!</p>
+              </div>
+            </div>
+
+            <h3 class="text-lg font-bold text-gray-800 mb-4">Course Content</h3>
+
+            <div class="space-y-3">
+              <!-- Current Module -->
+              <div class="bg-blue-50 rounded-md p-3 border-l-4 border-blue-600">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center">
+                    <i class="fas fa-circle-check text-green-500 mr-2"></i>
+                    <span class="font-semibold text-blue-600"
+                      >Module 1: Getting Started</span
+                    >
+                  </div>
+                  <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded"
+                    >Current</span
+                  >
+                </div>
+              </div>
+
+              <!-- Other Modules -->
+              <div class="p-3 hover:bg-gray-50 rounded-md transition-colors">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center">
+                    <i class="far fa-circle text-gray-400 mr-2"></i>
+                    <a
+                      href="git_module2.html"
+                      class="text-gray-700 hover:text-blue-600"
+                      >Module 2: Git Fundamentals</a
+                    >
+                  </div>
+                  <span class="text-xs text-gray-500">Up next</span>
+                </div>
+              </div>
+
+              <div class="p-3 hover:bg-gray-50 rounded-md transition-colors">
+                <div class="flex items-center">
+                  <i class="far fa-circle text-gray-400 mr-2"></i>
+                  <a
+                    href="git_module3.html"
+                    class="text-gray-700 hover:text-blue-600"
+                    >Module 3: Essential Git Commands</a
+                  >
+                </div>
+              </div>
+
+              <div class="p-3 hover:bg-gray-50 rounded-md transition-colors">
+                <div class="flex items-center">
+                  <i class="far fa-circle text-gray-400 mr-2"></i>
+                  <a
+                    href="git_module4.html"
+                    class="text-gray-700 hover:text-blue-600"
+                    >Module 4: GitHub Essentials</a
+                  >
+                </div>
+              </div>
+
+              <div class="p-3 hover:bg-gray-50 rounded-md transition-colors">
+                <div class="flex items-center">
+                  <i class="far fa-circle text-gray-400 mr-2"></i>
+                  <a
+                    href="git_module5.html"
+                    class="text-gray-700 hover:text-blue-600"
+                    >Module 5: Collaboration &amp; Advanced</a
+                  >
+                </div>
+              </div>
+
+              <div class="p-3 hover:bg-gray-50 rounded-md transition-colors">
+                <div class="flex items-center">
+                  <i class="far fa-circle text-gray-400 mr-2"></i>
+                  <a
+                    href="git_module6.html"
+                    class="text-gray-700 hover:text-blue-600"
+                    >Module 6: CI/CD &amp; Deployment</a
+                  >
+                </div>
+              </div>
+
+              <div class="p-3 hover:bg-gray-50 rounded-md transition-colors">
+                <div class="flex items-center">
+                  <i class="far fa-circle text-gray-400 mr-2"></i>
+                  <a
+                    href="git_module7.html"
+                    class="text-gray-700 hover:text-blue-600"
+                    >Module 7: Professional Git Tools</a
+                  >
+                </div>
+              </div>
+
+              <div class="p-3 hover:bg-gray-50 rounded-md transition-colors">
+                <div class="flex items-center">
+                  <i class="far fa-circle text-gray-400 mr-2"></i>
+                  <a
+                    href="git_module8.html"
+                    class="text-gray-700 hover:text-blue-600"
+                    >Module 8: Real-World Scenarios</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8 border-t pt-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-4">Resources</h3>
+              <ul class="space-y-3">
+                <li>
+                  <a
+                    href="https://git-scm.com/doc"
+                    class="flex items-center text-blue-600 hover:text-blue-700"
+                  >
+                    <i class="fas fa-book mr-2"></i>
+                    <span>Git Documentation</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://docs.github.com/en/pages"
+                    class="flex items-center text-blue-600 hover:text-blue-700"
+                  >
+                    <i class="fas fa-globe mr-2"></i>
+                    <span>GitHub Pages Documentation</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://docs.github.com/en/actions"
+                    class="flex items-center text-blue-600 hover:text-blue-700"
+                  >
+                    <i class="fas fa-code-branch mr-2"></i>
+                    <span>GitHub Actions Documentation</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Next/Previous Module Navigation -->
+            <div class="mt-8 pt-6 border-t border-gray-200">
+              <div class="flex flex-col gap-4">
+                <button
+                  disabled
+                  class="py-3 px-4 border border-gray-300 rounded-lg text-gray-400 bg-gray-100 flex items-center justify-center opacity-50 cursor-not-allowed"
+                >
+                  <i class="fas fa-arrow-left mr-2"></i> Previous Module
+                </button>
+                <a
+                  href="git_module2.html"
+                  class="bg-blue-600 hover:bg-blue-700 text-white text-center py-3 px-4 rounded-lg font-medium flex items-center justify-center"
+                >
+                  Continue to Module 2
+                  <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
+    <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8 mt-12">
       <div class="max-w-7xl mx-auto px-4">
         <div class="flex flex-col md:flex-row justify-between items-center">
@@ -512,14 +755,16 @@ git config --global user.email "your.email@example.com"</code></pre>
           >
             <a
               href="git_landing_page.html"
-              class="text-gray-300 hover:text-white"
+              class="text-gray-300 hover:text-white transition-colors"
               >Course Home</a
             >
-            <a href="#" class="text-gray-300 hover:text-white">Support</a>
-            <a href="#" class="text-gray-300 hover:text-white"
+            <a href="#" class="text-gray-300 hover:text-white transition-colors"
+              >Support</a
+            >
+            <a href="#" class="text-gray-300 hover:text-white transition-colors"
               >Privacy Policy</a
             >
-            <a href="#" class="text-gray-300 hover:text-white"
+            <a href="#" class="text-gray-300 hover:text-white transition-colors"
               >Terms of Service</a
             >
           </div>
@@ -531,6 +776,7 @@ git config --global user.email "your.email@example.com"</code></pre>
         </div>
       </div>
     </footer>
-    <!-- Footer remains the same -->
+
+    <script src="git_module1.js"></script>
   </body>
 </html>
