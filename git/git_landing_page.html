@@ -5,15 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Git &amp; GitHub Mastery Course</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Added vendor prefixes and additional transition properties for better browser support -->
     <style>
       .module-card:hover {
+        -webkit-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
         transform: translateY(-5px);
-        transition: transform 0.3s ease;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        -webkit-box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05);
         box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
           0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        will-change: transform;
       }
     </style>
   </head>
+  <!-- Rest of the HTML remains unchanged -->
   <body class="bg-gray-50">
     <nav class="bg-white shadow-lg">
       <div class="max-w-7xl mx-auto px-4">
@@ -26,14 +36,14 @@
             </div>
             <div class="flex items-center py-4">
               <a
-                href="../ml_course.html"
+                href="../ml_course/ml_course.html"
                 class="text-gray-500 hover:text-blue-600"
                 >ML Course</a
               >
             </div>
             <div class="flex items-center py-4">
               <a
-                href="/git/git_landing_page.html"
+                href="../git/git_landing_page.html"
                 class="text-blue-600 font-bold text-lg"
                 >Git Course</a
               >

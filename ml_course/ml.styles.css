@@ -1,20 +1,30 @@
 :root {
-  --primary-color: #2563eb;
-  --secondary-color: #1e40af;
-  --background-gray: #f3f4f6;
-  --text-gray: #1f2937;
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --primary: #0052cc;
+  --secondary: #00a3bf;
+  --background: #f4f5f7;
+  --text: #172b4d;
+  --border: #dfe1e6;
 }
 
 body {
-  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-family: "Inter", sans-serif;
   line-height: 1.6;
+  color: var(--text);
+  background: var(--background);
   margin: 0;
-  padding: 20px;
-  background-color: var(--background-gray);
-  color: var(--text-gray);
+  padding: 2rem;
 }
-
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+h1,
+h2,
+h3,
+h4 {
+  color: var(--primary);
+  margin-top: 0;
+}
 /* Navigation */
 .nav-container {
   position: fixed;
@@ -41,6 +51,48 @@ body {
   transition: all 0.3s ease;
   padding: 0.5rem 1rem;
   border-radius: 8px;
+}
+.section {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+.lesson {
+  border-left: 4px solid var(--secondary);
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+}
+.explanation {
+  background: var(--background);
+  border-radius: 6px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+.explanation.cs-student {
+  border-left: 4px solid var(--primary);
+}
+.explanation.simple {
+  border-left: 4px solid var(--secondary);
+}
+ul {
+  padding-left: 1.5rem;
+}
+li {
+  margin: 0.5rem 0;
+}
+a.aws-link {
+  color: var(--primary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+a.aws-link:hover {
+  border-color: var(--primary);
+}
+.section {
+  padding: 1rem;
 }
 
 .nav-link:hover {
