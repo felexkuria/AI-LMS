@@ -1746,5 +1746,43 @@
         >
       </p>
     </div>
+    <script>
+      // Quiz functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get all quiz forms
+        const quizForms = document.querySelectorAll(".quiz-form");
+
+        // Handle form submission
+        quizForms.forEach((form) => {
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // Get the correct answer
+            const correctAnswer = this.dataset.correctAnswer;
+
+            // Get the selected answer
+            const selectedAnswer = Array.from(
+              this.querySelectorAll('input[type="radio"]:checked')
+            ).map((input) => input.value)[0];
+
+            // Show feedback
+            const feedback = this.querySelector(".feedback");
+            if (selectedAnswer === correctAnswer) {
+              feedback.textContent = "Correct!";
+              feedback.style.color = "green";
+            } else {
+              feedback.textContent = "Incorrect. Try again!";
+              feedback.style.color = "red";
+            }
+
+            // Reset form after 2 seconds
+            setTimeout(() => {
+              this.reset();
+              feedback.textContent = "";
+            }, 2000);
+          });
+        });
+      });
+    </script>
   </body>
 </html>
