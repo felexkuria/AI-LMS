@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module 1: Getting Started - Git Mastery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#4f46e5",
+              secondary: "#6b7280",
+              accent: "#10b981",
+              warning: "#f59e0b",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .smooth-load {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.3s ease-in-out;
+      }
+      .loaded {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .copy-success {
+        animation: fadeOut 1.5s ease-in-out forwards;
+      }
+      @keyframes fadeOut {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+      <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div class="flex items-center justify-between">
+          <h1 class="text-2xl font-bold text-primary">Git Mastery</h1>
+          <div class="flex items-center space-x-4">
+            <span class="text-secondary"
+              >Progress: <span id="global-progress">0%</span></span
+            >
+            <button class="text-primary hover:text-accent">My Account</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+        <!-- Sidebar -->
+        <aside class="lg:col-span-3 mb-8 lg:mb-0">
+          <div class="bg-white rounded-lg shadow p-4 sticky top-8">
+            <h3 class="text-lg font-semibold text-gray-800 mb-4">
+              Course Modules
+            </h3>
+            <nav class="space-y-2" id="module-nav">
+              <!-- Modules populated by JavaScript -->
+            </nav>
+
+            <div class="mt-6 pt-4 border-t border-gray-200">
+              <h4 class="text-sm font-semibold text-gray-800 mb-2">
+                Resources
+              </h4>
+              <ul class="space-y-2">
+                <li>
+                  <a href="#" class="text-primary hover:text-accent text-sm"
+                    >Git Documentation</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-primary hover:text-accent text-sm"
+                    >GitHub Guides</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="lg:col-span-9 space-y-8" id="main-content">
+          <!-- Content loaded dynamically -->
+        </main>
+      </div>
+    </div>
+
+    <!-- Quiz Modal -->
+    <div
+      id="quiz-modal"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4"
+    >
+      <div class="bg-white rounded-lg max-w-2xl w-full p-6">
+        <div id="quiz-content"></div>
+      </div>
+    </div>
+
+    <script>
+      // Local storage setup
+      const STORAGE_KEY = "gitCourseProgress";
+      let courseProgress = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {
+        completedModules: [],
+        scores: {},
+        currentModule: 1,
+      };
+
+      // Course content with videos and quizzes
+      const courseContent = {
+        modules: {
+          1: {
+            title: "Getting Started",
+            lessons: [
+              {
+                id: "basics",
+                title: "Git Basics: What is Version Control?",
+                content: `
+                  <div class="smooth-load bg-white rounded-lg shadow p-6">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-4">Git Basics: What is Version Control?</h2>
+                    <div class="aspect-w-16 aspect-h-9 mb-6">
+                      <iframe 
+                        src="https://www.youtube.com/embed/HksoPN2Pa2s" 
+                        class="w-full h-64 rounded-lg" 
+                        style="border: none;"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope" 
+                        allowfullscreen>
+                      </iframe>
+                    </div>
+                    <div class="prose max-w-none">
+                      <div class="mt-4 p-4 bg-blue-50 rounded-lg">
+                        <h3 class="font-semibold text-blue-800">📘 Learning Objectives</h3>
+                        <ul class="list-disc pl-6 mt-2">
+                          <li>Understand fundamental version control concepts</li>
+                          <li>Differentiate between VCS types</li>
+                          <li>Learn benefits of version control</li>
+                        </ul>
+                      </div>
+                      <div class="mt-4 p-4 bg-green-50 rounded-lg">
+                        <h4 class="font-semibold text-green-800">✅ Key Takeaways</h4>
+                        <ul class="list-disc pl-6 mt-2">
+                          <li>Version control tracks file changes</li>
+                          <li>Git is a distributed VCS</li>
+                          <li>Commits create project snapshots</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                `,
+              },
+              {
+                id: "installation",
+                title: "Installing Git",
+                content: `
+                  <div class="smooth-load bg-white rounded-lg shadow p-6">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-4">Installing Git on Mac, Windows & Linux</h2>
+                    <div class="aspect-w-16 aspect-h-9 mb-6">
+                      <iframe 
+                        src="https://www.youtube.com/embed/n9MUhWLvanc" 
+                        class="w-full h-64 rounded-lg" 
+                        style="border: none;"
+                        allowfullscreen>
+                      </iframe>
+                    </div>
+                    ${["Windows", "macOS", "Linux"]
+                      .map(
+                        (os) => `
+                        <div class="mb-6">
+                          <h3 class="font-semibold text-gray-800 mb-2">${os} Installation</h3>
+                          <div class="relative">
+                            <pre class="bg-gray-800 text-gray-100 p-4 rounded-lg overflow-x-auto">
+                              ${
+                                os === "Windows"
+                                  ? `# Download from https://git-scm.com/download/win\n# Run installer with default options`
+                                  : os === "macOS"
+                                  ? `# Using Homebrew\nbrew install git`
+                                  : `# Debian/Ubuntu\nsudo apt update && sudo apt install git`
+                              }
+                            </pre>
+                            <button class="copy-btn absolute top-2 right-2 p-2 text-gray-300 hover:text-white">
+                              📋
+                            </button>
+                          </div>
+                        </div>
+                      `
+                      )
+                      .join("")}
+                    <div class="mt-4 p-4 bg-purple-50 rounded-lg">
+                      <p class="text-purple-800">💡 Pro Tip: Verify with <code>git --version</code></p>
+                    </div>
+                  </div>
+                `,
+              },
+              {
+                id: "setup",
+                title: "Initial Git Setup",
+                content: `
+                  <div class="smooth-load bg-white rounded-lg shadow p-6">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-4">Initial Setup Explained</h2>
+                    <div class="aspect-w-16 aspect-h-9 mb-6">
+                      <iframe 
+                        src="https://www.youtube.com/embed/MgLdUs1dt50" 
+                        class="w-full h-64 rounded-lg" 
+                        style="border: none;"
+                        allowfullscreen>
+                      </iframe>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-6">
+                      <div class="relative">
+                        <pre class="bg-gray-800 text-gray-100 p-4 rounded-lg overflow-x-auto">
+                          # Configure user name
+                          git config --global user.name "Your Name"
+                          
+                          # Configure user email
+                          git config --global user.email "your@email.com"
+                          
+                          # Set default branch
+                          git config --global init.defaultBranch main
+                        </pre>
+                        <button class="copy-btn absolute top-2 right-2 p-2 text-gray-300 hover:text-white">
+                          📋
+                        </button>
+                      </div>
+                      <div class="p-4 bg-orange-50 rounded-lg">
+                        <h3 class="font-semibold text-orange-800">⚠️ Important Notes</h3>
+                        <ul class="list-disc pl-6 mt-2">
+                          <li>Use your GitHub email</li>
+                          <li>Global configuration settings</li>
+                          <li>Can be overridden per-repo</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                `,
+              },
+            ],
+            quiz: [
+              {
+                question: "What is version control's main purpose?",
+                options: [
+                  "Track code changes",
+                  "Improve performance",
+                  "Manage servers",
+                  "Create UIs",
+                ],
+                correct: 0,
+              },
+              {
+                question: "Which command checks Git version?",
+                options: [
+                  "git check",
+                  "git --version",
+                  "git status",
+                  "git verify",
+                ],
+                correct: 1,
+              },
+              {
+                question: "Recommended macOS install method?",
+                options: ["App Store", "Homebrew", "Direct download", "WSL"],
+                correct: 1,
+              },
+              {
+                question: "Mandatory config setting?",
+                options: [
+                  "user.name",
+                  "init.defaultBranch",
+                  "core.editor",
+                  "color.ui",
+                ],
+                correct: 0,
+              },
+              {
+                question: "What does --global do in git config?",
+                options: [
+                  "System-wide settings",
+                  "User-specific settings",
+                  "Repo-specific settings",
+                  "Reset config",
+                ],
+                correct: 1,
+              },
+            ],
+          },
+        },
+      };
+
+      // Initialize course
+      function initCourse() {
+        populateSidebar();
+        loadModuleContent(courseProgress.currentModule);
+        initCopyButtons();
+      }
+
+      function populateSidebar() {
+        const moduleNav = document.getElementById("module-nav");
+        Object.keys(courseContent.modules).forEach((moduleId) => {
+          const numericId = Number(moduleId);
+          const isCurrent = numericId === courseProgress.currentModule;
+          const isCompleted =
+            courseProgress.completedModules.includes(numericId);
+
+          moduleNav.innerHTML += `
+            <div class="p-2 ${isCurrent ? "bg-blue-50" : ""} rounded">
+              <h4 class="font-medium">Module ${moduleId}: ${
+            courseContent.modules[moduleId].title
+          }</h4>
+              ${
+                isCompleted
+                  ? '<span class="text-xs text-accent">✓ Completed</span>'
+                  : '<span class="text-xs text-secondary">→ In Progress</span>'
+              }
+            </div>
+          `;
+        });
+      }
+
+      function loadModuleContent(moduleId) {
+        const mainContent = document.getElementById("main-content");
+        const module = courseContent.modules[moduleId];
+
+        module.lessons.forEach((lesson) => {
+          mainContent.innerHTML += lesson.content;
+        });
+
+        mainContent.innerHTML += `
+          <button onclick="showQuiz(${moduleId})" 
+                  class="w-full bg-primary text-white py-3 rounded-lg hover:bg-accent transition-colors">
+              Take Module Quiz
+          </button>
+        `;
+
+        setTimeout(() => {
+          document.querySelectorAll(".smooth-load").forEach((el) => {
+            el.classList.add("loaded");
+          });
+        }, 100);
+      }
+
+      function initCopyButtons() {
+        document.querySelectorAll(".copy-btn").forEach((btn) => {
+          btn.addEventListener("click", copyCode);
+        });
+      }
+
+      function copyCode(e) {
+        const code = e.target.previousElementSibling.textContent;
+        navigator.clipboard.writeText(code).then(() => {
+          const btn = e.target;
+          btn.textContent = "✓ Copied!";
+          btn.classList.add("text-green-500", "copy-success");
+          setTimeout(() => {
+            btn.textContent = "📋";
+            btn.classList.remove("text-green-500", "copy-success");
+          }, 2000);
+        });
+      }
+
+      function showQuiz(moduleId) {
+        const modal = document.getElementById("quiz-modal");
+        const quizContent = document.getElementById("quiz-content");
+        const questions = courseContent.modules[moduleId].quiz;
+
+        quizContent.innerHTML = `
+          <h2 class="text-xl font-semibold mb-4">Module ${moduleId} Quiz</h2>
+          <form id="quiz-form" class="space-y-6">
+            ${questions
+              .map(
+                (q, i) => `
+                <div class="quiz-question">
+                  <p class="font-medium">${i + 1}. ${q.question}</p>
+                  <div class="space-y-2 mt-2">
+                    ${q.options
+                      .map(
+                        (opt, j) => `
+                        <label class="flex items-center space-x-2">
+                          <input type="radio" name="q${i}" value="${j}" required>
+                          <span>${opt}</span>
+                        </label>
+                      `
+                      )
+                      .join("")}
+                  </div>
+                </div>
+              `
+              )
+              .join("")}
+            <button type="submit" class="w-full bg-accent text-white py-2 rounded hover:bg-accent-600">
+                Submit Quiz
+            </button>
+          </form>
+        `;
+
+        document.getElementById("quiz-form").onsubmit = (e) => {
+          e.preventDefault();
+          const formData = new FormData(e.target);
+          let score = 0;
+
+          questions.forEach((q, i) => {
+            if (parseInt(formData.get(`q${i}`)) === q.correct) score++;
+          });
+
+          const percentage = (score / questions.length) * 100;
+          courseProgress.scores[moduleId] = percentage;
+
+          if (percentage >= 70) {
+            if (!courseProgress.completedModules.includes(Number(moduleId))) {
+              courseProgress.completedModules.push(Number(moduleId));
+            }
+            courseProgress.currentModule++;
+          }
+
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(courseProgress));
+          updateProgress();
+          modal.classList.add("hidden");
+          location.reload();
+        };
+
+        modal.classList.remove("hidden");
+      }
+
+      function updateProgress() {
+        const totalModules = Object.keys(courseContent.modules).length;
+        const completed = courseProgress.completedModules.length;
+        const progress = (completed / totalModules) * 100;
+        document.getElementById("global-progress").textContent = `${Math.round(
+          progress
+        )}%`;
+      }
+
+      // Initialize the course
+      initCourse();
+      updateProgress();
+    </script>
+  </body>
+</html>
